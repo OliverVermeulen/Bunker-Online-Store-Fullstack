@@ -4,61 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="/Bunker-Online-Store-Fullstack/src/css/style.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/e4ad388285.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>BUNKER®</title>
+    <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/bunker-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
+    <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="./script.js" type="module"></script>
-    <script
-      src="/Bunker-Online-Store-Fullstack/src/js/script.js"
-      defer
-    ></script>
+    <script src="/Bunker-Online-Store-Fullstack/src/js/script.js" defer></script>
   </head>
   <body>
     <div id="app">
       <div class="top-container">
-        <i class="fa fa-globe"></i>
-        <span>FREE SHIPPING ON ORDERS OVER R 4000</span>
+        <span><i class="fa fa-globe"></i> FREE SHIPPING ON ORDERS OVER R 4000</span>
       </div>
-
-      <!-- Header -->
       <header id="myHeader">
         <button id="myBtn" class="icon" title="Search">
           <i class="fa fa-search"></i>
         </button>
+
         <a href="home" title="Home" class="home-link">BUNKER</a>
+
         <button class="icon" title="Cart">
           <i class="fa fa-shopping-cart"></i>
         </button>
       </header>
 
-      <!-- Navbar -->
       <div id="mySidenav" class="sidenav">
-        <a href="/Bunker-Online-Store-Fullstack/src/pages/tops.php" title="Tops"
-          >Tops</a
-        >
-        <a
-          href="/Bunker-Online-Store-Fullstack/src/pages/bottoms.php"
-          title="Bottoms"
-          >Bottoms</a
-        >
-        <a
-          href="/Bunker-Online-Store-Fullstack/src/pages/accessories.php"
-          title="Accessories"
-          >Accessories</a
-        >
+        <a href="#" title="Tops">Tops</a>
+        <a href="#" title="Bottoms">Bottoms</a>
+        <a href="#" title="Accessories">Accessories</a>
         <a href="#" title="About Us">About Us</a>
         <a href="#" title="Account">Account</a>
       </div>
-      <ul>
-        <li v-for="product in products" :key="product.id">{{product.name}}</li>
-      </ul>
+
+      <main id="main" class="main">
+        <div class="cards">
+          <div class="card" v-for="product in products" :key="product.id">
+            <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
+              <input type="hidden" :value="product.id" name="product_id" />
+              <button class="card-img" type="submit" :title="product.name">
+                <img :src="product.image" :alt="product.name" style="width: 100%"/>
+              </button>
+            </form>
+            <div class="card-info">
+              <h4>{{product.name}}</h4>
+              <p>R {{product.price}}.00</p>
+            </div>
+          </div>
+        </div>
+      </main>
 
       <div>
         <button
