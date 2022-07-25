@@ -19,8 +19,8 @@ session_start();
     <div id="app">
         <?php
         // Footer
-        include("/MAMP/htdocs/store-test/src/include/header.inc.php");
-        include("/MAMP/htdocs/store-test/src/include/modal.inc.php");
+        include("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/include/header.inc.php");
+        include("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/include/modal.inc.php");
 
         // Switch Router
         $request = $_SERVER['REQUEST_URI'];
@@ -47,7 +47,7 @@ session_start();
         };
 
         // Footer
-        include("/MAMP/htdocs/store-test/src/include/footer.inc.php"); ?>
+        include("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/include/footer.inc.php"); ?>
     </div>
 </body>
 
