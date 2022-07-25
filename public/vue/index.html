@@ -5,45 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUNKER®</title>
-    <link
-      rel="shortcut icon"
-      href="/Bunker-Online-Store-Fullstack/src/images/bunker-icon.png"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="/Bunker-Online-Store-Fullstack/src/css/style.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/e4ad388285.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/bunker-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
+    <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="./script.js" type="module"></script>
-    <script
-      src="/Bunker-Online-Store-Fullstack/src/js/script.js"
-      defer
-    ></script>
+    <script src="/Bunker-Online-Store-Fullstack/src/js/script.js" defer></script>
   </head>
   <body>
     <div id="app">
+      <!-- Top Container -->
       <div class="top-container">
-        <span
-          ><i class="fa fa-globe"></i> FREE SHIPPING ON ORDERS OVER R 4000</span
-        >
+        <span><i class="fa fa-globe"></i> FREE SHIPPING ON ORDERS OVER R 4000</span>
       </div>
+
+      <!-- Header -->
       <header id="myHeader">
+        <!-- Search -->
         <button id="myBtn" class="icon" title="Search">
           <i class="fa fa-search"></i>
         </button>
 
+        <!-- Logo/Home -->
         <a href="home" title="Home" class="home-link">BUNKER</a>
 
+        <!-- Cart -->
         <button class="icon" title="Cart">
           <i class="fa fa-shopping-cart"></i>
         </button>
       </header>
 
+      <!-- Navbar -->
       <div id="mySidenav" class="sidenav">
         <a href="#" title="Tops">Tops</a>
         <a href="#" title="Bottoms">Bottoms</a>
@@ -52,19 +44,14 @@
         <a href="#" title="Account">Account</a>
       </div>
 
+      <!-- Main -->
       <main id="main" class="main">
         <div class="cards">
           <div class="card" v-for="product in productList" :key="product.id">
-            <form
-              action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php"
-            >
+            <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
               <input type="hidden" :value="product.id" name="product_id" />
               <button class="card-img" type="submit" :title="product.name">
-                <img
-                  :src="product.image"
-                  :alt="product.name"
-                  style="width: 100%"
-                />
+                <img :src="product.image" :alt="product.name" style="width: 100%"/>
               </button>
             </form>
             <div class="card-info">
@@ -77,88 +64,51 @@
 
       <main id="main" class="main">
         <button @click="awesome = !awesome">Toggle</button>
-        <div class="cards" v-if="awesome">
-          <div class="card" v-for="product in topList" :key="product.id">
-            <form
-              action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php"
-            >
-              <input type="hidden" :value="product.id" name="product_id" />
-              <button class="card-img" type="submit" :title="product.name">
-                <img
-                  :src="product.image"
-                  :alt="product.name"
-                  style="width: 100%"
-                />
-              </button>
-            </form>
-            <div class="card-info">
-              <h4>{{product.name}}</h4>
-              <p>R {{product.price}}.00</p>
+          <div class="cards" v-if="awesome">
+            <div class="card" v-for="product in topList" :key="product.id">
+              <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
+                <input type="hidden" :value="product.id" name="product_id" />
+                <button class="card-img" type="submit" :title="product.name">
+                  <img :src="product.image" :alt="product.name" style="width: 100%"/>
+                </button>
+              </form>
+              <div class="card-info">
+                <h4>{{product.name}}</h4>
+                <p>R {{product.price}}.00</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="cards" v-else>
-          <div class="card" v-for="product in bottomList" :key="product.id">
-            <form
-              action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php"
-            >
-              <input type="hidden" :value="product.id" name="product_id" />
-              <button class="card-img" type="submit" :title="product.name">
-                <img
-                  :src="product.image"
-                  :alt="product.name"
-                  style="width: 100%"
-                />
-              </button>
-            </form>
-            <div class="card-info">
-              <h4>{{product.name}}</h4>
-              <p>R {{product.price}}.00</p>
+          
+          <div class="cards" v-else>
+            <div class="card" v-for="product in bottomList" :key="product.id">
+              <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
+                <input type="hidden" :value="product.id" name="product_id" />
+                <button class="card-img" type="submit" :title="product.name">
+                  <img :src="product.image" :alt="product.name" style="width: 100%"/>
+                </button>
+              </form>
+              <div class="card-info">
+                <h4>{{product.name}}</h4>
+                <p>R {{product.price}}.00</p>
+              </div>
             </div>
           </div>
-        </div>
       </main>
 
       <div>
-        <button
-          onclick="topFunction()"
-          id="upBtn"
-          class="navigation-btn"
-          title="To top"
-        >
+        <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top">
           <i class="fa fa-arrow-up"></i>
         </button>
-        <button
-          onclick="bottomFunction()"
-          id="downBtn"
-          class="navigation-btn"
-          title="To bottom"
-        >
+        <button onclick="bottomFunction()" id="downBtn" class="navigation-btn" title="To bottom">
           <i class="fa fa-arrow-down"></i>
         </button>
-        <button
-          onclick="openNav()"
-          id="openNav"
-          class="navigation-btn"
-          title="Open Navbar"
-        >
+        <button onclick="openNav()" id="openNav" class="navigation-btn" title="Open Navbar">
           <i class="fa fa-arrow-right" class="icon"></i>
         </button>
-        <button
-          onclick="closeNav()"
-          id="closeNav"
-          class="navigation-btn"
-          title="Close Navbar"
-        >
+        <button onclick="closeNav()" id="closeNav" class="navigation-btn" title="Close Navbar">
           <i class="fa fa-arrow-left"></i>
         </button>
-        <button
-          onclick="history.back()"
-          id="previousPage"
-          class="navigation-btn"
-          title="Back"
-        >
+        <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back">
           <i class="fa fa-close"></i>
         </button>
       </div>
