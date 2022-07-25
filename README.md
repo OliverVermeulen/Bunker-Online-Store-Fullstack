@@ -6,23 +6,26 @@ The aim of this project is to make a fullstack online store using everything I'v
 
 ## Features
 1. The Header features:
-    + A search button where the use can search for a specific product
-    + A logo that functions as a home button
+    + A Search button where the use can search for a specific product
+    + A Logo that functions as a home button
     + A Cart button that takes you to a page where the user can checkout
 
 2. A navigation bar that features:
-    + A button list to filter products by category
+    + A button form to filter products by category
     + A button that takes the user to the About us page
-    + An account button that takes the user to the Account page
+    + A button that takes the user to the Account page
 
 3. The main pages features: 
-    + A coming soon products section
-    + A featured products section
-    + A products section that can be filtered by brand and price
+    + A coming soon section
+    + A featured section
+    + A available section that can be filtered by brand and price
 
 4. The product page features: 
+    + An image selector to see a different view of the product
+    + More details about the selected product
+    + A Checkout form and button
 
-4. A navigation controller that can:
+5. A navigation controller that can:
     + Take to to the top and bottom of the page
     + Bring a navigation bar in and out
     + A button that takes the user to the previous page
