@@ -404,6 +404,6 @@ footer {
 /* Media Query for Large screens */
 @media (min-width: 1900px) {
   main {
-    padding: 1.2rem 2rem;
+    padding: 1.25rem 2rem;
   }
 }
