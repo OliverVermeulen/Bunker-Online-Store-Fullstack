@@ -1,0 +1,137 @@
+[
+    {
+        "id" : "01",
+        "type" : "top",
+        "name" : "Float Tee",
+        "brand": "Supreme",        
+        "price" : "700",      
+        "image" : "/store-test/src/images/t-shirt.png",
+        "alt-view-image" : "/store-test/src/images/t-shirt-alt-view.png"
+    },
+    {
+        "id" : "02",
+        "type" : "top",
+        "name" : "Camo Field Jacket With Patches",
+        "brand": "Off-White",        
+        "price" : "22000",      
+        "image" : "/store-test/src/images/camo-jacket.png",
+        "alt-view-image" : "/store-test/src/images/camo-jacket-alt-view.jpg"
+    },
+    {
+        "id" : "03",
+        "type" : "top",
+        "name" : "Cotton Ripstop Dyed Jacket",
+        "brand": "Stone Island",        
+        "price" : "10600",      
+        "image" : "/store-test/src/images/cotton-dyed-jacket.png",
+        "alt-view-image" : "/store-test/src/images/cotton-dyed-jacket-alt-view.png"
+    },
+    {
+        "id" : "04",
+        "type" : "top",
+        "name" : "Peace Of Mind Hoodie",
+        "brand": "Vans",        
+        "price" : "1500",      
+        "image" : "/store-test/src/images/hoodie.png",
+        "alt-view-image" : "/store-test/src/images/hoodie-alt-view.png"
+    },    
+    {
+        "id" : "05",
+        "type" : "top",
+        "name" : "Busy Shark Chambray Shirt",
+        "brand": "Bape",        
+        "price" : "5670",      
+        "image" : "/store-test/src/images/chambray-shirt.png",
+        "alt-view-image" : "/store-test/src/images/chambray-shirt-alt-view.png"
+    },
+    {
+        "id" : "06",
+        "type" : "bottom",
+        "name" : "Credit Card Jean",
+        "brand": "Supreme",        
+        "price" : "3050",      
+        "image" : "/store-test/src/images/jean.png",
+        "alt-view-image" : "/store-test/src/images/jean-alt-view.png"
+    },
+    {
+        "id" : "07",
+        "type" : "bottom",
+        "name" : "Denim Shorts",
+        "brand": "Off-White",        
+        "price" : "7500",      
+        "image" : "/store-test/src/images/denim-short.png",
+        "alt-view-image" : "/store-test/src/images/denim-short-alt-view.png"
+    },
+    {
+        "id" : "08",
+        "type" : "bottom",
+        "name" : "Cotton Canvas Trousers",
+        "brand": "Stone Island",        
+        "price" : "4440",      
+        "image" : "/store-test/src/images/canvas-trousers.png",
+        "alt-view-image" : "/store-test/src/images/canvas-trousers-alt-view.png"
+    },
+    {
+        "id" : "09",
+        "type" : "bottom",
+        "name" : "Eco Positivity Short",
+        "brand": "Vans",        
+        "price" : "799",      
+        "image" : "/store-test/src/images/elastic-short.png",
+        "alt-view-image" : "/store-test/src/images/elastic-short-alt-view.png"
+    },    
+    {
+        "id" : "10",
+        "type" : "bottom",
+        "name" : "Camo Painter Pants",
+        "brand": "Bape",        
+        "price" : "8250",      
+        "image" : "/store-test/src/images/painter-pants.png",
+        "alt-view-image" : "/store-test/src/images/painter-pants-alt-view.png"
+    },
+    {
+        "id" : "11",
+        "type" : "accessory",
+        "name" : "Velo Sunglasses",
+        "brand": "Supreme",        
+        "price" : "3400",      
+        "image" : "/store-test/src/images/sunglasses.png",
+        "alt-view-image" : "/store-test/src/images/sunglasses-alt-view.png"
+    },
+    {
+        "id" : "12",
+        "type" : "accessory",
+        "name" : "Tape Industrial Belt",
+        "brand": "Off-White",        
+        "price" : "3220",      
+        "image" : "/store-test/src/images/belt.png",
+        "alt-view-image" : "/store-test/src/images/belt-alt-view.png"
+    },
+    {
+        "id" : "13",
+        "type" : "accessory",
+        "name" : "Commato Backpack",
+        "brand": "Stone Island",        
+        "price" : "6350",      
+        "image" : "/store-test/src/images/backpack.png",
+        "alt-view-image" : "/store-test/src/images/backpack-alt-view.png"
+    },
+    {
+        "id" : "14",
+        "type" : "accessory",
+        "name" : "Checkerboard Crew Socks",
+        "brand": "Vans",        
+        "price" : "300",      
+        "image" : "/store-test/src/images/socks.png",
+        "alt-view-image" : "/store-test/src/images/socks-alt-view.png"
+    },    
+    {
+        "id" : "15",
+        "type" : "accessory",
+        "name" : "Knit Cap",
+        "brand": "Bape",        
+        "price" : "1600",      
+        "image" : "/store-test/src/images/beanie.png",
+        "alt-view-image" : "/store-test/src/images/beanie-alt-view.png"
+    }
+]
