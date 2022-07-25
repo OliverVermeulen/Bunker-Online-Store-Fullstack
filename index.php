@@ -9,9 +9,9 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BUNKER®</title>
-    <link rel="shortcut icon" href="/store-test/src/images/bunker-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/store-test/src/css/style.css">
-    <script src="/store-test/src/js/script.js" defer></script>
+    <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/bunker-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css">
+    <script src="/Bunker-Online-Store-Fullstack/src/js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
 </head>
 

@@ -15,9 +15,9 @@
 
 <!-- Navbar -->
 <div id="mySidenav" class="sidenav">
-    <a href="/store-test/src/pages/tops.php" title="Tops">Tops</a>
-    <a href="/store-test/src/pages/bottoms.php" title="Bottoms">Bottoms</a>
-    <a href="/store-test/src/pages/accessories.php" title="Accessories">Accessories</a>
+    <a href="/Bunker-Online-Store-Fullstack/src/pages/tops.php" title="Tops">Tops</a>
+    <a href="/Bunker-Online-Store-Fullstack/src/pages/bottoms.php" title="Bottoms">Bottoms</a>
+    <a href="/Bunker-Online-Store-Fullstack/src/pages/accessories.php" title="Accessories">Accessories</a>
     <a href="#" title="About Us">About Us</a>
     <a href="#" title="Account">Account</a>
 </div>
