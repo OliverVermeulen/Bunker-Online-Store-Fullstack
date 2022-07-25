@@ -5,17 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUNKER®</title>
-    <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/bunker-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
-    <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
+    <link
+      rel="shortcut icon"
+      href="/Bunker-Online-Store-Fullstack/src/images/bunker-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/Bunker-Online-Store-Fullstack/src/css/style.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/e4ad388285.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="./script.js" type="module"></script>
-    <script src="/Bunker-Online-Store-Fullstack/src/js/script.js" defer></script>
+    <script
+      src="/Bunker-Online-Store-Fullstack/src/js/script.js"
+      defer
+    ></script>
   </head>
   <body>
     <div id="app">
       <div class="top-container">
-        <span><i class="fa fa-globe"></i> FREE SHIPPING ON ORDERS OVER R 4000</span>
+        <span
+          ><i class="fa fa-globe"></i> FREE SHIPPING ON ORDERS OVER R 4000</span
+        >
       </div>
       <header id="myHeader">
         <button id="myBtn" class="icon" title="Search">
@@ -39,11 +54,62 @@
 
       <main id="main" class="main">
         <div class="cards">
-          <div class="card" v-for="product in products" :key="product.id">
-            <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
+          <div class="card" v-for="product in productList" :key="product.id">
+            <form
+              action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php"
+            >
               <input type="hidden" :value="product.id" name="product_id" />
               <button class="card-img" type="submit" :title="product.name">
-                <img :src="product.image" :alt="product.name" style="width: 100%"/>
+                <img
+                  :src="product.image"
+                  :alt="product.name"
+                  style="width: 100%"
+                />
+              </button>
+            </form>
+            <div class="card-info">
+              <h4>{{product.name}}</h4>
+              <p>R {{product.price}}.00</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <main id="main" class="main">
+        <button @click="awesome = !awesome">Toggle</button>
+        <div class="cards" v-if="awesome">
+          <div class="card" v-for="product in topList" :key="product.id">
+            <form
+              action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php"
+            >
+              <input type="hidden" :value="product.id" name="product_id" />
+              <button class="card-img" type="submit" :title="product.name">
+                <img
+                  :src="product.image"
+                  :alt="product.name"
+                  style="width: 100%"
+                />
+              </button>
+            </form>
+            <div class="card-info">
+              <h4>{{product.name}}</h4>
+              <p>R {{product.price}}.00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards" v-else>
+          <div class="card" v-for="product in bottomList" :key="product.id">
+            <form
+              action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php"
+            >
+              <input type="hidden" :value="product.id" name="product_id" />
+              <button class="card-img" type="submit" :title="product.name">
+                <img
+                  :src="product.image"
+                  :alt="product.name"
+                  style="width: 100%"
+                />
               </button>
             </form>
             <div class="card-info">
