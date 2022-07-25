@@ -56,8 +56,8 @@
         </div> -->
         <div class="cards">
           <div class="card" v-for="product in filteredList" :key="product.id">
-            <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php" class="product-page-form">
-              <input type="hidden" :value="product.id" :name="product.id" />
+            <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
+              <input type="hidden" :value="product.id" name="product_id" />
               <button class="card-img" type="submit" :title="product.name">
                 <img :src="product.image" :alt="product.name" style="width: 100%"/>
               </button>
@@ -108,7 +108,7 @@
           <div class="cards" v-else>
             <div class="card" v-for="product in bottomList" :key="product.id">
               <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
-                <input type="hidden" :value="product.id" name="product_id" />
+                <input type="hidden" :value="product.id" name="product.id" />
                 <button class="card-img" type="submit" :title="product.name">
                   <img :src="product.image" :alt="product.name" style="width: 100%"/>
                 </button>
