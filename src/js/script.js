@@ -1,6 +1,5 @@
 window.onscroll = function () {
   myFunction();
-  scrollFunction();
 };
 
 // Sticky header function

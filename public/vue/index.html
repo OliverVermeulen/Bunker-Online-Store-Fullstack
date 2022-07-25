@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3"></script>
-    <script src="./script.js" type="module"></script>
+    <script src="./vue.js" type="module"></script>
     <script src="/Bunker-Online-Store-Fullstack/src/js/script.js" defer></script>
   </head>
   <body>
@@ -22,9 +22,13 @@
       <!-- Header -->
       <header id="myHeader">
         <!-- Search -->
-        <button id="myBtn" class="icon" title="Search">
+        <!-- <button id="myBtn" class="icon" title="Search">
           <i class="fa fa-search"></i>
-        </button>
+        </button> -->
+
+        <div class="search-wrapper">
+          <input type="text" v-model="search" placeholder="Search title.."/>
+        </div>
 
         <!-- Logo/Home -->
         <a href="home" title="Home" class="home-link">BUNKER</a>
@@ -44,8 +48,30 @@
         <a href="#" title="Account">Account</a>
       </div>
 
-      <!-- Main -->
+
+
       <main id="main" class="main">
+        <!-- <div class="search-wrapper">
+          <input type="text" v-model="search" placeholder="Search title.."/>
+        </div> -->
+        <div class="cards">
+          <div class="card" v-for="product in filteredList" :key="product.id">
+            <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php" class="product-page-form">
+              <input type="hidden" :value="product.id" :name="product.id" />
+              <button class="card-img" type="submit" :title="product.name">
+                <img :src="product.image" :alt="product.name" style="width: 100%"/>
+              </button>
+            </form>
+            <div class="card-info">
+              <h4>{{product.name}}</h4>
+              <p>R {{product.price}}.00</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Main -->
+      <!-- <main id="main" class="main">
         <div class="cards">
           <div class="card" v-for="product in productList" :key="product.id">
             <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
@@ -60,9 +86,9 @@
             </div>
           </div>
         </div>
-      </main>
+      </main> -->      
 
-      <main id="main" class="main">
+      <!-- <main id="main" class="main">
         <button @click="awesome = !awesome">Toggle</button>
           <div class="cards" v-if="awesome">
             <div class="card" v-for="product in topList" :key="product.id">
@@ -93,7 +119,7 @@
               </div>
             </div>
           </div>
-      </main>
+      </main> -->
 
       <div>
         <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top">

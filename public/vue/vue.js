@@ -8,8 +8,9 @@ const filterType = (key, productList) =>
 const Component = {
   data() {
     return {
+      search: "",
       productList: productArray,
-      awesome: true
+      // awesome: true
     };
   },
   computed: {
@@ -18,6 +19,12 @@ const Component = {
     },
     bottomList() {
       return filterType("bottom", this.productList);
+    },
+
+    filteredList() {
+      return this.productList.filter((post) => {
+        return post.name.toLowerCase().includes(this.search.toLowerCase());
+      });
     },
   },
   methods: {
