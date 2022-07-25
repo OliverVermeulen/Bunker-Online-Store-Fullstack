@@ -24,7 +24,7 @@ session_start();
 
         // Switch Router
         $request = $_SERVER['REQUEST_URI'];
-        $basepath = "store-test/";
+        $basepath = "Bunker-Online-Store-Fullstack/";
         $request = str_replace($basepath, "", $request);
         $request = strtok($request, '?');
         switch ($request) {
