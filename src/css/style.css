@@ -217,7 +217,7 @@ footer {
   border: 1px solid transparent;
 }
 
-@media (min-width: 300px) and (max-width: 1000px) {
+@media (min-width: 300px) and (max-width: 1200px) {
   .product {
     flex-direction: column;
   }
@@ -277,27 +277,27 @@ footer {
   }
   #upBtn {
     position: fixed;
-    bottom: 54.5%;
+    bottom: 250px;
     right: 40px;
   }
   #downBtn {
     position: fixed;
-    bottom: 45.5%;
+    bottom: 190px;
     right: 40px;
   }
   #openNav {
     position: fixed;
-    bottom: 50%;
+    bottom: 220px;
     right: 10px;
   }
   #closeNav {
     position: fixed;
-    bottom: 50%;
+    bottom: 220px;
     right: 70px;
   }
   #previousPage {
     position: fixed;
-    bottom: 50%;
+    bottom: 220px;
     right: 40px;
     border-radius: 50%;
   }
@@ -343,27 +343,27 @@ footer {
   }
   #upBtn {
     position: fixed;
-    bottom: 45.5%;
+    bottom: 276px;
     right: 40px;
   }
   #downBtn {
     position: fixed;
-    bottom: 40.5%;
+    bottom: 216px;
     right: 40px;
   }
   #openNav {
     position: fixed;
-    bottom: 43%;
+    bottom: 246px;
     right: 10px;
   }
   #closeNav {
     position: fixed;
-    bottom: 43%;
+    bottom: 246px;
     right: 70px;
   }
   #previousPage {
     position: fixed;
-    bottom: 43%;
+    bottom: 246px;
     right: 40px;
     border-radius: 50%;
   }
