@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/Bunker-Online-Store-Fullstack/src/css/style.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/e4ad388285.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./script.js" type="module"></script>
+    <script
+      src="/Bunker-Online-Store-Fullstack/src/js/script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="top-container">
+        <i class="fa fa-globe"></i>
+        <span>FREE SHIPPING ON ORDERS OVER R 4000</span>
+      </div>
+
+      <!-- Header -->
+      <header id="myHeader">
+        <button id="myBtn" class="icon" title="Search">
+          <i class="fa fa-search"></i>
+        </button>
+        <a href="home" title="Home" class="home-link">BUNKER</a>
+        <button class="icon" title="Cart">
+          <i class="fa fa-shopping-cart"></i>
+        </button>
+      </header>
+
+      <!-- Navbar -->
+      <div id="mySidenav" class="sidenav">
+        <a href="/Bunker-Online-Store-Fullstack/src/pages/tops.php" title="Tops"
+          >Tops</a
+        >
+        <a
+          href="/Bunker-Online-Store-Fullstack/src/pages/bottoms.php"
+          title="Bottoms"
+          >Bottoms</a
+        >
+        <a
+          href="/Bunker-Online-Store-Fullstack/src/pages/accessories.php"
+          title="Accessories"
+          >Accessories</a
+        >
+        <a href="#" title="About Us">About Us</a>
+        <a href="#" title="Account">Account</a>
+      </div>
+      <ul>
+        <li v-for="product in products" :key="product.id">{{product.name}}</li>
+      </ul>
+
+      <div>
+        <button
+          onclick="topFunction()"
+          id="upBtn"
+          class="navigation-btn"
+          title="To top"
+        >
+          <i class="fa fa-arrow-up"></i>
+        </button>
+        <button
+          onclick="bottomFunction()"
+          id="downBtn"
+          class="navigation-btn"
+          title="To bottom"
+        >
+          <i class="fa fa-arrow-down"></i>
+        </button>
+        <button
+          onclick="openNav()"
+          id="openNav"
+          class="navigation-btn"
+          title="Open Navbar"
+        >
+          <i class="fa fa-arrow-right" class="icon"></i>
+        </button>
+        <button
+          onclick="closeNav()"
+          id="closeNav"
+          class="navigation-btn"
+          title="Close Navbar"
+        >
+          <i class="fa fa-arrow-left"></i>
+        </button>
+        <button
+          onclick="history.back()"
+          id="previousPage"
+          class="navigation-btn"
+          title="Back"
+        >
+          <i class="fa fa-close"></i>
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="trademarks">
+          <span>BUNKER®</span>
+        </div>
+
+        <div div="extra-information">
+          <span>R ZAR</span>
+          <span>|</span>
+          <span>Help <i class="fa fa-gear"></i></span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
