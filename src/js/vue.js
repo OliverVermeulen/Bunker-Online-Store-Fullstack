@@ -20,7 +20,9 @@ const Component = {
     bottomList() {
       return filterType("bottom", this.productList);
     },
-
+    accessoriesList() {
+      return filterType("accessories", this.productList);
+    },
     filteredList() {
       return this.productList.filter((post) => {
         return post.name.toLowerCase().includes(this.search.toLowerCase());
