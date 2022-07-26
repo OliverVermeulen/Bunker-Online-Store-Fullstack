@@ -21,10 +21,6 @@
 
       <!-- Header -->
       <header id="myHeader">
-        <!-- Search -->
-        <!-- <button id="myBtn" class="icon" title="Search">
-          <i class="fa fa-search"></i>
-        </button> -->
 
         <div class="search-wrapper">
           <input type="text" v-model="search" placeholder="Search title.."/>
@@ -48,8 +44,6 @@
         <a href="#" title="Account">Account</a>
       </div>
 
-
-
       <main id="main" class="main">
         <div class="cards">
           <div class="card" v-for="product in filteredList" :key="product.id">
@@ -66,57 +60,6 @@
           </div>
         </div>
       </main>
-
-      <!-- Main -->
-      <!-- <main id="main" class="main">
-        <div class="cards">
-          <div class="card" v-for="product in productList" :key="product.id">
-            <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
-              <input type="hidden" :value="product.id" name="product_id" />
-              <button class="card-img" type="submit" :title="product.name">
-                <img :src="product.image" :alt="product.name" style="width: 100%"/>
-              </button>
-            </form>
-            <div class="card-info">
-              <h4>{{product.name}}</h4>
-              <p>R {{product.price}}.00</p>
-            </div>
-          </div>
-        </div>
-      </main> -->      
-
-      <!-- <main id="main" class="main">
-        <button @click="awesome = !awesome">Toggle</button>
-          <div class="cards" v-if="awesome">
-            <div class="card" v-for="product in topList" :key="product.id">
-              <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
-                <input type="hidden" :value="product.id" name="product_id" />
-                <button class="card-img" type="submit" :title="product.name">
-                  <img :src="product.image" :alt="product.name" style="width: 100%"/>
-                </button>
-              </form>
-              <div class="card-info">
-                <h4>{{product.name}}</h4>
-                <p>R {{product.price}}.00</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="cards" v-else>
-            <div class="card" v-for="product in bottomList" :key="product.id">
-              <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
-                <input type="hidden" :value="product.id" name="product.id" />
-                <button class="card-img" type="submit" :title="product.name">
-                  <img :src="product.image" :alt="product.name" style="width: 100%"/>
-                </button>
-              </form>
-              <div class="card-info">
-                <h4>{{product.name}}</h4>
-                <p>R {{product.price}}.00</p>
-              </div>
-            </div>
-          </div>
-      </main> -->
 
       <div>
         <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top">

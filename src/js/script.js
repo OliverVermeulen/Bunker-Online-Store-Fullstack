@@ -1,37 +1,32 @@
+// Header functions
 window.onscroll = function () {
   myFunction();
 };
-
-// Sticky header function
 let header = document.getElementById("myHeader");
 let sticky = header.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+    header.classList.add("sticky"); // Add sticky class
   } else {
-    header.classList.remove("sticky");
+    header.classList.remove("sticky"); // Remove sticky class
   }
-}
+};
 
-// Top of page function
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-// Bottom of page function
-function bottomFunction() {
-  document.body.scrollTop = 10000;
-  document.documentElement.scrollTop = 10000;
-}
-
-// Navbar function
-function openNav() {
+// Navigation controller functions
+function openNav() { // Open nav
   document.getElementById("mySidenav").style.width = "35px";
   document.getElementById("app").style.marginLeft = "35px";
-}
-function closeNav() {
+};
+function closeNav() { // Close nav
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("app").style.marginLeft = "0";
-}
+};
+function topFunction() { // Top of page
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+function bottomFunction() { // Bottom of page
+  document.body.scrollTop = 10000;
+  document.documentElement.scrollTop = 10000;
+};
