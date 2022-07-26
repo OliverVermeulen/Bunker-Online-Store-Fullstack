@@ -59,6 +59,40 @@ header .icon {
   border: none;
   background-color: transparent;
 }
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0px;
+}
+.search-input {
+  width: 40%;
+  min-width: 250px;
+  height: 40px;
+  margin-right: 20px;
+  outline: none;
+  border: 1px solid black;
+  font-size: 15px;
+  padding: 10px;
+}
+.input-button {
+  color: black;
+  background-color: #f2cc0f;
+  border: 1px solid black;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 10%;
+  min-width: 70px;
+  height: 40px;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.input-button:hover {
+  background-color: black;
+  color: #f2cc0f;
+}
 
 .sidenav {
   height: 100%;
@@ -110,8 +144,8 @@ main .cards {
   margin-bottom: 50px;
 }
 main .card {
- width: fit-content;
- margin: 0 auto;
+  width: fit-content;
+  margin: 0 auto;
 }
 main .card-img {
   overflow: hidden;

@@ -22,12 +22,9 @@
       <!-- Header -->
       <header id="myHeader">
         <div class="header-buttons">
-
         <button onclick="myFunction()" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
-
         <!-- Logo/Home -->
         <a href="/Bunker-Online-Store-Fullstack/public/vue/index.html" title="Home" class="home-link">BUNKER</a>
-
         <!-- Cart -->
         <button class="icon" title="Cart">
           <i class="fa fa-shopping-cart"></i>
@@ -35,8 +32,10 @@
       </div>
 
       <div id="searchbar" style="display: none;">
-          <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.."/>
-          <button @click="resetInput" class="input-button"><i class="fa fa-close"></i></button>
+        <div class="searchbar">
+          <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.." autocomplete="off"/>
+          <button @click="resetInput" class="input-button" title="Clear Search">CLEAR</button>
+        </div>  
       </div>
       </header>
 
