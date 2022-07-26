@@ -32,13 +32,12 @@
         <button class="icon" title="Cart">
           <i class="fa fa-shopping-cart"></i>
         </button>
-      </div>  
-      <div id="searchbar">
-        <div class="search-wrapper">
-          <input type="text" id="searchInput" v-model="search" placeholder="Search.."/>
-          <button @click="resetInput"><i class="fa fa-close"></i></button>
-        </div>
-        </div>
+      </div>
+
+      <div id="searchbar" style="display: none;">
+          <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.."/>
+          <button @click="resetInput" class="input-button"><i class="fa fa-close"></i></button>
+      </div>
       </header>
 
       <!-- Navbar -->
