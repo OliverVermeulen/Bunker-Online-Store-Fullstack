@@ -52,7 +52,7 @@
       <main id="main" class="main">
         <div class="cards">
           <div class="card" v-for="product in filteredList" :key="product.id">
-            <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
+            <form action="./selected-product.html">
               <input type="hidden" :value="product.id" name="product_id" />
               <button class="card-img" type="submit" :title="product.name">
                 <img :src="product.image" :alt="product.name"/>
