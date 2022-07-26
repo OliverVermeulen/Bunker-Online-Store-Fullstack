@@ -31,6 +31,9 @@ const Component = {
     toggle() {
       this.awesome = !this.awesome;
     },
+    resetInput() {
+      this.search = "";
+    },
   },
 };
 

@@ -27,7 +27,8 @@
         </button> -->
 
         <div class="search-wrapper">
-          <input type="text" v-model="search" placeholder="Search title.."/>
+          <input type="text" id="searchInput" v-model="search" placeholder="Search title.."/>
+          <button @click="resetInput"><i class="fa fa-close"></i></button>
         </div>
 
         <!-- Logo/Home -->
