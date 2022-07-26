@@ -49,8 +49,7 @@
         <a href="#" title="Account">Account</a>
       </div>
 
-
-
+      <!-- Main -->
       <main id="main" class="main">
         <div class="cards">
           <div class="card" v-for="product in filteredList" :key="product.id">
@@ -68,7 +67,6 @@
         </div>
       </main>
 
-      <!-- Main -->
       <!-- <main id="main" class="main">
         <div class="cards">
           <div class="card" v-for="product in productList" :key="product.id">
@@ -119,7 +117,8 @@
           </div>
       </main> -->
 
-      <div>
+      <!-- Navigation Controller -->
+      <div class="navigation-controller">
         <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top">
           <i class="fa fa-arrow-up"></i>
         </button>
