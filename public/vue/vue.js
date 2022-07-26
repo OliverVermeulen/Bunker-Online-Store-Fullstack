@@ -23,7 +23,7 @@ const Component = {
 
     filteredList() {
       return this.productList.filter((post) => {
-        return post.name.toLowerCase().includes(this.search.toLowerCase());
+        return post.name.price.toLowerCase().includes(this.search.toLowerCase());
       });
     },
   },
