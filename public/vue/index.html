@@ -21,15 +21,9 @@
 
       <!-- Header -->
       <header id="myHeader">
-        <!-- Search -->
-        <!-- <button id="myBtn" class="icon" title="Search">
-          <i class="fa fa-search"></i>
-        </button> -->
+        <div class="header-buttons">
 
-        <div class="search-wrapper">
-          <input type="text" id="searchInput" v-model="search" placeholder="Search title.."/>
-          <button @click="resetInput"><i class="fa fa-close"></i></button>
-        </div>
+        <button onclick="myFunction()" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
 
         <!-- Logo/Home -->
         <a href="/Bunker-Online-Store-Fullstack/public/vue/index.html" title="Home" class="home-link">BUNKER</a>
@@ -38,6 +32,13 @@
         <button class="icon" title="Cart">
           <i class="fa fa-shopping-cart"></i>
         </button>
+      </div>  
+      <div id="searchbar">
+        <div class="search-wrapper">
+          <input type="text" id="searchInput" v-model="search" placeholder="Search.."/>
+          <button @click="resetInput"><i class="fa fa-close"></i></button>
+        </div>
+        </div>
       </header>
 
       <!-- Navbar -->

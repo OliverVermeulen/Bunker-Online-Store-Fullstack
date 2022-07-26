@@ -1,17 +1,26 @@
-// Header functions
-window.onscroll = function () {
-  myFunction();
-};
-let header = document.getElementById("myHeader");
-let sticky = header.offsetTop;
+// // Header functions
+// window.onscroll = function () {
+//   myFunction();
+// };
+// let header = document.getElementById("myHeader");
+// let sticky = header.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add("sticky"); // Add sticky class
+//   } else {
+//     header.classList.remove("sticky"); // Remove sticky class
+//   }
+// };
 
 function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky"); // Add sticky class
+  let searchbar = document.getElementById("searchbar");
+  if (searchbar.style.display === "none") {
+    searchbar.style.display = "block";
   } else {
-    header.classList.remove("sticky"); // Remove sticky class
+    searchbar.style.display = "none";
   }
-};
+}
 
 // Navigation controller functions
 function openNav() { // Open nav

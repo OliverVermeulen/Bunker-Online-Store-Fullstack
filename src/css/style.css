@@ -26,15 +26,17 @@ body {
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   background-color: #f2cc0f;
   color: black;
   padding: 0.4rem 2rem;
   z-index: 1;
   width: 100%;
+}
+header .header-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 header a {
   cursor: pointer;
@@ -58,6 +60,35 @@ header .icon {
   background-color: transparent;
 }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sidenav a {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f2cc0f;
+  display: block;
+  transition: 0.3s;
+  writing-mode: vertical-rl;
+  transform: scale(-1, -1);
+}
+.sidenav a:hover {
+  color: #d3a92a;
+}
+
 main {
   padding: 0.5rem 2rem;
 }
@@ -78,6 +109,10 @@ main .cards {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-bottom: 50px;
 }
+main .card {
+ width: fit-content;
+ margin: 0 auto;
+}
 main .card-img {
   overflow: hidden;
 }
@@ -93,20 +128,6 @@ main .card-info {
   flex-direction: row;
   justify-content: space-evenly;
   padding: 0px 5px;
-}
-.card {
- width: fit-content;
- margin: 0 auto;
-}
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 2rem 0.5rem 2rem;
-  background-color: #f2cc0f;
-  color: black;
-  font-weight: bold;
 }
 
 /* Back to top button */
@@ -158,6 +179,18 @@ footer {
 #previousPage:hover {
   color: black;
   background-color: #f2cc0f;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  background-color: #f2cc0f;
+  color: black;
+  font-weight: bold;
 }
 
 /* Product page */
@@ -240,35 +273,6 @@ footer {
   .view-img {
     width: 120px;
   }
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: black;
-  overflow-x: hidden;
-  transition: 0.5s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.sidenav a {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-style: italic;
-  text-decoration: none;
-  font-size: 25px;
-  color: #f2cc0f;
-  display: block;
-  transition: 0.3s;
-  writing-mode: vertical-rl;
-  transform: scale(-1, -1);
-}
-.sidenav a:hover {
-  color: #d3a92a;
 }
 
 /* Media Query for Mobile Devices */
