@@ -191,27 +191,27 @@ button:active {
 #upBtn {
   position: fixed;
   bottom: 105px;
-  right: 40px;
+  right: 45px;
 }
 #downBtn {
   position: fixed;
   bottom: 45px;
-  right: 40px;
+  right: 45px;
 }
 #openNav {
   position: fixed;
   bottom: 75px;
-  right: 10px;
+  right: 15px;
 }
 #closeNav {
   position: fixed;
   bottom: 75px;
-  right: 70px;
+  right: 75px;
 }
 #previousPage {
   position: fixed;
   bottom: 75px;
-  right: 40px;
+  right: 45px;
   border-radius: 50%;
   color: #f2cc0f;
   background-color: black;
@@ -231,6 +231,7 @@ footer {
   background-color: #f2cc0f;
   color: black;
   font-weight: bold;
+  width: 100%;
 }
 
 /* Product page */
