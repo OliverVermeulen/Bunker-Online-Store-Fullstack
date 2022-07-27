@@ -462,3 +462,37 @@ footer {
     padding: 1.25rem 2rem;
   }
 }
+
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-input {
+  width: 40%;
+  min-width: 250px;
+  height: 40px;
+  outline: none;
+  border: 1px solid black;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  font-size: 25px;
+  padding-bottom: 5px;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.form-button {
+  width: 40%;
+  min-width: 125px;
+  height: 40px;
+  font-size: 25px;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
