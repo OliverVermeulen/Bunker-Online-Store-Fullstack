@@ -124,7 +124,7 @@ header .icon {
 }
 
 main {
-  padding: 0.5rem 2rem;
+  padding: 0rem 2rem;
 }
 main button {
   padding: 0%;
@@ -152,7 +152,7 @@ main .card-img {
 }
 main .card-img img {
   transition: transform 0.8s ease;
-  width: 100%;
+  width: 95%;
 }
 main .card-img:hover img {
   transform: scale(1.18);

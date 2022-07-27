@@ -22,6 +22,6 @@ function topFunction() { // Top of page
   document.documentElement.scrollTop = 0;
 };
 function bottomFunction() { // Bottom of page
-  document.body.scrollTop = 10000;
-  document.documentElement.scrollTop = 10000;
+  document.body.scrollTop = 100000;
+  document.documentElement.scrollTop = 100000;
 };
