@@ -3,7 +3,7 @@
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'root'); // Input own credentials
-define('DB_NAME', 'library'); // Database used's name is library
+define('DB_NAME', 'bunker'); // Database used's name is library
  
 /* Attempt to connect to MySQL database */
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);

@@ -1,7 +1,6 @@
 
 <?php
 // Include config file
-// include ("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/Model/db.php");
 include ("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/Model/db.php");
 
 // Define variables and initialize with empty values

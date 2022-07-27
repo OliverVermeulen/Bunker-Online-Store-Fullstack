@@ -468,10 +468,11 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1rem;
 }
 
 .form-input {
-  width: 40%;
+  width: 30%;
   min-width: 250px;
   height: 40px;
   outline: none;
@@ -489,10 +490,21 @@ footer {
 }
 
 .form-button {
-  width: 40%;
-  min-width: 125px;
+  width: 25%;
+  min-width: 200px;
   height: 40px;
   font-size: 25px;
   font-style: italic;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #f2cc0f;
+  background-color: black;
+  border: 1px solid #f2cc0f;
+  transition: 0.5s;
+  margin-bottom: 1rem;  
+  cursor: pointer;
+}
+.form-button:hover {
+  background-color: #f2cc0f;
+  color: black;
+  border: 1px solid black;
 }
