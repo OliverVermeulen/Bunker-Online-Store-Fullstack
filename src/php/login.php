@@ -4,12 +4,12 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: /sql-user-authentication-app/index.php");
+    header("location: /Bunker-Online-Store-Fullstack/");
     exit;
 }
 
 // Include config file
-require_once "/MAMP/htdocs/sql-user-authentication-app/src/include/config.inc.php";
+include ("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/Model/db.php");
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -86,4 +86,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Close connection
     mysqli_close($link);
 }
-header('Location: /Bunker-Online-Store-Fullstack/');
+?>
