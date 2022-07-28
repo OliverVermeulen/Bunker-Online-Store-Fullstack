@@ -13,16 +13,45 @@
     <script src="/Bunker-Online-Store-Fullstack/src/js/vue.js" type="module" defer></script>
   </head>
   <body>
+    <header id="myHeader">
+      <div class="header-buttons">
+      <button onclick="myFunction()" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
+      <!-- Logo/Home -->
+      <a href="/Bunker-Online-Store-Fullstack/" title="Home" class="home-link">BUNKER</a>
+      <!-- Cart -->
+      <button class="icon" title="Cart">
+        <i class="fa fa-shopping-cart"></i>
+      </button>
+    </div>
+    <div id="searchbar" style="display: none;">
+      <div class="searchbar">
+        <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.." autocomplete="off"/>
+        <button @click="resetInput" class="input-button" title="Clear Search">CLEAR</button>
+      </div>  
+    </div>
+    </header>
+
     <div class="about">
       <div class="map-responsive">
         <iframe src="https://maps.google.com/maps?q=167%20Longmarket%20St%20Cape%20Town%20City%20Centre%20Cape%20Town%208000&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
+
+        <div class="grid-container">
+          <div class="grid-item"><img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-1.jpg" alt=""></div>
+          <div class="grid-item"><img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-2.jpg" alt=""></div>
+          <div class="grid-item"><img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-3.jpg" alt=""></div>  
+          <div class="grid-item"><img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-4.jpg" alt=""></div>
+        </div>
+
+        <div class="company-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, fugiat aliquid saepe possimus, veniam, quis est in veritatis nostrum distinctio voluptates quaerat. Repellendus delectus similique hic cum aspernatur ipsam rerum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus ipsa quos reprehenderit illum debitis impedit incidunt excepturi similique culpa minima dolorum explicabo beatae fugiat consequatur, dicta itaque nostrum necessitatibus cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dignissimos eligendi quas temporibus sit explicabo nulla odio repellat atque esse amet, libero veniam veritatis sapiente et quibusdam accusamus quo inventore?
+        </div>
     </div>
+
     <footer class="footer">
       <div class="trademarks">
         <span>BUNKER®</span>
       </div>
-
       <div div="extra-information">
         <span>R ZAR</span>
         <span>|</span>
