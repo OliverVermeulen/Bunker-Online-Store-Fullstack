@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepare an update statement
         $sql = "UPDATE users SET password = ? WHERE id = ?";
         
-        if($stmt = $mysqli->prepare($sql)){
+        if($stmt = $link->prepare($sql)){
             // Bind variables to the prepared statement as parameters
             $stmt->bind_param("si", $param_password, $param_id);
             
@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if($stmt->execute()){
                 // Password updated successfully. Destroy the session, and redirect to login page
                 session_destroy();
-                header("location: login.php");
+                header('Location: /Bunker-Online-Store-Fullstack/src/pages/login.html');
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -66,6 +66,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Close connection
-    $mysqli->close();
+    $link->close();
 }
-?>
