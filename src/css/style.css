@@ -510,15 +510,25 @@ footer {
 }
 
 .company-staff {
-  max-width: 900px;
+  width: 410px;
   margin: 0 auto;
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
 }
 .staff-card {
   width: fit-content;
+  height: 300px;
 }
 .staff-card img {
-  width: 100%;
+  width: 200px;
+  height: 300px;
+}
+
+.company {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
 }
