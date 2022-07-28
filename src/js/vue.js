@@ -27,10 +27,13 @@ const Component = {
       let result = this.productList.filter((post) => {
         return post.name.toLowerCase().includes(this.search.toLowerCase());
       });
-      let productId = parseInt(window.location.search.substr(1).split("=")[1], 10);
-      console.log(productId);
-      if (productId) {
-        result = result.filter((product) => {return parseInt(product.id, 10) === productId})
+      let queryParams = window.location.search.substr(1).split("=")
+      if (queryParams[0] === "product_id") {
+        let productId = parseInt(queryParams[1], 10);
+         result = result.filter((product) => {return parseInt(product.id, 10) === productId})
+      }
+      if (queryParams[0] === "product_type") {
+          result = result.filter((product) => {return product.type === queryParams[1]})
       }
       return result;
     },
