@@ -24,9 +24,15 @@ const Component = {
       return filterType("accessories", this.productList);
     },
     filteredList() {
-      return this.productList.filter((post) => {
+      let result = this.productList.filter((post) => {
         return post.name.toLowerCase().includes(this.search.toLowerCase());
       });
+      let productId = parseInt(window.location.search.substr(1).split("=")[1], 10);
+      console.log(productId);
+      if (productId) {
+        result = result.filter((product) => {return parseInt(product.id, 10) === productId})
+      }
+      return result;
     },
   },
   methods: {

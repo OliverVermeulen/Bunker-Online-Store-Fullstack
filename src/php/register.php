@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check input errors before inserting in database
     if (empty($name_err) && empty($username_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)) {
 
-        // Prepare an insert statement
+        // Preparing an insert statement
         $sql = "INSERT INTO users (name, username, email, password) VALUES (?, ?, ?, ?)";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
                 // Redirect to login page
-                header("location: /Bunker-Online-Store-Fullstack/");
+                header("location: /Bunker-Online-Store-Fullstack/src/pages/login.html");
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }

@@ -41,9 +41,18 @@
 
       <!-- Navbar -->
       <div id="mySidenav" class="sidenav">
-        <a href="#" title="Tops">Tops</a>
-        <a href="#" title="Bottoms">Bottoms</a>
-        <a href="#" title="Accessories">Accessories</a>
+        <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
+          <input type="hidden" value="top" name="product_type" />
+        <button  href="#" title="Tops">Tops</button>
+        </form>
+        <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
+          <input type="hidden" value="bottom" name="product_type" />
+          <button href="#" title="Bottoms">Bottoms</button>
+        </form>
+          <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
+            <input type="hidden" value="accessory" name="product_type" />
+            <button title="Accessories">Accessories</button>
+          </form>
         <a href="/Bunker-Online-Store-Fullstack/src/pages/about-us.html" title="About Us">About Us</a>
         <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account">Account</a>
       </div>

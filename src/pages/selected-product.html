@@ -53,10 +53,13 @@
           </div>
           <img id="product-img" :src="product.image" class="product-img" />
           <div class="product-order-form">
-            <form class="order-form">
+            <form action="/Bunker-Online-Store-Fullstack/src/php/cart.php" method="post" class="order-form">
               <p class="detail"><span class="label">NAME:</span>{{product.name}}</p>
               <p class="detail"><span class="label">BRAND:</span>{{product.brand}}</p>
               <p class="detail"><span class="label">PRICE:</span>R {{product.price}}.00</p>
+              <input type="hidden" :value="product.id" name="product_id">
+              <input type="hidden" :value="product.name" name="product_name">
+              <input type="hidden" :value="product.price" name="product_price">
               <button type="submit" class="product-btn" title="Add to cart">ADD TO CART</button>
             </form>
           </div>
