@@ -508,3 +508,20 @@ footer {
   color: black;
   border: 1px solid black;
 }
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:500px;
+  max-width: 600px;
+  min-width: 300px;
+  position:relative;
+  height:0;
+  margin: 0 auto;
+}
+
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
