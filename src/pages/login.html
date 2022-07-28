@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUNKER® - REGISTER</title>
+    <title>BUNKER® - SIGN IN</title>
     <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/bunker-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
@@ -23,21 +23,12 @@
       </div>
     </header>
     <account>
-      <form action="/Bunker-Online-Store-Fullstack/src/php/register.php" method="post" class="account-form">
-          <label class="form-label">Name</label>
-          <input type="text" name="name" class="form-input" required /> 
-
-          <label class="form-label">Username</label>
-          <input type="text" name="username" class="form-input" required />
-
-          <!-- <label class="form-label">Email</label>
-          <input type="email" name="email" class="form-input" required />  -->
+      <form action="/Bunker-Online-Store-Fullstack/src/php/login.php" method="post" class="account-form">
+          <label class="form-label">Email</label>
+          <input type="email" name="email" class="form-input" required /> 
 
           <label class="form-label">Password</label>
           <input type="password" name="password" class="form-input" required />
-
-          <label class="form-label">Confirm Password</label>
-          <input type="password" name="confirm_password" class="form-input" required />
 
           <input type="submit" value="Submit" class="form-button" />
           <input type="reset" value="Reset" class="form-button" />
