@@ -508,3 +508,17 @@ footer {
   color: black;
   border: 1px solid black;
 }
+
+.company-staff {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.staff-card {
+  width: fit-content;
+}
+.staff-card img {
+  width: 100%;
+}
