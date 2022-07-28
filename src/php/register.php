@@ -108,4 +108,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Close connection
     mysqli_close($link);
 }
-header('Location: /Bunker-Online-Store-Fullstack/');
+header('Location: /Bunker-Online-Store-Fullstack/src/pages/login.html');
