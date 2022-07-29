@@ -177,7 +177,64 @@ button:active {
   transform: scale(0.95);
 }
 
-/* Back to top button */
+/* Account Sign -In, -Out, -Register and change password pages */
+.account {
+  background-color: #f2cc0f;
+  width: 45%;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.account .account-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.account .form-input {
+  width: 75%;
+  min-width: 250px;
+  height: 40px;
+  outline: none;
+  border: 1px solid black;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
+.account .form-label {
+  font-size: 25px;
+  padding-bottom: 5px;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.account .account-form-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.account .form-button {
+  width: 20%;
+  min-width: 110px;
+  height: 40px;
+  font-size: 25px;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #f2cc0f;
+  background-color: black;
+  border: 1px solid #f2cc0f;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.account .form-button:hover {
+  background-color: #f2cc0f;
+  color: black;
+  border: 1px solid black;
+}
+.account p {
+  text-align: center;
+}
+
+/* Navigation controller */
 .navigation-btn {
   border: none;
   outline: none;
@@ -195,26 +252,31 @@ button:active {
   background-color: black;
   color: #f2cc0f;
 }
+/* Top of page */
 #upBtn {
   position: fixed;
   bottom: 105px;
   right: 45px;
 }
+/* Bottom of page */
 #downBtn {
   position: fixed;
   bottom: 45px;
   right: 45px;
 }
+/* Open nav */
 #openNav {
   position: fixed;
   bottom: 75px;
   right: 15px;
 }
+/* Close nav */
 #closeNav {
   position: fixed;
   bottom: 75px;
   right: 75px;
 }
+/* Previous page */
 #previousPage {
   position: fixed;
   bottom: 75px;
@@ -241,7 +303,7 @@ footer {
   width: 100%;
 }
 
-/* Product page */
+/* selected-product page */
 .product {
   display: flex;
   flex-direction: row;
@@ -468,58 +530,6 @@ footer {
   main {
     padding: 1.25rem 2rem;
   }
-}
-
-.account {
-  background-color: #f2cc0f;
-  width: 45%;
-  min-width: 300px;
-  margin: 0 auto;
-  padding: 1rem 0;
-}
-
-.account-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-input {
-  width: 75%;
-  min-width: 250px;
-  height: 40px;
-  outline: none;
-  border: 1px solid black;
-  font-size: 16px;
-  padding: 10px;
-  margin-bottom: 2rem;
-}
-
-.form-label {
-  font-size: 25px;
-  padding-bottom: 5px;
-  font-style: italic;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
-
-.form-button {
-  width: 25%;
-  min-width: 200px;
-  height: 40px;
-  font-size: 25px;
-  font-style: italic;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: #f2cc0f;
-  background-color: black;
-  border: 1px solid #f2cc0f;
-  transition: 0.5s;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-.form-button:hover {
-  background-color: #f2cc0f;
-  color: black;
-  border: 1px solid black;
 }
 
 .about {
