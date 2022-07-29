@@ -59,13 +59,13 @@ header .icon {
   border: none;
   background-color: transparent;
 }
-.searchbar {
+header .searchbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 10px 0px;
 }
-.search-input {
+header .search-input {
   width: 40%;
   min-width: 250px;
   height: 40px;
@@ -75,9 +75,9 @@ header .icon {
   font-size: 15px;
   padding: 10px;
 }
-.input-button {
-  color: black;
-  background-color: #f2cc0f;
+header .input-button {
+  background-color: black;
+  color: #f2cc0f;
   border: 1px solid black;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   width: 10%;
@@ -90,8 +90,8 @@ header .icon {
   transition: 0.5s;
 }
 .input-button:hover {
-  background-color: black;
-  color: #f2cc0f;
+  color: black;
+  background-color: #f2cc0f;
 }
 
 .sidenav {
@@ -121,6 +121,13 @@ header .icon {
 }
 .sidenav a:hover {
   color: #d3a92a;
+}
+.sidenav .type-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 main {
@@ -463,7 +470,6 @@ footer {
   }
 }
 
-
 .account-form {
   display: flex;
   flex-direction: column;
@@ -486,7 +492,7 @@ footer {
   font-size: 25px;
   padding-bottom: 5px;
   font-style: italic;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .form-button {
@@ -495,12 +501,12 @@ footer {
   height: 40px;
   font-size: 25px;
   font-style: italic;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: #f2cc0f;
   background-color: black;
   border: 1px solid #f2cc0f;
   transition: 0.5s;
-  margin-bottom: 1rem;  
+  margin-bottom: 1rem;
   cursor: pointer;
 }
 .form-button:hover {
@@ -514,25 +520,25 @@ footer {
   min-width: 300px;
   margin: 0 auto;
 }
-.map-responsive{
-  overflow:hidden;
-  padding-bottom:500px;
-  position:relative;
-  height:0;
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 500px;
+  position: relative;
+  height: 0;
   margin: 0 auto;
 }
-.map-responsive iframe{
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:absolute;
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUNKER®</title>
+    <title>BUNKER® - TYPE</title>
     <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/store/bunker-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
@@ -43,23 +43,24 @@
       </header>
 
       <!-- Navbar -->
-      <div id="mySidenav" class="sidenav">
+      <nav id="mySidenav" class="sidenav">
         <!-- Filter products by tops -->
         <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
           <input type="hidden" value="top" name="product_type" />
-          <button href="#" title="Tops">Tops</button>
+          <button title="Tops" class="type-button"><a>Tops</a></button>
+          <!-- <a type="submit" title="Tops">Tops</a> -->
         </form>
 
         <!-- Filter products by bottoms -->
         <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
           <input type="hidden" value="bottom" name="product_type" />
-          <button href="#" title="Bottoms">Bottoms</button>
+          <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
         </form>
 
         <!-- Filter products by accessories -->
         <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
           <input type="hidden" value="accessory" name="product_type" />
-          <button title="Accessories">Accessories</button>
+          <button title="Accessories" class="type-button"><a>Accessories</a></button>
         </form>
 
         <!-- About Us page -->
@@ -67,7 +68,7 @@
 
         <!-- Account page -->
         <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account" >Account</a>
-      </div>
+      </nav>
 
       <!-- Main -->
       <main id="main" class="main">

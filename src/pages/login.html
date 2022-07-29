@@ -22,7 +22,34 @@
       </div>
     </header>
 
+    <!-- Navbar -->
+    <nav id="mySidenav" class="sidenav">
+      <!-- Filter products by tops -->
+      <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+        <input type="hidden" value="top" name="product_type" />
+        <button title="Tops" class="type-button"><a>Tops</a></button>
+        <!-- <a type="submit" title="Tops">Tops</a> -->
+      </form>
 
+      <!-- Filter products by bottoms -->
+      <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+        <input type="hidden" value="bottom" name="product_type" />
+        <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
+      </form>
+
+      <!-- Filter products by accessories -->
+      <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+        <input type="hidden" value="accessory" name="product_type" />
+        <button title="Accessories" class="type-button"><a>Accessories</a></button>
+      </form>
+
+      <!-- About Us page -->
+      <a href="/Bunker-Online-Store-Fullstack/src/pages/about-us.html" title="About Us">About Us</a>
+
+      <!-- Account page -->
+      <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account" >Account</a>
+    </nav>
+    
     <account>
       <form action="/Bunker-Online-Store-Fullstack/src/php/login.php" method="post" class="account-form">
           <label class="form-label">Username</label>
