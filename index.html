@@ -21,50 +21,64 @@
 
       <!-- Header -->
       <header id="myHeader">
+        <!-- Buttons/Links -->
         <div class="header-buttons">
-        <button onclick="myFunction()" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
-        <!-- Logo/Home -->
-        <a href="/Bunker-Online-Store-Fullstack/" title="Home" class="home-link">BUNKER</a>
-        <!-- Cart -->
-        <button class="icon" title="Cart">
-          <i class="fa fa-shopping-cart"></i>
-        </button>
-      </div>
+          <!-- Toggle searchbar -->
+          <button onclick="myFunction()" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
 
-      <div id="searchbar" style="display: none;">
-        <div class="searchbar">
-          <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.." autocomplete="off"/>
-          <button @click="resetInput" class="input-button" title="Clear Search">CLEAR</button>
-        </div>  
-      </div>
+          <!-- Logo/Home -->
+          <a href="/Bunker-Online-Store-Fullstack/" title="Home" class="home-link">BUNKER</a>
+
+          <!-- Cart -->
+          <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
+        </div>
+
+        <!-- Searchbar -->
+        <div id="searchbar" style="display: none">
+          <div class="searchbar">
+            <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.." autocomplete="off" />
+            <button @click="resetInput" class="input-button" title="Clear Search">CLEAR</button>
+          </div>
+        </div>
       </header>
 
       <!-- Navbar -->
       <div id="mySidenav" class="sidenav">
-        <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
+        <!-- Filter products by tops -->
+        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
           <input type="hidden" value="top" name="product_type" />
-        <button  href="#" title="Tops">Tops</button>
+          <button href="#" title="Tops">Tops</button>
         </form>
-        <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
+
+        <!-- Filter products by bottoms -->
+        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
           <input type="hidden" value="bottom" name="product_type" />
           <button href="#" title="Bottoms">Bottoms</button>
         </form>
-          <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
-            <input type="hidden" value="accessory" name="product_type" />
-            <button title="Accessories">Accessories</button>
-          </form>
+
+        <!-- Filter products by accessories -->
+        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+          <input type="hidden" value="accessory" name="product_type" />
+          <button title="Accessories">Accessories</button>
+        </form>
+
+        <!-- About Us page -->
         <a href="/Bunker-Online-Store-Fullstack/src/pages/about-us.html" title="About Us">About Us</a>
-        <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account">Account</a>
+
+        <!-- Account page -->
+        <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account" >Account</a>
       </div>
 
       <!-- Main -->
       <main id="main" class="main">
         <div class="cards">
+          <!-- Vue data loop -->
           <div class="card" v-for="product in filteredList" :key="product.id">
+            <!-- Filter by selected product -->
             <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
               <input type="hidden" :value="product.id" name="product_id" />
               <button class="card-img" type="submit" :title="product.name">
-                <img :src="product.image" :alt="product.name"/>
+                <img :src="product.image" :alt="product.name" />
               </button>
             </form>
             <div class="card-info">
@@ -75,81 +89,32 @@
         </div>
       </main>
 
-      <!-- <main id="main" class="main">
-        <div class="cards">
-          <div class="card" v-for="product in productList" :key="product.id">
-            <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
-              <input type="hidden" :value="product.id" name="product_id" />
-              <button class="card-img" type="submit" :title="product.name">
-                <img :src="product.image" :alt="product.name" style="width: 100%"/>
-              </button>
-            </form>
-            <div class="card-info">
-              <h4>{{product.name}}</h4>
-              <p>R {{product.price}}.00</p>
-            </div>
-          </div>
-        </div>
-      </main> -->      
-
-      <!-- <main id="main" class="main">
-        <button @click="awesome = !awesome">Toggle</button>
-          <div class="cards" v-if="awesome">
-            <div class="card" v-for="product in topList" :key="product.id">
-              <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
-                <input type="hidden" :value="product.id" name="product_id" />
-                <button class="card-img" type="submit" :title="product.name">
-                  <img :src="product.image" :alt="product.name" style="width: 100%"/>
-                </button>
-              </form>
-              <div class="card-info">
-                <h4>{{product.name}}</h4>
-                <p>R {{product.price}}.00</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="cards" v-else>
-            <div class="card" v-for="product in bottomList" :key="product.id">
-              <form action="/Bunker-Online-Store-Fullstack/src/pages/view-page.php">
-                <input type="hidden" :value="product.id" name="product.id" />
-                <button class="card-img" type="submit" :title="product.name">
-                  <img :src="product.image" :alt="product.name" style="width: 100%"/>
-                </button>
-              </form>
-              <div class="card-info">
-                <h4>{{product.name}}</h4>
-                <p>R {{product.price}}.00</p>
-              </div>
-            </div>
-          </div>
-      </main> -->
-
       <!-- Navigation Controller -->
       <div class="navigation-controller">
-        <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top">
-          <i class="fa fa-arrow-up"></i>
-        </button>
-        <button onclick="bottomFunction()" id="downBtn" class="navigation-btn" title="To bottom">
-          <i class="fa fa-arrow-down"></i>
-        </button>
-        <button onclick="openNav()" id="openNav" class="navigation-btn" title="Open Navbar">
-          <i class="fa fa-arrow-right" class="icon"></i>
-        </button>
-        <button onclick="closeNav()" id="closeNav" class="navigation-btn" title="Close Navbar">
-          <i class="fa fa-arrow-left"></i>
-        </button>
-        <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back">
-          <i class="fa fa-close"></i>
-        </button>
+        <!-- Top of page -->
+        <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top"><i class="fa fa-arrow-up"></i></button>
+
+        <!-- Bottom of page -->
+        <button onclick="bottomFunction()" id="downBtn" class="navigation-btn" title="To bottom"><i class="fa fa-arrow-down"></i></button>
+
+        <!-- Open Navbar -->
+        <button onclick="openNav()" id="openNav" class="navigation-btn" title="Open Navbar"><i class="fa fa-arrow-right" class="icon"></i></button>
+
+        <!-- Close Navbar -->
+        <button onclick="closeNav()" id="closeNav" class="navigation-btn" title="Close Navbar"><i class="fa fa-arrow-left"></i></button>
+
+        <!-- Previous page -->
+        <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back"><i class="fa fa-close"></i></button>
       </div>
 
       <!-- Footer -->
       <footer class="footer">
+        <!-- Trademarks -->
         <div class="trademarks">
           <span>BUNKER®</span>
         </div>
 
+        <!-- Extra Info -->
         <div div="extra-information">
           <span>R ZAR</span>
           <span>|</span>

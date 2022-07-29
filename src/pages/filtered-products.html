@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUNKER® - PRODUCT</title>
+    <title>BUNKER®</title>
     <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/store/bunker-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
@@ -24,13 +24,21 @@
         <!-- Buttons/Links -->
         <div class="header-buttons">
           <!-- Toggle searchbar -->
-          <button type="disabled" class="icon" title="Disabled"><i class="fa fa-search"></i></button>
+          <button onclick="myFunction()" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
 
           <!-- Logo/Home -->
           <a href="/Bunker-Online-Store-Fullstack/" title="Home" class="home-link">BUNKER</a>
 
           <!-- Cart -->
-          <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
+          <button class="icon" title="Cart" title="My Cart"><i class="fa fa-shopping-cart"></i></button>
+        </div>
+
+        <!-- Searchbar -->
+        <div id="searchbar" style="display: none">
+          <div class="searchbar">
+            <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.." autocomplete="off" />
+            <button @click="resetInput" class="input-button" title="Clear Search">CLEAR</button>
+          </div>
         </div>
       </header>
 
@@ -61,30 +69,22 @@
         <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account" >Account</a>
       </div>
 
-      <main id="main">
-        <div class="product" v-for="product in filteredList" :key="product.id">
-          <!-- Product-images -->
-          <div class="change-view-buttons">
-            <button onclick="document.getElementById('myImage').src='product.image'"><img :src="product.image" class="view-img" /></button>
-
-            <button onclick="document.getElementById('myImage').src='product.alt_view_image'"><img :src="product.alt_view_image" class="view-img" /></button>
-          </div>
-          <img id="product-img" :src="product.image" class="product-img" />
-
-          <!-- Product details -->
-          <div class="product-order-form">
-            <form action="/Bunker-Online-Store-Fullstack/src/php/cart.php" method="post" class="order-form">
-              <!-- Visible information -->
-              <p class="detail"><span class="label">NAME:</span>{{product.name}}</p>
-              <p class="detail"><span class="label">BRAND:</span>{{product.brand}}</p>
-              <p class="detail"><span class="label">PRICE:</span>R {{product.price}}.00</p>
-
-              <!-- Form data -->
-              <input type="hidden" :value="product.id" name="product_id">
-              <input type="hidden" :value="product.name" name="product_name">
-              <input type="hidden" :value="product.price" name="product_price">
-              <button type="submit" class="product-btn" title="Add to cart">ADD TO CART</button>
+      <!-- Main -->
+      <main id="main" class="main">
+        <div class="cards">
+          <!-- Vue data loop -->
+          <div class="card" v-for="product in filteredList" :key="product.id">
+            <!-- Filter by selected product -->
+            <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
+              <input type="hidden" :value="product.id" name="product_id" />
+              <button class="card-img" type="submit" :title="product.name">
+                <img :src="product.image" :alt="product.name" />
+              </button>
             </form>
+            <div class="card-info">
+              <h4>{{product.name}}</h4>
+              <p>R {{product.price}}.00</p>
+            </div>
           </div>
         </div>
       </main>

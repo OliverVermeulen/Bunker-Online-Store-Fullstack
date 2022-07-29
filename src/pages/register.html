@@ -15,62 +15,90 @@
 <body>
   <div id="app">
     <header id="myHeader">
+      <!-- Buttons/Links -->
       <div class="header-buttons">
-        <button type="disabled" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
+        <!-- Toggle searchbar -->
+        <button type="disabled" class="icon" title="Disabled"><i class="fa fa-search"></i></button>
+
+        <!-- Logo/Home -->
         <a href="/Bunker-Online-Store-Fullstack/" title="Home" class="home-link">BUNKER</a>
+
+        <!-- Cart -->
         <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
       </div>
+
+      <!-- Searchbar -->
+      <div id="searchbar" style="display: none">
+        <div class="searchbar">
+          <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.." autocomplete="off" />
+          <button @click="resetInput" class="input-button" title="Clear Search">CLEAR</button>
+        </div>
+      </div>
     </header>
+
+
     <account>
+      <!-- Register account form -->
       <form action="/Bunker-Online-Store-Fullstack/src/php/register.php" method="post" class="account-form">
-          <label class="form-label">Name</label>
-          <input type="text" name="name" class="form-input" required /> 
+        <!-- Name input -->
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-input" required /> 
 
-          <label class="form-label">Username</label>
-          <input type="text" name="username" class="form-input" required />
+        <!-- Username input -->
+        <label class="form-label">Username</label>
+        <input type="text" name="username" class="form-input" required />
 
-          <label class="form-label">Email</label>
-          <input type="email" name="email" class="form-input" required /> 
+        <!-- Email input -->
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-input" required /> 
 
-          <label class="form-label">Password</label>
-          <input type="password" name="password" class="form-input" required />
+        <!-- Password input -->
+        <label class="form-label">Password</label>
+        <input type="password" name="password" class="form-input" required />
 
-          <label class="form-label">Confirm Password</label>
-          <input type="password" name="confirm_password" class="form-input" required />
+        <!-- Confirm Password -->
+        <label class="form-label">Confirm Password</label>
+        <input type="password" name="confirm_password" class="form-input" required />
 
-          <input type="submit" value="Submit" class="form-button" />
-          <input type="reset" value="Reset" class="form-button" />
+        <!-- Submit form -->
+        <input type="submit" value="Submit" class="form-button" />
+
+        <!-- Clear form -->
+        <input type="reset" value="Reset" class="form-button" />
       </form>
-  </account>
+    </account>
 
-  <div class="navigation-controller">
-    <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top">
-      <i class="fa fa-arrow-up"></i>
-    </button>
-    <button onclick="bottomFunction()" id="downBtn" class="navigation-btn" title="To bottom">
-      <i class="fa fa-arrow-down"></i>
-    </button>
-    <button onclick="openNav()" id="openNav" class="navigation-btn" title="Open Navbar">
-      <i class="fa fa-arrow-right" class="icon"></i>
-    </button>
-    <button onclick="closeNav()" id="closeNav" class="navigation-btn" title="Close Navbar">
-      <i class="fa fa-arrow-left"></i>
-    </button>
-    <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back">
-      <i class="fa fa-close"></i>
-    </button>
-  </div>
+      <!-- Navigation Controller -->
+      <div class="navigation-controller">
+        <!-- Top of page -->
+        <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top"><i class="fa fa-arrow-up"></i></button>
 
-  <footer class="footer">
-    <div class="trademarks">
-      <span>BUNKER®</span>
-    </div>
+        <!-- Bottom of page -->
+        <button onclick="bottomFunction()" id="downBtn" class="navigation-btn" title="To bottom"><i class="fa fa-arrow-down"></i></button>
 
-    <div div="extra-information">
-      <span>R ZAR</span>
-      <span>|</span>
-      <span>Help <i class="fa fa-gear"></i></span>
-    </div>
-  </footer>
+        <!-- Open Navbar -->
+        <button onclick="openNav()" id="openNav" class="navigation-btn" title="Open Navbar"><i class="fa fa-arrow-right" class="icon"></i></button>
+
+        <!-- Close Navbar -->
+        <button onclick="closeNav()" id="closeNav" class="navigation-btn" title="Close Navbar"><i class="fa fa-arrow-left"></i></button>
+
+        <!-- Previous page -->
+        <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back"><i class="fa fa-close"></i></button>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <!-- Trademarks -->
+        <div class="trademarks">
+          <span>BUNKER®</span>
+        </div>
+
+        <!-- Extra Info -->
+        <div div="extra-information">
+          <span>R ZAR</span>
+          <span>|</span>
+          <span>Help <i class="fa fa-gear"></i></span>
+        </div>
+      </footer>
   </div>
 </body>
