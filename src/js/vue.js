@@ -13,6 +13,7 @@ const Component = {
       search: "",
       productList: productArray,
       awesome: true,
+      all : null
     };
   },
   computed: {
@@ -48,7 +49,7 @@ const Component = {
   },
   mounted() {
     axios.get('public/product-data/all') 
-.then(response => (this.all = response.data))
+    .then(response => (this.all = response.data))
   }
 };
 

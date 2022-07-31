@@ -15,6 +15,11 @@ $app->addRoutingMiddleware();
 $app->add(new BasePathMiddleware($app));
 $app->addErrorMiddleware(true, true, true);
 
+// $app->get('/', function (Request $request, Response $response, $args) {
+//     $response->getBody()->write("Hello world!");
+//     return $response;
+// });
+
 $app->get('/product-data/all', function (Request $request, Response $response) {
     $sql = "SELECT * FROM products";
 
