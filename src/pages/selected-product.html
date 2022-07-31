@@ -62,9 +62,9 @@
         <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account" >Account</a>
       </nav>
 
-      <main id="main">
+      <!-- <main id="main">
         <div class="product" v-for="product in filteredList" :key="product.id">
-          <!-- Product-images -->
+           Product-images 
           <div class="change-view-buttons">
             <button onclick="document.getElementById('myImage').src='product.image'"><img :src="product.image" class="view-img" /></button>
 
@@ -73,28 +73,48 @@
           <img id="product-img" :src="product.image" class="product-img" />
 
           
-        <!-- <button @click="toggle">toggle</button>
+         <button @click="toggle">toggle</button>
         <button @click="toggle">toggle</button>
         <h1 v-if="awesome"><img :src="product.image" class="product-img" /></h1>
-        <h1 v-else><img :src="product.alt_view_image" class="product-img" /></h1> -->
+        <h1 v-else><img :src="product.alt_view_image" class="product-img" /></h1>
 
-          <!-- Product details -->
+           Product details
           <div class="product-order-form">
             <form action="/Bunker-Online-Store-Fullstack/src/php/cart.php" method="post" class="order-form">
-              <!-- Visible information -->
+               Visible information
               <p class="detail"><span class="label">NAME:</span>{{product.name}}</p>
               <p class="detail"><span class="label">BRAND:</span>{{product.brand}}</p>
               <p class="detail"><span class="label">PRICE:</span>R {{product.price}}.00</p>
 
-              <!-- Form data -->
+               Form data
               <input type="hidden" :value="product.id" name="product_id">
               <input type="hidden" :value="product.name" name="product_name">
               <input type="hidden" :value="product.price" name="product_price">
-              <input type="hidden" :value="product.image" name="product_image">
               <button type="submit" class="product-btn" title="Add to cart">ADD TO CART</button>
             </form>
           </div>
         </div>
+      </main> -->
+
+      <main id="main">
+        <div class="product" v-for="product in filteredList" :key="product.id">
+            <img :src="product.alt_view_image" :alt="product.name" class="select-page-image">
+        
+        <div class="order-form">
+          <form action="/Bunker-Online-Store-Fullstack/src/php/cart.php" method="post" class="order-form">
+            <!-- Visible information -->
+            <p class="detail"><span class="label">NAME:</span>{{product.name}}</p>
+            <p class="detail"><span class="label">BRAND:</span>{{product.brand}}</p>
+            <p class="detail"><span class="label">PRICE:</span>R {{product.price}}.00</p>
+
+            <!-- Form data -->
+            <input type="hidden" :value="product.id" name="product_id">
+            <input type="hidden" :value="product.name" name="product_name">
+            <input type="hidden" :value="product.price" name="product_price">
+            <input type="hidden" :value="product.image" name="product_image">
+            <button type="submit" class="product-btn" title="Add to cart">ADD TO CART</button>
+          </form>
+        </div></div>
       </main>
 
       <!-- Navigation Controller -->
