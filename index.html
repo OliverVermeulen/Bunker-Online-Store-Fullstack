@@ -72,9 +72,23 @@
 
       <!-- Main -->
       <main id="main" class="main">
+        <p class="section-heading">Coming Soon</p>
+        <div class="cards">
+          <div class="content" v-for="product in productList.slice(15, 18)" :key="product.id">
+              <div class="content-overlay"></div>
+              <img class="content-image" :src="product.image">
+              <div class="content-details fadeIn-top">
+                <p>{{product.name}}</p>
+                <p>{{product.brand}}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <p class="section-heading">All Products</p>
         <div class="cards">
           <!-- Vue data loop -->
-          <div class="card" v-for="product in filteredList" :key="product.id">
+          <div class="card" v-for="product in filteredList.slice(0, 15)" :key="product.id">
             <!-- Filter by selected product -->
             <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
               <input type="hidden" :value="product.id" name="product_id" />

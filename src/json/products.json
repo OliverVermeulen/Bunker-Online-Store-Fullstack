@@ -6,7 +6,9 @@
         "brand": "Supreme",        
         "price" : "700",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/t-shirt.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/t-shirt-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/t-shirt-alt-view.png",
+        "released" : true,
+        "featured" : true
     },
     {
         "id" : "02",
@@ -15,7 +17,9 @@
         "brand": "Off-White",        
         "price" : "22000",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/camo-jacket.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/camo-jacket-alt-view.jpg"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/camo-jacket-alt-view.jpg",
+        "released" : true,
+        "featured" : false
     },
     {
         "id" : "03",
@@ -24,7 +28,9 @@
         "brand": "Stone Island",        
         "price" : "10600",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/cotton-dyed-jacket.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/cotton-dyed-jacket-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/cotton-dyed-jacket-alt-view.png",
+        "released" : true,
+        "featured" : false
     },
     {
         "id" : "04",
@@ -33,7 +39,9 @@
         "brand": "Vans",        
         "price" : "1500",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/hoodie.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/hoodie-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/hoodie-alt-view.png",
+        "released" : true,
+        "featured" : false
     },    
     {
         "id" : "05",
@@ -42,7 +50,9 @@
         "brand": "Bape",        
         "price" : "5670",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/chambray-shirt.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/chambray-shirt-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/chambray-shirt-alt-view.png",
+        "released" : true,
+        "featured" : false
     },
     {
         "id" : "06",
@@ -51,7 +61,9 @@
         "brand": "Supreme",        
         "price" : "3050",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/jean.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/jean-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/jean-alt-view.png",
+        "released" : true,
+        "featured" : false
     },
     {
         "id" : "07",
@@ -60,7 +72,9 @@
         "brand": "Off-White",        
         "price" : "7500",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/denim-short.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/denim-short-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/denim-short-alt-view.png",
+        "released" : true,
+        "featured" : true
     },
     {
         "id" : "08",
@@ -69,7 +83,9 @@
         "brand": "Stone Island",        
         "price" : "4440",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/canvas-trousers.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/canvas-trousers-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/canvas-trousers-alt-view.png",
+        "released" : true,
+        "featured" : false
     },
     {
         "id" : "09",
@@ -78,7 +94,9 @@
         "brand": "Vans",        
         "price" : "799",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/elastic-short.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/elastic-short-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/elastic-short-alt-view.png",
+        "released" : true,
+        "featured" : false
     },    
     {
         "id" : "10",
@@ -87,7 +105,9 @@
         "brand": "Bape",        
         "price" : "8250",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/painter-pants.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/painter-pants-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/painter-pants-alt-view.png",
+        "released" : true,
+        "featured" : false
     },
     {
         "id" : "11",
@@ -96,7 +116,9 @@
         "brand": "Supreme",        
         "price" : "3400",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/sunglasses.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/sunglasses-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/sunglasses-alt-view.png",
+        "released" : true,
+        "featured" : false
     },
     {
         "id" : "12",
@@ -105,7 +127,9 @@
         "brand": "Off-White",        
         "price" : "3220",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/belt.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/belt-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/belt-alt-view.png",
+        "released" : true,
+        "featured" : false
     },
     {
         "id" : "13",
@@ -114,7 +138,9 @@
         "brand": "Stone Island",        
         "price" : "6350",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/backpack.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/backpack-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/backpack-alt-view.png",
+        "released" : true,
+        "featured" : true
     },
     {
         "id" : "14",
@@ -123,7 +149,9 @@
         "brand": "Vans",        
         "price" : "300",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/socks.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/socks-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/socks-alt-view.png",
+        "released" : true,
+        "featured" : false
     },    
     {
         "id" : "15",
@@ -132,6 +160,41 @@
         "brand": "Bape",        
         "price" : "1600",      
         "image" : "/Bunker-Online-Store-Fullstack/src/images/products/beanie.png",
-        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/beanie-alt-view.png"
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/beanie-alt-view.png",
+        "released" : true,
+        "featured" : false
+    },
+    {
+        "id" : "16",
+        "type" : "top",
+        "name" : "Palm Tree Bowling Shirt",
+        "brand": "Gucci",        
+        "price" : "16710",      
+        "image" : "/Bunker-Online-Store-Fullstack/src/images/products/coming-soon-1.png",
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/coming-soon-1.png",
+        "released" : false,
+        "featured" : false
+    },
+    {
+        "id" : "17",
+        "type" : "bottom",
+        "name" : "50/50 Wide Leg Jeans",
+        "brand": "Balenciaga",        
+        "price" : "12510",      
+        "image" : "/Bunker-Online-Store-Fullstack/src/images/products/coming-soon-2.png",
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/coming-soon-2.png",
+        "released" : false,
+        "featured" : false
+    },    
+    {
+        "id" : "18",
+        "type" : "accessory",
+        "name" : "Monogram Split Scarf",
+        "brand": "Louis Vuitton",        
+        "price" : "19000",      
+        "image" : "/Bunker-Online-Store-Fullstack/src/images/products/coming-soon-3.png",
+        "alt_view_image" : "/Bunker-Online-Store-Fullstack/src/images/products/coming-soon-3.png",
+        "released" : false,
+        "featured" : false
     }
 ]
