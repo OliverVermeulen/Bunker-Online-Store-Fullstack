@@ -1,6 +1,6 @@
 [
     {
-        "id" : "1",
+        "id" : "01",
         "type" : "top",
         "name" : "Float Tee",
         "brand": "Supreme",        
@@ -11,7 +11,7 @@
         "featured" : true
     },
     {
-        "id" : "2",
+        "id" : "02",
         "type" : "top",
         "name" : "Camo Field Jacket With Patches",
         "brand": "Off-White",        
@@ -22,7 +22,7 @@
         "featured" : false
     },
     {
-        "id" : "3",
+        "id" : "03",
         "type" : "top",
         "name" : "Cotton Ripstop Dyed Jacket",
         "brand": "Stone Island",        
@@ -33,7 +33,7 @@
         "featured" : false
     },
     {
-        "id" : "4",
+        "id" : "04",
         "type" : "top",
         "name" : "Peace Of Mind Hoodie",
         "brand": "Vans",        
@@ -44,7 +44,7 @@
         "featured" : false
     },    
     {
-        "id" : "5",
+        "id" : "05",
         "type" : "top",
         "name" : "Busy Shark Chambray Shirt",
         "brand": "Bape",        
@@ -55,7 +55,7 @@
         "featured" : false
     },
     {
-        "id" : "6",
+        "id" : "06",
         "type" : "bottom",
         "name" : "Credit Card Jean",
         "brand": "Supreme",        
@@ -66,7 +66,7 @@
         "featured" : false
     },
     {
-        "id" : "7",
+        "id" : "07",
         "type" : "bottom",
         "name" : "Denim Shorts",
         "brand": "Off-White",        
@@ -77,7 +77,7 @@
         "featured" : true
     },
     {
-        "id" : "8",
+        "id" : "08",
         "type" : "bottom",
         "name" : "Cotton Canvas Trousers",
         "brand": "Stone Island",        
@@ -88,7 +88,7 @@
         "featured" : false
     },
     {
-        "id" : "9",
+        "id" : "09",
         "type" : "bottom",
         "name" : "Eco Positivity Short",
         "brand": "Vans",        
