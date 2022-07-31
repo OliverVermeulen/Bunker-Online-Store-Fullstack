@@ -24,7 +24,7 @@
         <!-- Buttons/Links -->
         <div class="header-buttons">
           <!-- Toggle searchbar -->
-          <button onclick="myFunction()" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
+          <button onclick="myFunction()" class="icon" title="Search Toggle"><a href="#all-products"><i class="fa fa-search"></i></a></button>
 
           <!-- Logo/Home -->
           <a href="/Bunker-Online-Store-Fullstack/" title="Home" class="home-link">BUNKER</a>
@@ -85,7 +85,7 @@
           </div>
         </div>
 
-        <p class="section-heading">All Products</p>
+        <p class="section-heading" id="all-products">All Products</p>
         <div class="cards">
           <!-- Vue data loop -->
           <div class="card" v-for="product in filteredList.slice(0, 15)" :key="product.id">

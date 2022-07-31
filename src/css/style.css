@@ -38,7 +38,7 @@ header .header-buttons {
   justify-content: space-between;
   align-items: center;
 }
-header a {
+header .home-link {
   cursor: pointer;
   color: black;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -50,6 +50,7 @@ header i {
   font-size: 20px;
   cursor: pointer;
   transition: transform 0.8s ease;
+  color: black;
 }
 header i:hover {
   transform: scale(1.18);
@@ -89,7 +90,7 @@ header .input-button {
   cursor: pointer;
   transition: 0.5s;
 }
-.input-button:hover {
+header .input-button:hover {
   color: black;
   background-color: #f2cc0f;
 }
