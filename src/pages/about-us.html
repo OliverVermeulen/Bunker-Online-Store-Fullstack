@@ -5,58 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUNKER® - ABOUT US</title>
-    <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/store/bunker-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
-    <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
+    <link
+      rel="shortcut icon"
+      href="/Bunker-Online-Store-Fullstack/src/images/store/bunker-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/Bunker-Online-Store-Fullstack/src/css/style.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/e4ad388285.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/vue@3"></script>
-    <script src="/Bunker-Online-Store-Fullstack/src/js/script.js" defer></script>
-    <script src="/Bunker-Online-Store-Fullstack/src/js/vue.js" type="module" defer></script>
+    <script
+      src="/Bunker-Online-Store-Fullstack/src/js/script.js"
+      defer
+    ></script>
+    <script
+      src="/Bunker-Online-Store-Fullstack/src/js/vue.js"
+      type="module"
+      defer
+    ></script>
   </head>
   <body>
-    <header id="myHeader">
-      <div class="header-buttons">
-      <button onclick="myFunction()" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
-      <!-- Logo/Home -->
-      <a href="/Bunker-Online-Store-Fullstack/" title="Home" class="home-link">BUNKER</a>
-      <!-- Cart -->
-      <button class="icon" title="Cart">
-        <i class="fa fa-shopping-cart"></i>
-      </button>
-    </div>
-    <div id="searchbar" style="display: none;">
-      <div class="searchbar">
-        <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.." autocomplete="off"/>
-        <button @click="resetInput" class="input-button" title="Clear Search">CLEAR</button>
-      </div>  
-    </div>
-    </header>
+    <div id="app">
+      <!-- Header -->
+      <header id="myHeader">
+        <!-- Buttons/Links -->
+        <div class="header-buttons">
+          <!-- Toggle searchbar (disabled) -->
+          <button type="disabled" class="icon" title="Search Toggle">
+            <a href="#all-products"><i class="fa fa-search"></i></a>
+          </button>
 
-    <div class="about">
-      <div class="map-responsive">
-        <iframe src="https://maps.google.com/maps?q=167%20Longmarket%20St%20Cape%20Town%20City%20Centre%20Cape%20Town%208000&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <!-- Logo/Home -->
+          <a
+            href="/Bunker-Online-Store-Fullstack/"
+            title="Home"
+            class="home-link"
+            >BUNKER</a
+          >
+
+          <!-- Cart -->
+          <button class="icon" title="Cart">
+            <i class="fa fa-shopping-cart"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Navbar -->
+      <nav id="mySidenav" class="sidenav">
+        <!-- Filter products by tops -->
+        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+          <input type="hidden" value="top" name="product_type" />
+          <button title="Tops" class="type-button"><a>Tops</a></button>
+        </form>
+
+        <!-- Filter products by bottoms -->
+        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+          <input type="hidden" value="bottom" name="product_type" />
+          <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
+        </form>
+
+        <!-- Filter products by accessories -->
+        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+          <input type="hidden" value="accessory" name="product_type" />
+          <button title="Accessories" class="type-button"><a>Accessories</a></button>
+        </form>
+
+        <!-- About Us page -->
+        <a href="/Bunker-Online-Store-Fullstack/src/pages/about-us.html" title="About Us">About Us</a>
+
+        <!-- Account page -->
+        <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account" >Account</a>
+      </nav>
+
+      <div class="about-us">
+        <div class="company-staff">
+          <div class="staff">
+            <img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-1.jpg" class="staff-img" alt="" />
+          </div>
+
+          <div class="staff">
+            <img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-2.jpg" class="staff-img" alt="" />
+          </div>
+
+          <div class="staff">
+            <img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-3.jpg" class="staff-img" alt="" />
+          </div>
+
+          <div class="staff">
+            <img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-4.jpg" class="staff-img" alt=""/>
+          </div>
         </div>
 
-        <div class="grid-container">
-          <div class="grid-item"><img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-1.jpg" alt=""></div>
-          <div class="grid-item"><img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-2.jpg" alt=""></div>
-          <div class="grid-item"><img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-3.jpg" alt=""></div>  
-          <div class="grid-item"><img src="/Bunker-Online-Store-Fullstack/src/images/store/staff-4.jpg" alt=""></div>
-        </div>
+        <div class="company-details">
+          <div class="map-responsive">
+            <iframe src="https://maps.google.com/maps?q=167%20Longmarket%20St%20Cape%20Town%20City%20Centre%20Cape%20Town%208000&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" frameborder="0" style="border: 0" allowfullscreen></iframe>
+          </div>
 
-        <div class="company-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, fugiat aliquid saepe possimus, veniam, quis est in veritatis nostrum distinctio voluptates quaerat. Repellendus delectus similique hic cum aspernatur ipsam rerum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus ipsa quos reprehenderit illum debitis impedit incidunt excepturi similique culpa minima dolorum explicabo beatae fugiat consequatur, dicta itaque nostrum necessitatibus cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dignissimos eligendi quas temporibus sit explicabo nulla odio repellat atque esse amet, libero veniam veritatis sapiente et quibusdam accusamus quo inventore?
+          <div class="company-description">
+            <p>Bunker is not a company but a collective of young visionaries that have come together in collaboration to bring luxury mens fashion to the streets of South-Africa. This project is a portal to all the pieces in our inventory up for sale as well as showing off future editions to it. Each luxury piece is hand selected by our staff and is of the highest quality.</p>
+          </div>
         </div>
-    </div>
-
-    <footer class="footer">
-      <div class="trademarks">
-        <span>BUNKER®</span>
       </div>
-      <div div="extra-information">
-        <span>R ZAR</span>
-        <span>|</span>
-        <span>Help <i class="fa fa-gear"></i></span>
+
+      <!-- Navigation Controller -->
+      <div class="navigation-controller">
+        <!-- Top of page -->
+        <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top"><i class="fa fa-arrow-up"></i></button>
+
+        <!-- Bottom of page -->
+        <button onclick="bottomFunction()" id="downBtn" class="navigation-btn" title="To bottom"><i class="fa fa-arrow-down"></i></button>
+
+        <!-- Open Navbar -->
+        <button onclick="openNav()" id="openNav" class="navigation-btn" title="Open Navbar"><i class="fa fa-arrow-right" class="icon"></i></button>
+
+        <!-- Close Navbar -->
+        <button onclick="closeNav()" id="closeNav" class="navigation-btn" title="Close Navbar"><i class="fa fa-arrow-left"></i></button>
+
+        <!-- Previous page -->
+        <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back"><i class="fa fa-close"></i></button>
       </div>
-    </footer>
+
+      <footer class="footer">
+        <div class="trademarks">
+          <span>BUNKER®</span>
+        </div>
+        <div div="extra-information">
+          <span>R ZAR</span>
+          <span>|</span>
+          <span>Help <i class="fa fa-gear"></i></span>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

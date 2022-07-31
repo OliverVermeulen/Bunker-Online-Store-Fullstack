@@ -131,17 +131,94 @@ header .input-button:hover {
   cursor: pointer;
 }
 
+/* Main Page */
 main {
   padding: 0rem 2rem;
+}
+main .section-heading {
+  margin: 0.7rem 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+}
+main .content {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+main .content .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+}
+main .content:hover .content-overlay {
+  opacity: 1;
+}
+main .content-image {
+  width: 100%;
+}
+main .content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+}
+main .content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+main .content-details p {
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 18px;
+}
+main .fadeIn-top {
+  top: 20%;
+}
+main .input-button {
+  background-color: black;
+  color: #f2cc0f;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 10%;
+  min-width: 70px;
+  height: 40px;
+  font-size: 20px;
+  font-style: italic;
+  padding-right: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+main .input-button:hover {
+  color: black;
+  background-color: #f2cc0f;
 }
 main button {
   padding: 0%;
   border: 0;
   background-color: transparent;
   cursor: pointer;
-}
-main h1 {
-  text-align: center;
 }
 main .cards {
   max-width: 100%;
@@ -207,7 +284,6 @@ button:active {
   font-style: italic;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
-
 .account .account-form-buttons {
   display: flex;
   flex-direction: row;
@@ -385,7 +461,6 @@ footer {
     width: 120px;
   }
 }
-
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
   main {
@@ -427,13 +502,11 @@ footer {
     border-radius: 50%;
   }
 }
-
 @media (min-width: 481px) and (max-width: 899px) {
   body {
     background-color: yellow;
   }
 }
-
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 900px) and (max-width: 1024px) {
   .top-container {
@@ -492,7 +565,6 @@ footer {
     border-radius: 50%;
   }
 }
-
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {
   .top-container {
@@ -525,7 +597,6 @@ footer {
     font-size: 18px;
   }
 }
-
 /* Media Query for Large screens */
 @media (min-width: 1900px) {
   main {
@@ -533,10 +604,24 @@ footer {
   }
 }
 
-.about {
+.about-us {
+  margin: 1rem 0;
+}
+.company-staff {
   max-width: 600px;
-  min-width: 300px;
   margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.staff img {
+  width: 100%;
+  height: 100%;
+}
+.company-details {
+max-width: 600px;
+min-width: 300px;
+margin: 0 auto;
 }
 .map-responsive {
   overflow: hidden;
@@ -544,103 +629,17 @@ footer {
   position: relative;
   height: 0;
   margin: 0 auto;
+  margin-top: 1rem;
 }
 .map-responsive iframe {
   left: 0;
   top: 0;
   height: 100%;
-  width: 100%;
+  width: 600px;
+  min-width: 300px;
   position: absolute;
 }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  background-color: #2196f3;
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.grid-item img {
-  width: 100%;
-  height: 100%;
-}
-
-
-
-.content {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.content .content-overlay {
-  background: rgba(0,0,0,0.7);
-  position: absolute;
-  height: 99%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  transition: all 0.4s ease-in-out 0s;
-}
-
-.content:hover .content-overlay{
-  opacity: 1;
-}
-
-.content-image{
-  width: 100%;
-}
-
-/* .content-image-featured{
-  width: 100%;
-  transform: scale(1.2);
-} */
-
-.content-details {
-  position: absolute;
-  text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.content:hover .content-details{
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-}
-
-.content-details p{
-  color: #fff;
-  font-weight: normal;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 18px;
-}
-
-.fadeIn-top{
-  top: 20%;
-}
-
-.section-heading {
-  margin: 0.7rem 0;
-  font-size: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-style: italic;
+.company-description {
+  font-size: 16px;
+  margin-top: 1rem;
 }
