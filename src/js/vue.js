@@ -1,5 +1,4 @@
-import axios from 'axios';
-
+// import axios from 'axios';
 import productArray from "/Bunker-Online-Store-Fullstack/src/json/products.json" assert { type: "json" };
 
 const { createApp } = window.Vue;
@@ -48,7 +47,8 @@ const Component = {
     },
   },
   mounted() {
-    axios.get('public/product-data/all') 
+    axios
+    .get('public/product-data/all') 
     .then(response => (this.all = response.data))
   }
 };
