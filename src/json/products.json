@@ -166,7 +166,7 @@
     },
     {
         "id" : "16",
-        "type" : "top",
+        "type" : "soon",
         "name" : "Palm Tree Bowling Shirt",
         "brand": "Gucci",        
         "price" : "16710",      
@@ -177,7 +177,7 @@
     },
     {
         "id" : "17",
-        "type" : "bottom",
+        "type" : "soon",
         "name" : "50/50 Wide Leg Jeans",
         "brand": "Balenciaga",        
         "price" : "12510",      
@@ -188,7 +188,7 @@
     },    
     {
         "id" : "18",
-        "type" : "accessory",
+        "type" : "soon",
         "name" : "Monogram Split Scarf",
         "brand": "Louis Vuitton",        
         "price" : "19000",      

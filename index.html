@@ -85,6 +85,24 @@
           </div>
         </div>
 
+        <p class="section-heading" id="all-products">Featured Products</p>
+        <div class="cards">
+          <!-- Vue data loop -->
+          <div class="content" v-for="product in featuredList" :key="product.id">
+            <!-- Filter by selected product -->
+            <div class="content-overlay"></div>
+            <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
+              <input type="hidden" :value="product.id" name="product_id" />
+              <img class="content-image" :src="product.image">
+            <div class="content-details fadeIn-top">
+              <p>{{product.name}}</p>
+              <p>R {{product.price}}.00</p>
+              <button type="submit" :title="product.name">dfgdfg</button>
+            </div>
+            </form>
+          </div>
+        </div>
+
         <p class="section-heading" id="all-products">All Products</p>
         <div class="cards">
           <!-- Vue data loop -->

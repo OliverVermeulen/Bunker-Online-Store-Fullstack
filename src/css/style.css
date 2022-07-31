@@ -598,6 +598,11 @@ footer {
   width: 100%;
 }
 
+/* .content-image-featured{
+  width: 100%;
+  transform: scale(1.2);
+} */
+
 .content-details {
   position: absolute;
   text-align: center;
@@ -607,11 +612,7 @@ footer {
   top: 50%;
   left: 50%;
   opacity: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 

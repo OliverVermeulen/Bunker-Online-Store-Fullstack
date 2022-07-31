@@ -2,8 +2,8 @@ import productArray from "/Bunker-Online-Store-Fullstack/src/json/products.json"
 
 const { createApp } = window.Vue;
 
-const filterType = (key, productList) =>
-  productList.filter((item) => item.type === key);
+  const filterType = (value, productList) =>
+  productList.filter((item) => item.featured === value);
 
 const Component = {
   data() {
@@ -31,6 +31,9 @@ const Component = {
         });
       }
       return result;
+    },
+    featuredList() {
+      return filterType(true, this.productList);
     },
   },
   methods: {
