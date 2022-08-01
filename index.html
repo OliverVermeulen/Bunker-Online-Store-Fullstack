@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUNKER®</title>
-    <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/store/bunker-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
+    <link rel="shortcut icon" href="./src/images/store/bunker-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue@3"></script>
-    <script src="/Bunker-Online-Store-Fullstack/src/js/script.js" defer></script>
-    <script src="/Bunker-Online-Store-Fullstack/src/js/vue.js" type="module" defer></script>
+    <script src="./src/js/script.js" defer></script>
+    <script src="./src/js/vue.js" type="module" defer></script>
   </head>
   <body>
     <div id="app">
+      <!-- <div v-for="item in all">
+        {{item.name}}
+      </div> -->
       <!-- Top Container -->
       <div class="top-container">
         <span><i class="fa fa-globe"></i> FREE SHIPPING ON ORDERS OVER R 4000</span>
@@ -28,7 +31,7 @@
           <button onclick="myFunction()" class="icon" title="Search Toggle"><a href="#all-products"><i class="fa fa-search"></i></a></button>
 
           <!-- Logo/Home -->
-          <a href="/Bunker-Online-Store-Fullstack/" title="Home" class="home-link">BUNKER</a>
+          <a href="" title="Home" class="home-link">BUNKER</a>
 
           <!-- Cart -->
           <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
@@ -70,13 +73,12 @@
         <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account" >Account</a>
       </nav>
 
-      <!-- Main -->
       <main id="main" class="main">
         <p class="section-heading">Coming Soon</p>
         <div class="cards">
-          <div class="content" v-for="product in productList.slice(15, 18)" :key="product.id">
+          <div class="content" v-for="product in all" :key="product.id">
               <div class="content-overlay"></div>
-              <img class="content-image" :src="product.image">
+              <img class="content-image" v-bind:src="'./src/images/products/' + product.image">
               <div class="content-details fadeIn-top">
                 <p>{{product.name}}</p>
                 <p>{{product.brand}}</p>
@@ -87,13 +89,13 @@
 
         <p class="section-heading" id="all-products">Featured Products</p>
         <div class="cards">
-          <!-- Vue data loop -->
-          <div class="content" v-for="product in featuredList" :key="product.id">
+          <!-- Vue data loop  -->
+          <div class="content" v-for="product in all" :key="product.id">
             <!-- Filter by selected product -->
             <div class="content-overlay"></div>
             <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
               <input type="hidden" :value="product.id" name="product_id" />
-              <img class="content-image" :src="product.image">
+              <img class="content-image" v-bind:src="'./src/images/products/' + product.image">
             <div class="content-details fadeIn-top">
               <p>{{product.name}}</p>
               <p>R {{product.price}}.00</p>
@@ -107,12 +109,12 @@
         <p class="section-heading" id="all-products">All Products</p>
         <div class="cards">
           <!-- Vue data loop -->
-          <div class="card" v-for="product in filteredList.slice(0, 15)" :key="product.id">
+          <div class="card" v-for="product in all" :key="product.id">
             <!-- Filter by selected product -->
             <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
               <input type="hidden" :value="product.id" name="product_id" />
               <button class="card-img" type="submit" :title="product.name">
-                <img :src="product.image" :alt="product.name" />
+                <img v-bind:src="'./src/images/products/' + product.image" :alt="product.name" />
               </button>
             </form>
             <div class="card-info">
@@ -121,7 +123,7 @@
             </div>
           </div>
         </div>
-      </main>
+        </main>
 
       <!-- Navigation Controller -->
       <div class="navigation-controller">

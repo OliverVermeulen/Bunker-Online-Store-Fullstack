@@ -8,6 +8,17 @@ function myFunction() {
   }
 }
 
+let header = document.getElementById("myHeader");
+let sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky"); // Add sticky class
+  } else {
+    header.classList.remove("sticky"); // Remove sticky class
+  }
+}
+
 // Navigation controller functions
 function openNav() { // Open nav
   document.getElementById("mySidenav").style.width = "35px";

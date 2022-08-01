@@ -82,6 +82,11 @@ header .input-button:hover {
   color: black;
   background-color: #f2cc0f;
 }
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
 
 .section-heading {
   margin: 0.7rem 0;
@@ -136,15 +141,17 @@ button:active {
 }
 
 /* Account Sign -In, -Register and Change Password pages */
+main {
+  min-height: calc(100vh - 60.78px - 35px);
+  padding: 30px;
+  width: 592px;
+  min-width: 300px;
+  padding: 20px;
+  margin: 0 auto;
+}
 .account {
   background-color: #f2cc0f;
-  width: 45%;
-  min-width: 300px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem 0;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px;
 }
 .account .account-form {
   display: flex;
@@ -291,10 +298,43 @@ footer {
     right: 40px;
     border-radius: 50%;
   }
+  main {
+    width: 340px;
+  }
 }
 @media (min-width: 481px) and (max-width: 899px) {
-  body {
-    background-color: yellow;
+  main {
+    width: 400px;
+  }
+  #upBtn {
+    position: fixed;
+    bottom: 126px;
+    right: 50px;
+  }
+  #downBtn {
+    position: fixed;
+    bottom: 66px;
+    right: 50px;
+  }
+  #openNav {
+    position: fixed;
+    bottom: 96px;
+    right: 20px;
+  }
+  #closeNav {
+    position: fixed;
+    bottom: 96px;
+    right: 80px;
+  }
+  #previousPage {
+    position: fixed;
+    bottom: 96px;
+    right: 50px;
+    border-radius: 50%;
+  }
+  .account .form-button {
+    margin-left: 7px;
+    margin-right: 7px;
   }
 }
 /* Media Query for Tablets Ipads portrait mode */

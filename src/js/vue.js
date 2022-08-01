@@ -1,56 +1,72 @@
 // import axios from 'axios';
-import productArray from "/Bunker-Online-Store-Fullstack/src/json/products.json" assert { type: "json" };
+// import productArray from "/Bunker-Online-Store-Fullstack/src/json/products.json" assert { type: "json" };
 
 const { createApp } = window.Vue;
 
-  const filterType = (value, productList) =>
-  productList.filter((item) => item.featured === value);
+// const filterType = (value, productList) =>
+// productList.filter((item) => item.featured === value);
 
 const Component = {
   data() {
     return {
-      search: "",
-      productList: productArray,
-      awesome: true,
-      all : null
+      // search: "",
+      // productList: productArray,
+      // awesome: true,
+      all: null,
+      coming_soon: [],
     };
   },
-  computed: {
-    filteredList() {
-      let result = this.productList.filter((post) => {
-        return post.name.toLowerCase().includes(this.search.toLowerCase());
-      });
-      let queryParams = window.location.search.substr(1).split("=");
-      if (queryParams[0] === "product_id") {
-        let productId = parseInt(queryParams[1], 10);
-        result = result.filter((product) => {
-          return parseInt(product.id, 10) === productId;
-        });
-      }
-      if (queryParams[0] === "product_type") {
-        result = result.filter((product) => {
-          return product.type === queryParams[1];
-        });
-      }
-      return result;
-    },
-    featuredList() {
-      return filterType(true, this.productList);
-    },
-  },
+  // computed: {
+  //   filteredList() {
+  //     let result = this.productList.filter((post) => {
+  //       return post.name.toLowerCase().includes(this.search.toLowerCase());
+  //     });
+  //     let queryParams = window.location.search.substr(1).split("=");
+  //     if (queryParams[0] === "product_id") {
+  //       let productId = parseInt(queryParams[1], 10);
+  //       result = result.filter((product) => {
+  //         return parseInt(product.id, 10) === productId;
+  //       });
+  //     }
+  //     if (queryParams[0] === "product_type") {
+  //       result = result.filter((product) => {
+  //         return product.type === queryParams[1];
+  //       });
+  //     }
+  //     return result;
+  //   },
+  //   featuredList() {
+  //     return filterType(true, this.productList);
+  //   },
+  // },
   methods: {
-    toggle() {
-      this.awesome = !this.awesome;
-    },
-    resetInput() {
-      this.search = "";
+    // toggle() {
+    //   this.awesome = !this.awesome;
+    // },
+    // resetInput() {
+    //   this.search = "";
+    // },
+    comingSoonArray() {
+      for (product in all) {
+        if (product.released == false) {
+          array.push(product, coming_soon);
+        }
+      }
     },
   },
   mounted() {
+    // axios
+    //   .get("/public/product-data/all")
+    //   .then(
+    //     (response) => (this.all = response.data),
+    //     console.log(response.data)
+    //   );
     axios
-    .get('public/product-data/all') 
-    .then(response => (this.all = response.data))
-  }
+      .get("public/product-data/all")
+      .then((response) => (this.all = response.data)),
+      console.log(this),
+    this.comingSoonArray()  
+  },
 };
 
 // mounting app
