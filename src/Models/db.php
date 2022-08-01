@@ -1,9 +1,4 @@
 <?php
-
-namespace App\Models;
-
-use \PDO;
-
 class DB
 {
     private $host = 'localhost';
