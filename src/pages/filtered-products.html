@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUNKER® - TYPE</title>
-    <link rel="shortcut icon" href="/Bunker-Online-Store-Fullstack/src/images/store/bunker-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/Bunker-Online-Store-Fullstack/src/css/style.css" />
+    <link rel="shortcut icon" href="../images/store/bunker-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3"></script>
-    <script src="/Bunker-Online-Store-Fullstack/src/js/script.js" defer></script>
-    <script src="/Bunker-Online-Store-Fullstack/src/js/vue.js" type="module" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/vue.js" type="module" defer></script>
   </head>
   <body>
     <div id="app">
@@ -45,29 +45,29 @@
       <!-- Navbar -->
       <nav id="mySidenav" class="sidenav">
         <!-- Filter products by tops -->
-        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+        <form action="../pages/filtered-products.html">
           <input type="hidden" value="top" name="product_type" />
           <button title="Tops" class="type-button"><a>Tops</a></button>
           <!-- <a type="submit" title="Tops">Tops</a> -->
         </form>
 
         <!-- Filter products by bottoms -->
-        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+        <form action="../pages/filtered-products.html">
           <input type="hidden" value="bottom" name="product_type" />
           <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
         </form>
 
         <!-- Filter products by accessories -->
-        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+        <form action="../pages/filtered-products.html">
           <input type="hidden" value="accessory" name="product_type" />
           <button title="Accessories" class="type-button"><a>Accessories</a></button>
         </form>
 
         <!-- About Us page -->
-        <a href="/Bunker-Online-Store-Fullstack/src/pages/about-us.html" title="About Us">About Us</a>
+        <a href="../pages/about-us.html" title="About Us">About Us</a>
 
         <!-- Account page -->
-        <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account" >Account</a>
+        <a href="../php/user.php" title="Account" >Account</a>
       </nav>
 
       <!-- Main -->
@@ -76,7 +76,7 @@
           <!-- Vue data loop -->
           <div class="card" v-for="product in filteredList" :key="product.id">
             <!-- Filter by selected product -->
-            <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
+            <form action="../pages/selected-product.html">
               <input type="hidden" :value="product.id" name="product_id" />
               <button class="card-img" type="submit" :title="product.name">
                 <img :src="product.image" :alt="product.name" />

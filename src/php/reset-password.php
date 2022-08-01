@@ -4,12 +4,12 @@ session_start();
  
 // Check if the user is logged in, otherwise redirect to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header('Location: /Bunker-Online-Store-Fullstack/src/pages/login.php');
+    header('Location: ../pages/login.php');
     exit;
 }
  
 // Include config file
-include ("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/Model/db.php");
+include ("../Model/db.php");
  
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if($stmt->execute()){
                 // Password updated successfully. Destroy the session, and redirect to login page
                 session_destroy();
-                header('Location: /Bunker-Online-Store-Fullstack/src/pages/login.html');
+                header('Location: ../pages/login.html');
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";

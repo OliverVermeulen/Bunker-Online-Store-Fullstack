@@ -4,12 +4,12 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header('Location: /Bunker-Online-Store-Fullstack/');
+    header('Location: /');
     exit;
 }
 
 // Include config file
-include("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/Model/db.php");
+include("../Model/db.php");
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["username"] = $username;
 
                             // Redirect user to home page
-                            header('Location: /Bunker-Online-Store-Fullstack/');
+                            header('Location: /');
                         } else {
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
@@ -86,4 +86,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Close connection
     mysqli_close($link);
 }
-header('Location: /Bunker-Online-Store-Fullstack/');
+header('Location: /');

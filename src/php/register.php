@@ -1,7 +1,7 @@
 
 <?php
 // Include config file
-include ("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/Model/db.php");
+include ("../Model/db.php");
 
 // Define variables and initialize with empty values
 $name = $username = $email = $password = $confirm_password = "";
@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
                 // Redirect to login page
-                header("location: /Bunker-Online-Store-Fullstack/src/pages/login.html");
+                header("location: ../pages/login.html");
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
@@ -108,4 +108,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Close connection
     mysqli_close($link);
 }
-header('Location: /Bunker-Online-Store-Fullstack/src/pages/login.html');
+header('Location: ../pages/login.html');

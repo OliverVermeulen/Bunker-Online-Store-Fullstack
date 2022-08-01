@@ -9,5 +9,5 @@ $_SESSION = array();
 session_destroy();
  
 // Redirect to home page
-header('Location: /Bunker-Online-Store-Fullstack/');
+header('Location: /');
 exit;

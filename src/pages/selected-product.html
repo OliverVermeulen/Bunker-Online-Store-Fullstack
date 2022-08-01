@@ -37,29 +37,29 @@
       <!-- Navbar -->
       <nav id="mySidenav" class="sidenav">
         <!-- Filter products by tops -->
-        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+        <form action="../pages/filtered-products.html">
           <input type="hidden" value="top" name="product_type" />
           <button title="Tops" class="type-button"><a>Tops</a></button>
           <!-- <a type="submit" title="Tops">Tops</a> -->
         </form>
   
         <!-- Filter products by bottoms -->
-        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+        <form action="../pages/filtered-products.html">
           <input type="hidden" value="bottom" name="product_type" />
           <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
         </form>
   
         <!-- Filter products by accessories -->
-        <form action="/Bunker-Online-Store-Fullstack/src/pages/filtered-products.html">
+        <form action="../pages/filtered-products.html">
           <input type="hidden" value="accessory" name="product_type" />
           <button title="Accessories" class="type-button"><a>Accessories</a></button>
         </form>
   
         <!-- About Us page -->
-        <a href="/Bunker-Online-Store-Fullstack/src/pages/about-us.html" title="About Us">About Us</a>
+        <a href="../pages/about-us.html" title="About Us">About Us</a>
   
         <!-- Account page -->
-        <a href="/Bunker-Online-Store-Fullstack/src/php/user.php" title="Account" >Account</a>
+        <a href="../php/user.php" title="Account" >Account</a>
       </nav>
 
       <!-- <main id="main">
@@ -80,7 +80,7 @@
 
            Product details
           <div class="product-order-form">
-            <form action="/Bunker-Online-Store-Fullstack/src/php/cart.php" method="post" class="order-form">
+            <form action="../php/cart.php" method="post" class="order-form">
                Visible information
               <p class="detail"><span class="label">NAME:</span>{{product.name}}</p>
               <p class="detail"><span class="label">BRAND:</span>{{product.brand}}</p>
@@ -101,7 +101,7 @@
             <img :src="product.alt_view_image" :alt="product.name" class="select-page-image">
         
         <div class="order-form">
-          <form action="/Bunker-Online-Store-Fullstack/src/php/cart.php" method="post" class="order-form">
+          <form action="../php/cart.php" method="post" class="order-form">
             <p class="detail"><span class="label">NAME:</span>{{product.name}}</p>
             <p class="detail"><span class="label">BRAND:</span>{{product.brand}}</p>
             <p class="detail"><span class="label">PRICE:</span>R {{product.price}}.00</p>

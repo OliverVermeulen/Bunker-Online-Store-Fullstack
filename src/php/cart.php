@@ -3,7 +3,7 @@
 session_start();
 
 // Include config file
-include("/MAMP/htdocs/Bunker-Online-Store-Fullstack/src/Model/db.php");
+include("../Model/db.php");
 
 // Check if the user is logged in, if yes execute function, if not redirect to sign in page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
@@ -20,8 +20,8 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
     $stmt->execute();
 
-    header('Location: /Bunker-Online-Store-Fullstack/');
+    header('Location: /');
     exit;
 } else {
-    header('Location: /Bunker-Online-Store-Fullstack/src/pages/login.html');
+    header('Location: ../pages/login.html');
 }
