@@ -313,24 +313,6 @@ footer {
   width: 100%;
 }
 
-.select-page-image {
-  filter: blur(1px);
-}
-/*   
-  @media (min-width: 300px) and (max-width: 1200px) {
-    .product {
-      flex-direction: column;
-    }
-    .change-view-buttons {
-      flex-direction: row;
-    }
-    .product-img {
-      width: 90%;
-    }
-    .view-img {
-      width: 120px;
-    }
-  } */
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
   #upBtn {
@@ -361,9 +343,6 @@ footer {
   }
 }
 @media (min-width: 481px) and (max-width: 899px) {
-  body {
-    background-color: yellow;
-  }
 }
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 900px) and (max-width: 1024px) {

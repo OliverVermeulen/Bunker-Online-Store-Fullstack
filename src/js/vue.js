@@ -3,20 +3,32 @@ const { createApp } = window.Vue;
 const Component = {
   data() {
     return {
-      test: null,
+      upcoming: null,
+      available: null,
+      featured: null,
       all: null,
     };
   },
   mounted() {
-      axios
-      .get("public/product-data/all", {params: {brand:"Supreme"}})
-      .then((response) => (this.test = response.data))
-      console.log(this),
+    axios
+      .get("public/product-data/upcoming")
+      .then((response) => (this.upcoming = response.data));
+    console.log(this);
 
     axios
-      .get("public/product-data/all")
-      .then((response) => (this.all = response.data))
-      console.log(this)
+      .get("public/product-data/available")
+      .then((response) => (this.available = response.data));
+    console.log(this);
+
+    axios
+    .get("public/product-data/available")
+    .then((response) => (this.available = response.data));
+  console.log(this);
+
+    axios
+      .get("public/product-data/featured")
+      .then((response) => (this.featured = response.data));
+    console.log(this);
     // this.comingSoonArray()
   },
 };

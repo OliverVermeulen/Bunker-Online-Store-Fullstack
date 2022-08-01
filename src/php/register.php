@@ -1,7 +1,7 @@
 
 <?php
 // Include config file
-include ("../Model/db.php");
+include ("../Models/connect.php");
 
 // Define variables and initialize with empty values
 $name = $username = $email = $password = $confirm_password = "";

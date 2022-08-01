@@ -276,9 +276,6 @@ footer {
   }
 }
 @media (min-width: 481px) and (max-width: 899px) {
-  body {
-    background-color: yellow;
-  }
 }
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 900px) and (max-width: 1024px) {

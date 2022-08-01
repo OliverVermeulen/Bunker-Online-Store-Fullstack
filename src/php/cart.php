@@ -3,7 +3,7 @@
 session_start();
 
 // Include config file
-include("../Model/db.php");
+include("../Models/connect.php");
 
 // Check if the user is logged in, if yes execute function, if not redirect to sign in page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {

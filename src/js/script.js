@@ -1,13 +1,3 @@
-
-function myFunction() {
-  let searchbar = document.getElementById("searchbar");
-  if (searchbar.style.display === "none") {
-    searchbar.style.display = "block";
-  } else {
-    searchbar.style.display = "none";
-  }
-}
-
 let header = document.getElementById("myHeader");
 let sticky = header.offsetTop;
 
@@ -16,6 +6,15 @@ function myFunction() {
     header.classList.add("sticky"); // Add sticky class
   } else {
     header.classList.remove("sticky"); // Remove sticky class
+  }
+}
+
+function myFunction() {
+  let searchbar = document.getElementById("searchbar");
+  if (searchbar.style.display === "none") {
+    searchbar.style.display = "block";
+  } else {
+    searchbar.style.display = "none";
   }
 }
 

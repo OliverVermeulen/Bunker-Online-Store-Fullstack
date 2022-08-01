@@ -9,7 +9,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
  
 // Include config file
-include ("../Model/db.php");
+include ("../Models/connect.php");
  
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["new_password"]))){
         $new_password_err = "Please enter the new password.";     
     } elseif(strlen(trim($_POST["new_password"])) < 6){
-        $new_password_err = "Password must have atleast 6 characters.";
+        $new_password_err = "Password must have at least 6 characters.";
     } else{
         $new_password = trim($_POST["new_password"]);
     }
@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before updating the database
     if(empty($new_password_err) && empty($confirm_password_err)){
         // Prepare an update statement
-        $sql = "UPDATE users SET password = ? WHERE id = ?";
+        $sql = "UPDATE users SET password = ? WHERE user_id = ?";
         
         if($stmt = $link->prepare($sql)){
             // Bind variables to the prepared statement as parameters
