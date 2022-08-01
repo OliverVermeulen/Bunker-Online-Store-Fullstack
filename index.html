@@ -76,9 +76,9 @@
       <main id="main" class="main">
         <p class="section-heading">Coming Soon</p>
         <div class="cards">
-          <div class="content" v-for="product in all" :key="product.id">
+          <div class="content" v-for="product in all" :key="product.product_id">
               <div class="content-overlay"></div>
-              <img class="content-image" v-bind:src="'./src/images/products/' + product.image">
+              <img class="content-image" v-bind:src="'./src/images/products/' + product.image" :alt="product.name">
               <div class="content-details fadeIn-top">
                 <p>{{product.name}}</p>
                 <p>{{product.brand}}</p>
@@ -87,15 +87,15 @@
           </div>
         </div>
 
-        <p class="section-heading" id="all-products">Featured Products</p>
+        <p class="section-heading">Featured Products</p>
         <div class="cards">
           <!-- Vue data loop  -->
-          <div class="content" v-for="product in all" :key="product.id">
+          <div class="content" v-for="product in all" :key="product.product_id">
             <!-- Filter by selected product -->
             <div class="content-overlay"></div>
-            <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
-              <input type="hidden" :value="product.id" name="product_id" />
-              <img class="content-image" v-bind:src="'./src/images/products/' + product.image">
+            <form action="./src/pages/selected-product.html">
+              <input type="hidden" :value="product.product_id" name="product_id" />
+              <img class="content-image" v-bind:src="'./src/images/products/' + product.image" :alt="product.name">
             <div class="content-details fadeIn-top">
               <p>{{product.name}}</p>
               <p>R {{product.price}}.00</p>
@@ -109,10 +109,10 @@
         <p class="section-heading" id="all-products">All Products</p>
         <div class="cards">
           <!-- Vue data loop -->
-          <div class="card" v-for="product in all" :key="product.id">
+          <div class="card" v-for="product in all" :key="product.product_id">
             <!-- Filter by selected product -->
             <form action="/Bunker-Online-Store-Fullstack/src/pages/selected-product.html">
-              <input type="hidden" :value="product.id" name="product_id" />
+              <input type="hidden" :value="product.product_id" name="product_id" />
               <button class="card-img" type="submit" :title="product.name">
                 <img v-bind:src="'./src/images/products/' + product.image" :alt="product.name" />
               </button>
