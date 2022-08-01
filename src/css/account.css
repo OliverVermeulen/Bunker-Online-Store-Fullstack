@@ -13,18 +13,6 @@ body {
   transition: margin-left 0.5s;
 }
 
-.top-container {
-  padding: 0.3rem;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-.sticky {
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
-
 header {
   background-color: #f2cc0f;
   color: black;
@@ -95,12 +83,6 @@ header .input-button:hover {
   background-color: #f2cc0f;
 }
 
-button {
-  transition: 0.1s all;
-}
-button:active {
-  transform: scale(0.95);
-}
 .section-heading {
   margin: 0.7rem 0;
   font-size: 30px;
@@ -108,6 +90,13 @@ button:active {
   text-align: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-style: italic;
+}
+
+button {
+  transition: 0.1s all;
+}
+button:active {
+  transform: scale(0.95);
 }
 
 .sidenav {
@@ -146,114 +135,63 @@ button:active {
   cursor: pointer;
 }
 
-/* Main Page */
-main {
-  padding: 0rem 2rem;
-}
-main .content {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-  overflow: hidden;
-}
-main .content .content-overlay {
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  height: 99%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  transition: all 0.4s ease-in-out 0s;
-}
-main .content:hover .content-overlay {
-  opacity: 1;
-}
-main .content-image {
-  width: 100%;
-}
-main .content-details {
-  position: absolute;
-  text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease-in-out 0s;
-}
-main .content:hover .content-details {
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-}
-main .content-details p {
-  color: #fff;
-  font-weight: normal;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 18px;
-}
-main .fadeIn-top {
-  top: 20%;
-}
-main .input-button {
-  background-color: black;
-  color: #f2cc0f;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  width: 10%;
-  min-width: 70px;
-  height: 40px;
-  font-size: 20px;
-  font-style: italic;
-  padding-right: 3px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-main .input-button:hover {
-  color: black;
+/* Account Sign -In, -Register and Change Password pages */
+.account {
   background-color: #f2cc0f;
+  width: 45%;
+  min-width: 300px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  margin-left: auto;
+  margin-right: auto;
 }
-main button {
-  padding: 0%;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
+.account .account-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-main .cards {
-  max-width: 100%;
-  margin: 0 auto;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin-bottom: 50px;
+.account .form-input {
+  width: 75%;
+  min-width: 250px;
+  height: 40px;
+  outline: none;
+  border: 1px solid black;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 2rem;
 }
-main .card {
-  width: fit-content;
-  margin: 0 auto;
+.account .form-label {
+  font-size: 25px;
+  padding-bottom: 5px;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
-main .card-img {
-  overflow: hidden;
-}
-main .card-img img {
-  transition: transform 0.8s ease;
-  width: 95%;
-}
-main .card-img:hover img {
-  transform: scale(1.18);
-}
-main .card-info {
+.account .account-form-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding: 0px 5px;
+}
+.account .form-button {
+  width: 20%;
+  min-width: 110px;
+  height: 40px;
+  font-size: 25px;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #f2cc0f;
+  background-color: black;
+  border: 1px solid #f2cc0f;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.account .form-button:hover {
+  background-color: #f2cc0f;
+  color: black;
+  border: 1px solid black;
+}
+.account p {
+  text-align: center;
 }
 
 /* Navigation controller */
@@ -325,38 +263,8 @@ footer {
   width: 100%;
 }
 
-.select-page-image {
-  filter: blur(1px);
-}
-
-@media (min-width: 300px) and (max-width: 1200px) {
-  .product {
-    flex-direction: column;
-  }
-  .change-view-buttons {
-    flex-direction: row;
-  }
-  .product-img {
-    width: 90%;
-  }
-  .view-img {
-    width: 120px;
-  }
-}
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-  main {
-    padding: 0rem 2rem;
-  }
-  main h4 {
-    font-size: 15px;
-  }
-  main p {
-    font-size: 15px;
-  }
-  main .card-info {
-    justify-content: space-between;
-  }
   #upBtn {
     position: fixed;
     bottom: 250px;
@@ -405,18 +313,6 @@ footer {
   header i {
     font-size: 30px;
   }
-  main {
-    padding: 0rem 2rem;
-  }
-  main h4 {
-    font-size: 16px;
-  }
-  main p {
-    font-size: 16px;
-  }
-  main .card-info {
-    justify-content: space-around;
-  }
   footer {
     font-size: 18px;
   }
@@ -462,18 +358,6 @@ footer {
   }
   header i {
     font-size: 30px;
-  }
-  main {
-    padding: 0rem 2rem;
-  }
-  main h4 {
-    font-size: 16px;
-  }
-  main p {
-    font-size: 16px;
-  }
-  main .card-info {
-    justify-content: space-around;
   }
   footer {
     font-size: 18px;
