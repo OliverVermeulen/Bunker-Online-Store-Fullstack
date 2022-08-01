@@ -19,8 +19,8 @@ CREATE TABLE `bunker`.`products` (
 `price` INT NOT NULL , 
 `image` VARCHAR(250) NOT NULL , 
 `alt_view_image` VARCHAR(250) NOT NULL , 
-`released` VARCHAR(10) NOT NULL , 
-`featured` VARCHAR(10) NOT NULL , 
+`released` INT NOT NULL , 
+`featured` INT NOT NULL , 
 PRIMARY KEY (`product_id`)
 ) ENGINE = InnoDB;
 
@@ -37,5 +37,21 @@ ALTER TABLE `cart` ADD FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`) ON 
 
 -- Adds records into books table
 INSERT INTO `products` (`product_id`, `type`, `name`, `brand`, `price`, `image`, `alt_view_image`, `released`, `featured`) VALUES 
-(NULL, 'top', 'Float Tee', 'Supreme', '700', '/Bunker-Online-Store-Fullstack/src/images/products/t-shirt.png', '/Bunker-Online-Store-Fullstack/src/images/products/t-shirt-alt-view.png', 'true', 'true'), 
-(NULL, 'top', 'Camo Field Jacket With Patches', 'Off-White', '22000', '/Bunker-Online-Store-Fullstack/src/images/products/camo-jacket.png', '/Bunker-Online-Store-Fullstack/src/images/products/camo-jacket-alt-view.png', 'true', 'false')
+(NULL, 'top', 'Float Tee', 'Supreme', 700, 't-shirt.png', 't-shirt-alt-view.png', 1, 1), 
+(NULL, 'top', 'Camo Field Jacket With Patches', 'Off-White', 22000, 'camo-jacket.png', 'camo-jacket-alt-view.png', 1, 0),
+(NULL, 'top', 'Cotton Ripstop Dyed Jacket', 'Stone Island', 10600, 'cotton-dyed-jacket.png', 'cotton-dyed-jacket-alt-view.png', 1, 0), 
+(NULL, 'top', 'Peace Of Mind Hoodie', 'Vans', 1500, 'hoodie.png', 'hoodie-alt-view.png', 1, 0),
+(NULL, 'top', 'Busy Shark Chambray Shirt', 'Bape', 5670, 'chambray-shirt.png', 'chambray-shirt-alt-view.png', 1, 0), 
+(NULL, 'bottom', 'Credit Card Jean', 'Supreme', 3050, 'jean.png', 'jean-alt-view.png', 1, 0),
+(NULL, 'bottom', 'Denim Shorts', 'Off-White', 7500, 'denim-short.png', 'denim-short-alt-view.png', 1, 1),
+(NULL, 'bottom', 'Cotton Ripstop Dyed Jacket', 'Stone Island', 4400, 'canvas-trousers.png', 'canvas-trousers-alt-view.png', 1, 0),
+(NULL, 'bottom', 'Eco Positivity Short', 'Vans', 799, 'elastic-short.png', 'elastic-short-alt-view.png', 1, 0),
+(NULL, 'bottom', 'Camo Painter Pants', 'Bape', 8250, 'painter-pants.png', 'painter-pants-alt-view.png', 1, 0), 
+(NULL, 'accessory', 'Velo Sunglasses', 'Supreme', 3400, 'sunglasses.png', 'sunglasses-alt-view.png', 1, 0),
+(NULL, 'accessory', 'Tape Industrial Belt', 'Off-White', 3220, 'belt.png', 'belt-alt-view.png', 1, 0),
+(NULL, 'accessory', 'Commato Backpack', 'Stone Island', 6350, 'backpack.png', 'backpack-alt-view.png', 1, 1),
+(NULL, 'accessory', 'Checkerboard Crew Socks', 'Vans', 300, 'socks.png', 'socks-alt-view.png', 1, 0),
+(NULL, 'accessory', 'Knit Cap', 'Bape', 1600, 'beanie.png', 'beanie-alt-view.png', 1, 0),
+(NULL, 'soon', 'Palm Tree Bowling Shirt', 'Gucci', 16710, 'coming-soon-1.png', 'coming-soon-1.png', 0, 0),
+(NULL, 'soon', '50/50 Wide Leg Jeans', 'Balenciaga', 12510, 'coming-soon-2.png', 'coming-soon-2.png', 0, 0),
+(NULL, 'soon', 'Monogram Split Scarf', 'Louis Vuitton', 19000, 'coming-soon-3.png', 'coming-soon-3.png', 0, 0)

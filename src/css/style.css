@@ -19,11 +19,7 @@ body {
   color: white;
   text-align: center;
 }
-.sticky {
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
+
 
 header {
   background-color: #f2cc0f;
@@ -100,6 +96,11 @@ button {
 }
 button:active {
   transform: scale(0.95);
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 .section-heading {
   margin: 0.7rem 0;

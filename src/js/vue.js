@@ -55,12 +55,6 @@ const Component = {
     },
   },
   mounted() {
-    // axios
-    //   .get("/public/product-data/all")
-    //   .then(
-    //     (response) => (this.all = response.data),
-    //     console.log(response.data)
-    //   );
     axios
       .get("public/product-data/all")
       .then((response) => (this.all = response.data)),
