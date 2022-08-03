@@ -25,7 +25,7 @@ header {
   background-color: #f2cc0f;
   color: black;
   padding: 0.4rem 2rem;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 header .header-buttons {
@@ -169,12 +169,14 @@ main .content .content-overlay {
   right: 0;
   opacity: 0;
   transition: all 0.4s ease-in-out 0s;
+  z-index: 1;
 }
 main .content:hover .content-overlay {
   opacity: 1;
 }
 main .content-image {
   width: 100%;
+  transform: scale(1.2);
 }
 main .content-details {
   position: absolute;
@@ -187,6 +189,7 @@ main .content-details {
   opacity: 0;
   transform: translate(-50%, -50%);
   transition: all 0.3s ease-in-out 0s;
+  z-index: 1;
 }
 main .content:hover .content-details {
   top: 50%;
@@ -255,6 +258,7 @@ main .card-info {
   flex-direction: row;
   justify-content: space-evenly;
   padding: 0px 5px;
+  text-transform: uppercase;
 }
 
 /* Navigation controller */
@@ -270,6 +274,7 @@ main .card-info {
   height: 30px;
   transition: 0.5s;
   font-size: 18px;
+  z-index: 2;
 }
 .navigation-btn:hover {
   background-color: black;
@@ -324,6 +329,8 @@ footer {
   color: black;
   font-weight: bold;
   width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .select-page-image {

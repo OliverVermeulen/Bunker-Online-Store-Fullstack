@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+#app {
+  transition: margin-left 0.5s;
+}
+
+.top-container {
+  padding: 0.3rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+header {
+  background-color: #f2cc0f;
+  color: black;
+  padding: 0.4rem 2rem;
+  z-index: 2;
+  width: 100%;
+}
+header .header-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .home-link {
+  cursor: pointer;
+  color: black;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-decoration: none;
+  font-size: 40px;
+  font-style: italic;
+}
+header i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.8s ease;
+  color: black;
+}
+header i:hover {
+  transform: scale(1.18);
+}
+header .icon {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+header .searchbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0px;
+}
+header .search-input {
+  width: 40%;
+  min-width: 250px;
+  height: 40px;
+  margin-right: 20px;
+  outline: none;
+  border: 1px solid black;
+  font-size: 15px;
+  padding: 10px;
+}
+header .input-button {
+  background-color: black;
+  color: #f2cc0f;
+  border: 1px solid black;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 10%;
+  min-width: 70px;
+  height: 40px;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+header .input-button:hover {
+  color: black;
+  background-color: #f2cc0f;
+}
+
+button {
+  transition: 0.1s all;
+}
+button:active {
+  transform: scale(0.95);
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.section-heading {
+  margin: 0.7rem 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sidenav a {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f2cc0f;
+  display: block;
+  transition: 0.3s;
+  writing-mode: vertical-rl;
+  transform: scale(-1, -1);
+}
+.sidenav a:hover {
+  color: #d3a92a;
+}
+.sidenav .type-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.cart-text {
+  text-transform: uppercase;
+  width: 30%;
+}
+.cart-img {
+  width: 50px;
+}
+
+/* Navigation controller */
+.navigation-btn {
+  border: none;
+  outline: none;
+  color: black;
+  background-color: #f2cc0f;
+  cursor: pointer;
+  padding-top: 3px;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+  font-size: 18px;
+  z-index: 2;
+}
+.navigation-btn:hover {
+  background-color: black;
+  color: #f2cc0f;
+}
+/* Top of page */
+#upBtn {
+  position: fixed;
+  bottom: 105px;
+  right: 45px;
+}
+/* Bottom of page */
+#downBtn {
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+}
+/* Open nav */
+#openNav {
+  position: fixed;
+  bottom: 75px;
+  right: 15px;
+}
+/* Close nav */
+#closeNav {
+  position: fixed;
+  bottom: 75px;
+  right: 75px;
+}
+/* Previous page */
+#previousPage {
+  position: fixed;
+  bottom: 75px;
+  right: 45px;
+  border-radius: 50%;
+  color: #f2cc0f;
+  background-color: black;
+}
+#previousPage:hover {
+  color: black;
+  background-color: #f2cc0f;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  background-color: #f2cc0f;
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  main {
+    padding: 0 2rem;
+  }
+  .cart-item {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .cart-item {
+    min-width: 420px;
+  }
+}
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cart-item {
+    font-size: 15px;
+    width: 70%;
+  }
+}
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .cart-item {
+        font-size: 15px;
+        width: 70%;
+      }
+}

@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
+      Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  #app {
+    transition: margin-left 0.5s;
+  }
+  
+  .top-container {
+    padding: 0.3rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  
+  
+  header {
+    background-color: #f2cc0f;
+    color: black;
+    padding: 0.4rem 2rem;
+    z-index: 2;
+    width: 100%;
+  }
+  header .header-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .home-link {
+    cursor: pointer;
+    color: black;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    text-decoration: none;
+    font-size: 40px;
+    font-style: italic;
+  }
+  header i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.8s ease;
+    color: black;
+  }
+  header i:hover {
+    transform: scale(1.18);
+  }
+  header .icon {
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+  header .searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0px;
+  }
+  header .search-input {
+    width: 40%;
+    min-width: 250px;
+    height: 40px;
+    margin-right: 20px;
+    outline: none;
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 10px;
+  }
+  header .input-button {
+    background-color: black;
+    color: #f2cc0f;
+    border: 1px solid black;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    width: 10%;
+    min-width: 70px;
+    height: 40px;
+    font-size: 20px;
+    font-style: italic;
+    padding-left: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  header .input-button:hover {
+    color: black;
+    background-color: #f2cc0f;
+  }
+  
+  button {
+    transition: 0.1s all;
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+  .sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  .section-heading {
+    margin: 0.7rem 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-style: italic;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .sidenav a {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f2cc0f;
+    display: block;
+    transition: 0.3s;
+    writing-mode: vertical-rl;
+    transform: scale(-1, -1);
+  }
+  .sidenav a:hover {
+    color: #d3a92a;
+  }
+  .sidenav .type-button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* Footer */
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    background-color: #f2cc0f;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  @media (min-width: 300px) and (max-width: 1200px) {
+    .product {
+      flex-direction: column;
+    }
+    .change-view-buttons {
+      flex-direction: row;
+    }
+    .product-img {
+      width: 90%;
+    }
+    .view-img {
+      width: 120px;
+    }
+  }
+  /* Media Query for Mobile Devices */
+  @media (max-width: 480px) {
+    main {
+      padding: 0rem 2rem;
+    }
+    main h4 {
+      font-size: 15px;
+    }
+    main p {
+      font-size: 15px;
+    }
+    main .card-info {
+      justify-content: space-between;
+    }
+    #upBtn {
+      position: fixed;
+      bottom: 250px;
+      right: 40px;
+    }
+    #downBtn {
+      position: fixed;
+      bottom: 190px;
+      right: 40px;
+    }
+    #openNav {
+      position: fixed;
+      bottom: 220px;
+      right: 10px;
+    }
+    #closeNav {
+      position: fixed;
+      bottom: 220px;
+      right: 70px;
+    }
+    #previousPage {
+      position: fixed;
+      bottom: 220px;
+      right: 40px;
+      border-radius: 50%;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 899px) {
+  }
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 900px) and (max-width: 1024px) {
+    .top-container {
+      font-size: 18px;
+    }
+    header a {
+      cursor: pointer;
+      color: black;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      text-decoration: none;
+      font-size: 60px;
+      font-style: italic;
+    }
+    header i {
+      font-size: 30px;
+    }
+    main {
+      padding: 0rem 2rem;
+    }
+    main h4 {
+      font-size: 16px;
+    }
+    main p {
+      font-size: 16px;
+    }
+    main .card-info {
+      justify-content: space-around;
+    }
+    footer {
+      font-size: 18px;
+    }
+    #upBtn {
+      position: fixed;
+      bottom: 276px;
+      right: 40px;
+    }
+    #downBtn {
+      position: fixed;
+      bottom: 216px;
+      right: 40px;
+    }
+    #openNav {
+      position: fixed;
+      bottom: 246px;
+      right: 10px;
+    }
+    #closeNav {
+      position: fixed;
+      bottom: 246px;
+      right: 70px;
+    }
+    #previousPage {
+      position: fixed;
+      bottom: 246px;
+      right: 40px;
+      border-radius: 50%;
+    }
+  }
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .top-container {
+      font-size: 18px;
+    }
+    header a {
+      cursor: pointer;
+      color: black;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      text-decoration: none;
+      font-size: 60px;
+      font-style: italic;
+    }
+    header i {
+      font-size: 30px;
+    }
+    main {
+      padding: 0rem 2rem;
+    }
+    main h4 {
+      font-size: 16px;
+    }
+    main p {
+      font-size: 16px;
+    }
+    main .card-info {
+      justify-content: space-around;
+    }
+    footer {
+      font-size: 18px;
+    }
+  }
+  /* Media Query for Large screens */
+  @media (min-width: 1900px) {
+    main {
+      padding: 1.25rem 2rem;
+    }
+  }

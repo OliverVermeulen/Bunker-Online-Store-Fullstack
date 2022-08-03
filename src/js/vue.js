@@ -6,30 +6,32 @@ const Component = {
       upcoming: null,
       available: null,
       featured: null,
-      all: null,
+      cart: null,
     };
   },
   mounted() {
+    // Upcoming products
     axios
       .get("public/product-data/upcoming")
       .then((response) => (this.upcoming = response.data));
     console.log(this);
 
+    // Available products
     axios
       .get("public/product-data/available")
       .then((response) => (this.available = response.data));
     console.log(this);
 
-    axios
-    .get("public/product-data/available")
-    .then((response) => (this.available = response.data));
-  console.log(this);
-
+    // Featured products
     axios
       .get("public/product-data/featured")
       .then((response) => (this.featured = response.data));
     console.log(this);
-    // this.comingSoonArray()
+    
+    axios
+    .get("public/cart-data/user")
+    .then((response) => (this.cart = response.data));
+  console.log(this);
   },
 };
 

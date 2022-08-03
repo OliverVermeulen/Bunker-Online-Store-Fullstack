@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUNKER®</title>
     <link rel="shortcut icon" href="./src/images/store/bunker-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/cart.css" />
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue@3"></script>
@@ -25,15 +25,13 @@
         <!-- Buttons/Links -->
         <div class="header-buttons">
           <!-- Toggle searchbar -->
-          <button onclick="myFunction()" class="icon" title="Search Toggle"><a href="#all-products"><i class="fa fa-search"></i></a></button>
+          <button onclick="disabled" class="icon" title="Disabled"><i class="fa fa-search"></i></button>
 
           <!-- Logo/Home -->
-          <a href="" title="Home" class="home-link">BUNKER</a>
+          <a href="/" title="Home" class="home-link">BUNKER</a>
 
-          <!-- Cart page -->
-          <form action="./src/php//check-cart.php" method="post">
-            <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
-          </form>
+          <!-- Cart -->
+          <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
         </div>
 
         <!-- Searchbar -->
@@ -72,56 +70,15 @@
         <a href="./src/php/user.php" title="Account" >Account</a>
       </nav>
 
-      <main id="main" class="main">
-        <p class="section-heading">Coming Soon</p>
-        <div class="cards">
-          <div class="content" v-for="product in upcoming" :key="product.product_id">
-              <div class="content-overlay"></div>
-              <img class="content-image" v-bind:src="'./src/images/products/' + product.image" :alt="product.name">
-              <div class="content-details fadeIn-top">
-                <p>{{product.name}}</p>
-                <p>{{product.brand}}</p>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <p class="section-heading">Featured Products</p>
-        <div class="cards">
-          <!-- Vue data loop  -->
-          <div class="content" v-for="product in featured" :key="product.product_id">
-            <!-- Filter by selected product -->
-            <div class="content-overlay"></div>
-            <form action="./selected-products.html">
-              <input type="hidden" :value="product.product_id" name="product_id" />
-              <img class="content-image" v-bind:src="'./src/images/products/' + product.image" :alt="product.name">
-            <div class="content-details fadeIn-top">
-              <p>{{product.name}}</p>
-              <p>R {{product.price}}.00</p>
-              <!-- <button type="submit" :title="product.name">dfgdfg</button> -->
-              <button type="submit" class="input-button" title="See More">MORE</button>
-            </div>
-            </form>
-          </div>
-        </div>
-
-        <p class="section-heading" id="all-products">All Products</p>
-        <div class="cards">
-          <!-- Vue data loop -->
-          <div class="card" v-for="product in available" :key="product.product_id">
-            <!-- Filter by selected product -->
-            <form action="./selected-products.html">
-              <input type="hidden" :value="product.product_id" name="product_id" />
-              <button class="card-img" type="submit" :title="product.name">
-                <img v-bind:src="'./src/images/products/' + product.image" :alt="product.name" />
-              </button>
-            </form>
-            <div class="card-info">
-              <h4>{{product.name}}</h4>
-              <p>R {{product.price}}.00</p>
+        <main>
+          <p class="section-heading">Your Cart</p>
+          <div v-for="product in cart" :key="product.product_id">
+            <div class="cart-item">
+              <p class="cart-text">{{product.product_name}}</p>
+              <p class="cart-text">R {{product.product_price}}.00</p>
+              <img v-bind:src="'./src/images/products/' + product.product_image" :alt="product.product_name" class="cart-img" />
             </div>
           </div>
-        </div>
         </main>
 
       <!-- Navigation Controller -->

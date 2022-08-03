@@ -4,7 +4,7 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 // GET Cart Data
-$app->get('/cart-data/all', function (Request $request, Response $response) {
+$app->get('/cart-data/user', function (Request $request, Response $response) {
     $sql = "SELECT * FROM cart";
 
     try {

@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUNKER® - USER</title>
-    <link rel="shortcut icon" href="../images/store/bunker-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/user.css" />
-    <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="../js/script.js" defer></script>
-    <script src="../js/vue.js" type="module" defer></script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BUNKER® - PRODUCT</title>
+        <link rel="shortcut icon" href="./src/images/store/bunker-icon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./src/css/style.css" />
+        <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="./src/js/script.js" defer></script>
+        <script src="./src/js/vue.js" type="module" defer></script>
+    </head>
   <body>
     <div id="app">
+      <!-- Top Container -->
+      <div class="top-container">
+        <span><i class="fa fa-globe"></i> FREE SHIPPING ON ORDERS OVER R 4000</span>
+      </div>
+
       <!-- Header -->
       <header id="myHeader">
         <!-- Buttons/Links -->
@@ -32,39 +38,49 @@
       <!-- Navbar -->
       <nav id="mySidenav" class="sidenav">
         <!-- Filter products by tops -->
-        <form action="../pages/filtered-products.html">
+        <form action="./src/pages/filtered-products.html">
           <input type="hidden" value="top" name="product_type" />
           <button title="Tops" class="type-button"><a>Tops</a></button>
           <!-- <a type="submit" title="Tops">Tops</a> -->
         </form>
   
         <!-- Filter products by bottoms -->
-        <form action="../pages/filtered-products.html">
+        <form action="./src/pages/filtered-products.html">
           <input type="hidden" value="bottom" name="product_type" />
           <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
         </form>
   
         <!-- Filter products by accessories -->
-        <form action="../pages/filtered-products.html">
+        <form action="./src/pages/filtered-products.html">
           <input type="hidden" value="accessory" name="product_type" />
           <button title="Accessories" class="type-button"><a>Accessories</a></button>
         </form>
   
         <!-- About Us page -->
-        <a href="../pages/about-us.html" title="About Us">About Us</a>
+        <a href="./src/pages/about-us.html" title="About Us">About Us</a>
   
         <!-- Account page -->
-        <a href="../php/user.php" title="Account" >Account</a>
+        <a href="./src/php/user.php" title="Account" >Account</a>
       </nav>
 
-      <div class="user-account">
-        <img src="../images/store/user-icon.jpg" alt="User Icon" class="user-icon">
-        <p class="user-account-detail"><span class="user-account-label">Name:</span>Oliver</p>
-        <p class="user-account-detail"><span class="user-account-label">Username:</span>SKYRIDER</p>
-        <p class="user-account-detail"><span class="user-account-label">Email:</span>oliververmeulen862@gmail.com</p>
-        <button class="user-account-button" title="Reset Password"><a href="../pages/reset-password.html">Reset Password</a></button>
-        <button class="user-account-button" title="Log Out"><a href="../php/logout.php">Log Out</a></button>
-      </div>
+      <main id="main">
+        <div class="product" v-for="product in available" :key="product.id">
+            <img v-bind:src="'./src/images/products/' + product.image" :alt="product.name" class="select-page-image">
+            <img v-bind:src="'./src/images/products/' + product.alt_view_image" :alt="product.name" class="select-page-image">
+        <div class="order-form">
+          <form action="./src/php/cart.php" method="post" class="order-form">
+            <p class="detail"><span class="label">NAME:</span>{{product.name}}</p>
+            <p class="detail"><span class="label">BRAND:</span>{{product.brand}}</p>
+            <p class="detail"><span class="label">PRICE:</span>R {{product.price}}.00</p>
+
+            <input type="hidden" :value="product.product_id" name="product_id">
+            <input type="hidden" :value="product.name" name="product_name">
+            <input type="hidden" :value="product.price" name="product_price">
+            <input type="hidden" :value="product.image" name="product_image">
+            <button type="submit" class="product-btn" title="Add to cart">ADD TO CART</button>
+          </form>
+        </div></div>
+      </main>
 
       <!-- Navigation Controller -->
       <div class="navigation-controller">
@@ -81,7 +97,7 @@
         <button onclick="closeNav()" id="closeNav" class="navigation-btn" title="Close Navbar"><i class="fa fa-arrow-left"></i></button>
 
         <!-- Previous page -->
-        <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back" ><i class="fa fa-close"></i></button>
+        <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back"><i class="fa fa-close"></i></button>
       </div>
 
       <!-- Footer -->
