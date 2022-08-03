@@ -63,23 +63,37 @@
         <a href="./src/php/user.php" title="Account" >Account</a>
       </nav>
 
-      <main id="main">
+      <main class="main">
         <div class="product" v-for="product in available" :key="product.id">
-            <img v-bind:src="'./src/images/products/' + product.image" :alt="product.name" class="select-page-image">
-            <img v-bind:src="'./src/images/products/' + product.alt_view_image" :alt="product.name" class="select-page-image">
-        <div class="order-form">
-          <form action="./src/php/cart.php" method="post" class="order-form">
-            <p class="detail"><span class="label">NAME:</span>{{product.name}}</p>
-            <p class="detail"><span class="label">BRAND:</span>{{product.brand}}</p>
-            <p class="detail"><span class="label">PRICE:</span>R {{product.price}}.00</p>
 
+          <div class="product-alt-views">
+            <img v-bind:src="'./src/images/products/' + product.image" :alt="product.name" class="alt-img" title="Main view">
+            <img v-bind:src="'./src/images/products/' + product.alt_view_image" :alt="product.name" class="alt-img" title="Alternate View">
+          </div>  
+
+          <div>
+            <img v-bind:src="'./src/images/products/' + product.image" :alt="product.name" class="main-img" :title="product.name">
+          </div>
+
+        <div>
+          <form action="./src/php/cart.php" method="post" class="order-form">
+            <!-- Visible product data -->
+            <p class="form-text"><span class="form-text-label">Name:</span>{{product.name}}</p>
+            <p class="form-text"><span class="form-text-label">Brand:</span>{{product.brand}}</p>
+            <p class="form-text"><span class="form-text-label">Price:</span>R {{product.price}}.00</p>
+
+            <!-- Hidden form data -->
             <input type="hidden" :value="product.product_id" name="product_id">
             <input type="hidden" :value="product.name" name="product_name">
             <input type="hidden" :value="product.price" name="product_price">
             <input type="hidden" :value="product.image" name="product_image">
+
+            <!-- Form submit -->
             <button type="submit" class="product-btn" title="Add to cart">ADD TO CART</button>
           </form>
-        </div></div>
+        </div>
+
+      </div>
       </main>
 
       <!-- Navigation Controller -->

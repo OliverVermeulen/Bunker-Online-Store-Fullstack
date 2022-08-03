@@ -333,10 +333,6 @@ footer {
   letter-spacing: 0.05em;
 }
 
-.select-page-image {
-  filter: blur(1px);
-}
-
 @media (min-width: 300px) and (max-width: 1200px) {
   .product {
     flex-direction: column;
