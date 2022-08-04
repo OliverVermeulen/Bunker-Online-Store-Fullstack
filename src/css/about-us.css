@@ -9,6 +9,12 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+body button {
+  transition: 0.1s all;
+}
+body button:active {
+  transform: scale(0.95);
+}
 #app {
   transition: margin-left 0.5s;
 }
@@ -19,17 +25,12 @@ body {
   color: white;
   text-align: center;
 }
-.sticky {
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
 
 header {
   background-color: #f2cc0f;
   color: black;
   padding: 0.4rem 2rem;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 header .header-buttons {
@@ -94,21 +95,10 @@ header .input-button:hover {
   color: black;
   background-color: #f2cc0f;
 }
-
-.section-heading {
-  margin: 0.7rem 0;
-  font-size: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-style: italic;
-}
-
-button {
-  transition: 0.1s all;
-}
-button:active {
-  transform: scale(0.95);
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 .sidenav {
@@ -152,13 +142,21 @@ main {
   min-height: calc(100vh - 60px - 35px);
   margin: 0 auto;
 }
-/* About Us Page */
+/* Heading */
+main .section-heading {
+  margin: 0.7rem 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+}
+/* About Us */
 .about-us {
   margin: 2rem 0;
   display: flex;
   flex-direction: row;
 }
-
 /* Staff Grid */
 .company-staff {
   width: 35%;
@@ -224,7 +222,6 @@ main {
 .fadeIn-top {
   top: 20%;
 }
-
 /* Company Details */
 /* Background Image */
 .company-details {
@@ -365,7 +362,7 @@ footer {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
+  }
   .about-us {
     flex-direction: column;
   }
@@ -389,7 +386,7 @@ footer {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
+  }
   .about-us {
     flex-direction: column;
   }
@@ -413,16 +410,16 @@ footer {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-}
+  }
 
-.company-staff {
-  width: 35%;
-  min-width: 320px;
-  margin: 0 auto;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
+  .company-staff {
+    width: 35%;
+    min-width: 320px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
   .company-details {
     width: 500px;
     padding: 2rem;

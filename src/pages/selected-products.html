@@ -5,13 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BUNKER® - PRODUCT</title>
-        <link rel="shortcut icon" href="./src/images/store/bunker-icon.png" type="image/x-icon" />
-        <link rel="stylesheet" href="./src/css/product.css" />
+        <link rel="shortcut icon" href="../images/store/bunker-icon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="../css/product.css" />
         <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/vue@3"></script>
-        <script src="./src/js/script.js" defer></script>
-        <script src="./src/js/vue.js" type="module" defer></script>
+        <script src="../js/script.js" defer></script>
+        <script src="../js/vue.js" type="module" defer></script>
     </head>
   <body>
     <div id="app">
@@ -25,58 +25,60 @@
         <!-- Buttons/Links -->
         <div class="header-buttons">
           <!-- Toggle searchbar -->
-          <button type="disabled" class="icon" title="Disabled"><i class="fa fa-search"></i></button>
+          <button onclick="disabled" class="icon" title="Disabled"><i class="fa fa-search"></i></button>
 
           <!-- Logo/Home -->
-          <a href="/" title="Home" class="home-link">BUNKER</a>
+          <a href="" title="Home" class="home-link">BUNKER</a>
 
-          <!-- Cart -->
-          <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
+          <!-- Cart page -->
+          <form action="../php/check-cart.php" method="post">
+            <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
+          </form>
         </div>
       </header>
 
       <!-- Navbar -->
       <nav id="mySidenav" class="sidenav">
         <!-- Filter products by tops -->
-        <form action="./src/pages/filtered-products.html">
+        <form action="../pages/filtered-products.html">
           <input type="hidden" value="top" name="product_type" />
           <button title="Tops" class="type-button"><a>Tops</a></button>
           <!-- <a type="submit" title="Tops">Tops</a> -->
         </form>
   
         <!-- Filter products by bottoms -->
-        <form action="./src/pages/filtered-products.html">
+        <form action="../pages/filtered-products.html">
           <input type="hidden" value="bottom" name="product_type" />
           <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
         </form>
   
         <!-- Filter products by accessories -->
-        <form action="./src/pages/filtered-products.html">
+        <form action="../pages/filtered-products.html">
           <input type="hidden" value="accessory" name="product_type" />
           <button title="Accessories" class="type-button"><a>Accessories</a></button>
         </form>
   
         <!-- About Us page -->
-        <a href="./src/pages/about-us.html" title="About Us">About Us</a>
+        <a href="../pages/about-us.html" title="About Us">About Us</a>
   
         <!-- Account page -->
-        <a href="./src/php/user.php" title="Account" >Account</a>
+        <a href="../php/user.php" title="Account" >Account</a>
       </nav>
 
       <main class="main">
         <div class="product" v-for="product in available" :key="product.id">
 
           <div class="product-alt-views">
-            <img v-bind:src="'./src/images/products/' + product.image" :alt="product.name" class="alt-img" title="Main view">
-            <img v-bind:src="'./src/images/products/' + product.alt_view_image" :alt="product.name" class="alt-img" title="Alternate View">
+            <img v-bind:src="'../images/products/' + product.image" :alt="product.name" class="alt-img" title="Main view">
+            <img v-bind:src="'../images/products/' + product.alt_view_image" :alt="product.name" class="alt-img" title="Alternate View">
           </div>  
 
           <div>
-            <img v-bind:src="'./src/images/products/' + product.image" :alt="product.name" class="main-img" :title="product.name">
+            <img v-bind:src="'../images/products/' + product.image" :alt="product.name" class="main-img" :title="product.name">
           </div>
 
         <div>
-          <form action="./src/php/cart.php" method="post" class="order-form">
+          <form action="../php/cart.php" method="post" class="order-form">
             <!-- Visible product data -->
             <p class="form-text"><span class="form-text-label">Name:</span>{{product.name}}</p>
             <p class="form-text"><span class="form-text-label">Brand:</span>{{product.brand}}</p>

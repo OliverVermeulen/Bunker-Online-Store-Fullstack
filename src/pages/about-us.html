@@ -25,7 +25,7 @@
           <a href="/" title="Home" class="home-link">BUNKER</a>
 
           <!-- Cart page -->
-          <form action="./src/php/check-cart.php" method="post">
+          <form action="../php/check-cart.php" method="post">
             <button class="icon" title="Cart">
               <i class="fa fa-shopping-cart"></i>
             </button>
@@ -36,30 +36,28 @@
       <!-- Navbar -->
       <nav id="mySidenav" class="sidenav">
         <!-- Filter products by tops -->
-        <form action="./src/pages/filtered-products.html">
+        <form action="/src/pages/filtered-products.html">
           <input type="hidden" value="top" name="product_type" />
           <button title="Tops" class="type-button"><a>Tops</a></button>
         </form>
 
         <!-- Filter products by bottoms -->
-        <form action="./src/pages/filtered-products.html">
+        <form action="/src/pages/filtered-products.html">
           <input type="hidden" value="bottom" name="product_type" />
           <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
         </form>
 
         <!-- Filter products by accessories -->
-        <form action="./src/pages/filtered-products.html">
+        <form action="/src/pages/filtered-products.html">
           <input type="hidden" value="accessory" name="product_type" />
-          <button title="Accessories" class="type-button">
-            <a>Accessories</a>
-          </button>
+          <button title="Accessories" class="type-button"><a>Accessories</a></button>
         </form>
 
         <!-- About Us page -->
         <a href="/" title="About Us">Home</a>
 
         <!-- Account page -->
-        <a href="./src/php/user.php" title="Account">Account</a>
+        <a href="../php/user.php" title="Account" >Account</a>
       </nav>
 
       <main>

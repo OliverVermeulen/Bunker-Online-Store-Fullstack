@@ -1,10 +1,8 @@
 <?php
+session_start();
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
-
-
-session_start();
 
 // GET Cart Data
 $app->get('/cart-data/user', function (Request $request, Response $response) {

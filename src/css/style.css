@@ -9,6 +9,12 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+body button {
+  transition: 0.1s all;
+}
+body button:active {
+  transform: scale(0.95);
+}
 #app {
   transition: margin-left 0.5s;
 }
@@ -18,8 +24,8 @@ body {
   background-color: black;
   color: white;
   text-align: center;
+  text-transform: uppercase;
 }
-
 
 header {
   background-color: #f2cc0f;
@@ -41,6 +47,7 @@ header .home-link {
   text-decoration: none;
   font-size: 40px;
   font-style: italic;
+  text-transform: uppercase;
 }
 header i {
   font-size: 20px;
@@ -85,30 +92,16 @@ header .input-button {
   padding-left: 3px;
   cursor: pointer;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 header .input-button:hover {
   color: black;
   background-color: #f2cc0f;
 }
-
-button {
-  transition: 0.1s all;
-}
-button:active {
-  transform: scale(0.95);
-}
 .sticky {
   position: sticky;
   top: 0;
   width: 100%;
-}
-.section-heading {
-  margin: 0.7rem 0;
-  font-size: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-style: italic;
 }
 
 .sidenav {
@@ -147,10 +140,20 @@ button:active {
   cursor: pointer;
 }
 
-/* Main Page */
+/* Main */
 main {
   padding: 0rem 2rem;
 }
+/* Heading */
+main .section-heading {
+  margin: 0.7rem 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+}
+/* Coming soon and Featured products */
 main .content {
   position: relative;
   width: 100%;
@@ -220,6 +223,7 @@ main .input-button {
   padding-right: 3px;
   cursor: pointer;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 main .input-button:hover {
   color: black;
@@ -231,6 +235,7 @@ main button {
   background-color: transparent;
   cursor: pointer;
 }
+/* Available products */
 main .cards {
   max-width: 100%;
   margin: 0 auto;
@@ -333,156 +338,26 @@ footer {
   letter-spacing: 0.05em;
 }
 
-@media (min-width: 300px) and (max-width: 1200px) {
-  .product {
-    flex-direction: column;
-  }
-  .change-view-buttons {
-    flex-direction: row;
-  }
-  .product-img {
-    width: 90%;
-  }
-  .view-img {
-    width: 120px;
-  }
-}
+/* Media Queries */
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-  main {
-    padding: 0rem 2rem;
-  }
-  main h4 {
-    font-size: 15px;
-  }
-  main p {
-    font-size: 15px;
-  }
   main .card-info {
     justify-content: space-between;
   }
-  #upBtn {
-    position: fixed;
-    bottom: 250px;
-    right: 40px;
-  }
-  #downBtn {
-    position: fixed;
-    bottom: 190px;
-    right: 40px;
-  }
-  #openNav {
-    position: fixed;
-    bottom: 220px;
-    right: 10px;
-  }
-  #closeNav {
-    position: fixed;
-    bottom: 220px;
-    right: 70px;
-  }
-  #previousPage {
-    position: fixed;
-    bottom: 220px;
-    right: 40px;
-    border-radius: 50%;
-  }
 }
-@media (min-width: 481px) and (max-width: 899px) {
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  main .cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .sidenav a {
+    padding-right: 5px;
+    font-size: 18px;
 }
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 900px) and (max-width: 1024px) {
-  .top-container {
-    font-size: 18px;
-  }
-  header a {
-    cursor: pointer;
-    color: black;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    text-decoration: none;
-    font-size: 60px;
-    font-style: italic;
-  }
-  header i {
-    font-size: 30px;
-  }
-  main {
-    padding: 0rem 2rem;
-  }
-  main h4 {
-    font-size: 16px;
-  }
-  main p {
-    font-size: 16px;
-  }
-  main .card-info {
-    justify-content: space-around;
-  }
-  footer {
-    font-size: 18px;
-  }
-  #upBtn {
-    position: fixed;
-    bottom: 276px;
-    right: 40px;
-  }
-  #downBtn {
-    position: fixed;
-    bottom: 216px;
-    right: 40px;
-  }
-  #openNav {
-    position: fixed;
-    bottom: 246px;
-    right: 10px;
-  }
-  #closeNav {
-    position: fixed;
-    bottom: 246px;
-    right: 70px;
-  }
-  #previousPage {
-    position: fixed;
-    bottom: 246px;
-    right: 40px;
-    border-radius: 50%;
-  }
 }
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {
-  .top-container {
-    font-size: 18px;
-  }
-  header a {
-    cursor: pointer;
-    color: black;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    text-decoration: none;
-    font-size: 60px;
-    font-style: italic;
-  }
-  header i {
-    font-size: 30px;
-  }
-  main {
-    padding: 0rem 2rem;
-  }
-  main h4 {
-    font-size: 16px;
-  }
-  main p {
-    font-size: 16px;
-  }
   main .card-info {
     justify-content: space-around;
-  }
-  footer {
-    font-size: 18px;
-  }
-}
-/* Media Query for Large screens */
-@media (min-width: 1900px) {
-  main {
-    padding: 1.25rem 2rem;
   }
 }

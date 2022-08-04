@@ -178,7 +178,7 @@ main {
   margin-bottom: 1.5rem;
 }
 .total-text {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-style: italic;
   font-size: 20px;
 }
@@ -191,7 +191,7 @@ main {
   text-transform: uppercase;
   font-style: italic;
   border: 0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 20px;
   padding-left: 5px;
 }
@@ -272,7 +272,6 @@ footer {
   letter-spacing: 0.05em;
 }
 
-
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
   main {
@@ -298,8 +297,8 @@ footer {
 }
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .cart-item {
-        font-size: 15px;
-        width: 70%;
-      }
+  .cart-item {
+    font-size: 15px;
+    width: 70%;
+  }
 }

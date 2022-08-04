@@ -7,6 +7,7 @@ const Component = {
       available: null,
       featured: null,
       cart: null,
+      users: null,
     };
   },
   mounted() {
@@ -50,6 +51,11 @@ const Component = {
     .get("/public/cart-data/user")
     .then((response) => (this.cart = response.data));
   console.log(this);
+
+  axios
+  .get("/public/users-data/all")
+  .then((response) => (this.users = response.data));
+console.log(this);
   },
 };
 

@@ -1,11 +1,13 @@
 <?php
+// session_start();
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 // GET User Data
 $app->get('/users-data/all', function (Request $request, Response $response) {
-    $sql = "SELECT * FROM users";
+    $userId =  $_SESSION["user_id"];
+    $sql = "SELECT * FROM users WHERE user_id = $userId";
 
     try {
         $db = new DB();
