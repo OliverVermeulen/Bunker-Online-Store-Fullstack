@@ -9,10 +9,15 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+body button {
+  transition: 0.1s all;
+}
+body button:active {
+  transform: scale(0.95);
+}
 #app {
   transition: margin-left 0.5s;
 }
-
 
 .top-container {
   padding: 0.3rem;
@@ -99,22 +104,6 @@ header .input-button:hover {
   width: 100%;
 }
 
-.section-heading {
-  margin: 0.7rem 0;
-  font-size: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-style: italic;
-}
-
-button {
-  transition: 0.1s all;
-}
-button:active {
-  transform: scale(0.95);
-}
-
 .sidenav {
   height: 100%;
   width: 0;
@@ -151,46 +140,61 @@ button:active {
   cursor: pointer;
 }
 
-/* User Account Page */
-.user-account {
-  margin: 1rem 0;
-  text-align: center;
+main {
+  min-height: calc(100vh - 60.78px - 35px);
+  padding-top: 1rem;
 }
-/* User Details */
-.user-account-label {
-  font-size: 40px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-style: italic;
-  text-transform: uppercase;
-  padding-right: 10px;
+main .user-account {
+  background: url("../images/store/backdrop.jpg");
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 2rem;
 }
-.user-account-detail {
-  font-size: 40px;
-  word-break: break-all;
+/* User icon */
+main .user-img {
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 2rem;
 }
-.user-icon {
-  width: 300px;
-}
-.user-account-button {
-  background-color: transparent;
-  border: none;
+/* User details */
+main .user-detail-label {
   font-size: 20px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  padding: 10px;
-  text-decoration: none;
-}
-.user-account-button a {
-  background-color: #f2cc0f;
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  transition: 0.5s;
   text-transform: uppercase;
-  font-style: italic;
+  padding-right: 5px;
 }
-.user-account-button a:hover {
-  color: #f2cc0f;
+main .user-detail {
+  font-size: 18px;
+  color: white;
+  word-break: break-all;
+}
+/* Action buttons */
+main .action-button {
+  border: 1px solid black;
   background-color: black;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0.5rem;
+  transition: 0.5s;
+}
+main .action-button:hover {
+  border: 1px solid black;
+  background-color: #f2cc0f;
+}
+main .action-button a {
+  color: #f2cc0f;
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+  transition: 0.5s;
+}
+main .action-button a:hover {
+  color: black;
 }
 
 /* Navigation controller */
@@ -206,6 +210,7 @@ button:active {
   height: 30px;
   transition: 0.5s;
   font-size: 18px;
+  z-index: 2;
 }
 .navigation-btn:hover {
   background-color: black;
@@ -260,108 +265,23 @@ footer {
   color: black;
   font-weight: bold;
   width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
+/* Media Queries */
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-  #upBtn {
-    position: fixed;
-    bottom: 250px;
-    right: 40px;
-  }
-  #downBtn {
-    position: fixed;
-    bottom: 190px;
-    right: 40px;
-  }
-  #openNav {
-    position: fixed;
-    bottom: 220px;
-    right: 10px;
-  }
-  #closeNav {
-    position: fixed;
-    bottom: 220px;
-    right: 70px;
-  }
-  #previousPage {
-    position: fixed;
-    bottom: 220px;
-    right: 40px;
-    border-radius: 50%;
-  }
-}
-@media (min-width: 481px) and (max-width: 899px) {
-}
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 900px) and (max-width: 1024px) {
-  .top-container {
-    font-size: 18px;
-  }
-  header a {
-    cursor: pointer;
-    color: black;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    text-decoration: none;
-    font-size: 60px;
-    font-style: italic;
-  }
-  header i {
-    font-size: 30px;
-  }
-  footer {
-    font-size: 18px;
-  }
-  #upBtn {
-    position: fixed;
-    bottom: 276px;
-    right: 40px;
-  }
-  #downBtn {
-    position: fixed;
-    bottom: 216px;
-    right: 40px;
-  }
-  #openNav {
-    position: fixed;
-    bottom: 246px;
-    right: 10px;
-  }
-  #closeNav {
-    position: fixed;
-    bottom: 246px;
-    right: 70px;
-  }
-  #previousPage {
-    position: fixed;
-    bottom: 246px;
-    right: 40px;
-    border-radius: 50%;
-  }
-}
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .top-container {
-    font-size: 18px;
-  }
-  header a {
-    cursor: pointer;
-    color: black;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    text-decoration: none;
-    font-size: 60px;
-    font-style: italic;
-  }
-  header i {
-    font-size: 30px;
-  }
-  footer {
-    font-size: 18px;
-  }
-}
-/* Media Query for Large screens */
-@media (min-width: 1900px) {
   main {
-    padding: 1.25rem 2rem;
+    padding: 1rem 2rem;
+  }
+  .user-account {
+    flex-direction: column;
+  }
+}
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  main {
+    padding: 1rem 1rem;
   }
 }
