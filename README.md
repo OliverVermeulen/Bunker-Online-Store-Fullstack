@@ -1,52 +1,44 @@
 # Bunker-Online-Store-Fullstack
 
-## Description
+Use CMD localhost:8888 to host project
 
-The aim of this project is to make a fullstack online store using everything I've learnt so far in the course
+## Bunker
+
+Bunker is not a company but a collective of young visionaries that have come together in collaboration to bring luxury unisex fashion to the streets of South-Africa. Each luxury piece is hand selected by our staff and is of the highest quality.
+
+## About 
+
+Bunker is a fullstack application built with HTML5, CSS3, JavaScript and PHP as well as making use of the Vue, Slim and Axios frameworks to bring together a fully functional e-commerce store that looks visually appealing and is easy to navigate
 
 ## Features
-1. The Header features:
-    + A Search button where the use can search for a specific product
-    + A Logo that functions as a home button
-    + A Cart button that takes you to a page where the user can checkout
 
-2. A navigation bar that features:
-    + A button form to filter products by category
-    + A button that takes the user to the About us page
-    + A button that takes the user to the Account page
-
-3. The main pages features: 
-    + A coming soon section
-    + A featured section
-    + A available section that can be filtered by brand and price
-
-4. The product page features: 
-    + An image selector to see a different view of the product
-    + More details about the selected product
-    + A Checkout form and button
-
-5. A navigation controller that can:
-    + Take to to the top and bottom of the page
-    + Bring a navigation bar in and out
-    + A button that takes the user to the previous page
+1. A sticky header, sidebar and navigation controller
+2. Main page with coming soon, featured and available products sections
+3. A selected product page with more details about the specific product that can be added to the users cart
+4. An about us page that features details about the company
+5. An account page where the user can either sign out or change their password
+6. Sign in, register, and reset password pages
 
 ## MVP
 
 - The front and back end must be kept separate
-- Must have a sticky Header
+- Must make use of Vue framework
 - Data must persist between pages
-- Must make use of Vue or any JS framework
+- Must have a sticky Header
+- Must have a sidebar
+- Main page must have a coming soon, featured and available products sections
 - Must be Able to Sign -Up -In -Out and change password
+
 
 ## Backlog
 
-- Add Slim framework
-- Add Cart page
-- Add Account pages
+- Add Slim framework (Complete)
+- Add Cart page (Complete)
+- Add Account pages (Complete)
+- Add filtering (Complete)
 
 ## Links
 
 ### Repo link
 
 https://github.com/OliverVermeulen/Bunker-Online-Store-Fullstack.git
-
