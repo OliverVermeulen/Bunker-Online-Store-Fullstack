@@ -31,7 +31,7 @@
           <a href="" title="Home" class="home-link">BUNKER</a>
 
           <!-- Cart page -->
-          <form action="./src/php//check-cart.php" method="post">
+          <form action="./src/php/check-cart.php" method="post">
             <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
           </form>
         </div>
@@ -73,7 +73,7 @@
       </nav>
 
       <main id="main" class="main">
-        <p class="section-heading">Coming Soon</p>
+        <p class="section-heading">Dropping Soon</p>
         <div class="cards">
           <div class="content" v-for="product in upcoming" :key="product.product_id">
               <div class="content-overlay"></div>
@@ -86,7 +86,7 @@
           </div>
         </div>
 
-        <p class="section-heading">Featured Products</p>
+        <p class="section-heading">Featured</p>
         <div class="cards">
           <!-- Vue data loop  -->
           <div class="content" v-for="product in featured" :key="product.product_id">
@@ -105,7 +105,7 @@
           </div>
         </div>
 
-        <p class="section-heading" id="all-products">All Products</p>
+        <p class="section-heading" id="all-products">The Collection</p>
         <div class="cards">
           <!-- Vue data loop -->
           <div class="card" v-for="product in available" :key="product.product_id">

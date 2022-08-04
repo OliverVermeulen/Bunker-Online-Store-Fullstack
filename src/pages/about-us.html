@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUNKER® - ABOUT US</title>
-    <link rel="shortcut icon" href="../images/store/bunker-icon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../images/store/bunker-icon.png"type="image/x-icon"/>
     <link rel="stylesheet" href="../css/about-us.css" />
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
     <script src="../js/script.js" defer></script>
@@ -16,103 +16,127 @@
       <header id="myHeader">
         <!-- Buttons/Links -->
         <div class="header-buttons">
-          <!-- Toggle searchbar (disabled) -->
-          <button type="disabled" class="icon" title="Search Toggle">
-            <a href="#all-products"><i class="fa fa-search"></i></a>
+          <!-- Disabled -->
+          <button type="disabled" class="icon" title="Disabled">
+            <i class="fa fa-search"></i>
           </button>
 
           <!-- Logo/Home -->
-          <a href="/" title="Home" class="home-link">BUNKER</a>
+          <a href="" title="Home" class="home-link">BUNKER</a>
 
-          <!-- Cart -->
-          <button class="icon" title="Cart">
-            <i class="fa fa-shopping-cart"></i>
-          </button>
+          <!-- Cart page -->
+          <form action="./src/php/check-cart.php" method="post">
+            <button class="icon" title="Cart">
+              <i class="fa fa-shopping-cart"></i>
+            </button>
+          </form>
         </div>
       </header>
 
       <!-- Navbar -->
       <nav id="mySidenav" class="sidenav">
         <!-- Filter products by tops -->
-        <form action="../pages/filtered-products.html">
+        <form action="./src/pages/filtered-products.html">
           <input type="hidden" value="top" name="product_type" />
           <button title="Tops" class="type-button"><a>Tops</a></button>
         </form>
 
         <!-- Filter products by bottoms -->
-        <form action="../pages/filtered-products.html">
+        <form action="./src/pages/filtered-products.html">
           <input type="hidden" value="bottom" name="product_type" />
           <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
         </form>
 
         <!-- Filter products by accessories -->
-        <form action="../src/pages/filtered-products.html">
+        <form action="./src/pages/filtered-products.html">
           <input type="hidden" value="accessory" name="product_type" />
-          <button title="Accessories" class="type-button"><a>Accessories</a></button>
+          <button title="Accessories" class="type-button">
+            <a>Accessories</a>
+          </button>
         </form>
 
         <!-- About Us page -->
-        <a href="/" title="Home">Home</a>
+        <a href="/" title="About Us">Home</a>
 
         <!-- Account page -->
-        <a href="../php/user.php" title="Account" >Account</a>
+        <a href="./src/php/user.php" title="Account">Account</a>
       </nav>
 
-      <div class="section-heading">About Us</div>
-      <div class="about-us">
-        <div class="company-staff">
-          <div class="content">
+      <main>
+        <!-- Heading -->
+        <p class="section-heading">The Collective</p>
+        <!-- About Us -->
+        <div class="about-us">
+          <!-- Company staff -->
+          <div class="company-staff">
+            <!-- Staff 1 -->
+            <div class="content">
               <div class="content-overlay"></div>
-              <img class="content-image" src="../images/store/staff-1.jpg">
+              <img class="content-image" src="../images/store/staff-1.jpg" />
               <div class="content-details fadeIn-top">
-                <h3>Lisa Bera</h3>
-                <p>Store owner and manager</p>
-                <p>@LisaBera95</p>
+                <h3>Xoliswa</h3>
+                <p>Founder and CEO</p>
+                <p>@therealxoli</p>
+                <p>she/her</p>
               </div>
-            </a>
-          </div>
-          <div class="content">
-            <div class="content-overlay"></div>
-            <img class="content-image" src="../images/store/staff-2.jpg">
-            <div class="content-details fadeIn-top">
-              <h3>Lauren Ipsum</h3>
-              <p>Stock buyer and order tracker</p>
-              <p>@LI4life</p>
             </div>
-          </a>
-        </div>
-      <div class="content">
-        <div class="content-overlay"></div>
-        <img class="content-image" src="../images/store/staff-3.jpg">
-        <div class="content-details fadeIn-top">
-          <h3>Robert Mabusa</h3>
-          <p>Accountant</p>
-          <p>@robertmfinances</p>
-        </div>
-      </a>
-    </div>
-    <div class="content">
-      <div class="content-overlay"></div>
-      <img class="content-image" src="../images/store/staff-4.jpg">
-      <div class="content-details fadeIn-top">
-        <h3>Katelgo Skaara</h3>
-        <p>Store clerk and beats maker</p>
-        <p>@lilscarboy</p>
-      </div>
-    </a>
-  </div>
-        </div>
 
-        <div class="company-details">
-          <div class="map-responsive">
-            <iframe src="https://maps.google.com/maps?q=167%20Longmarket%20St%20Cape%20Town%20City%20Centre%20Cape%20Town%208000&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" frameborder="0" style="border: 0" allowfullscreen></iframe>
+            <!-- Staff 2 -->
+            <div class="content">
+              <div class="content-overlay"></div>
+              <img class="content-image" src="../images/store/staff-3.jpg" />
+              <div class="content-details fadeIn-top">
+                <h3>Zee</h3>
+                <p>Sourcing and Curating</p>
+                <p>@nowyouzeeme</p>
+                <p>he/him</p>
+              </div>
+            </div>
+
+            <!-- Staff 3 -->
+            <div class="content">
+              <div class="content-overlay"></div>
+              <img class="content-image" src="../images/store/staff-2.jpg" />
+              <div class="content-details fadeIn-top">
+                <h3>Amber</h3>
+                <p>Social Media Correspondent</p>
+                <p>@amberalert</p>
+                <p>she/her</p>
+              </div>
+            </div>
+
+            <!-- Staff 4 -->
+            <div class="content">
+              <div class="content-overlay"></div>
+              <img class="content-image" src="../images/store/staff-4.jpg" />
+              <div class="content-details fadeIn-top">
+                <h3>Will</h3>
+                <p>In House DJ</p>
+                <p>@willtheyorwontthey</p>
+                <p>he/they</p>
+              </div>
+            </div>
           </div>
 
-          <div class="company-description">
-            <p>Bunker is not a company but a collective of young visionaries that have come together in collaboration to bring luxury mens fashion to the streets of South-Africa. This project is a portal to all the pieces in our inventory up for sale as well as showing off future editions to it. Each luxury piece is hand selected by our staff and is of the highest quality.</p>
+          <div class="company-details">
+            <!-- Company description -->
+            <div class="company-description">
+              <p> Bunker is not a company but a collective of young visionaries that have come together in collaboration to bring luxury unisex fashion to the streets of South-Africa. This project is a portal to all the pieces in our inventory up for sale as well as showing off future editions to it. Each luxury piece is hand selected by our staff and is of the highest quality.</p>
+            </div>
+
+            <!-- Company location -->
+            <div class="map-responsive">
+              <iframe src="https://maps.google.com/maps?q=137%20Bree%20St,%20Cape%20Town%20City%20Centre,%20Cape%20Town,%208001,%20South%20Africa&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" frameborder="0" style="border: 0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Company contact -->
+            <div class="company-contact">
+              <p>@brandbunkercpt</p>
+              <p>bunker.cpt@gmail.com</p>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
 
       <!-- Navigation Controller -->
       <div class="navigation-controller">
@@ -132,10 +156,14 @@
         <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back"><i class="fa fa-close"></i></button>
       </div>
 
+      <!-- Footer -->
       <footer class="footer">
+        <!-- Trademarks -->
         <div class="trademarks">
-          <span>BUNKER®</span>
+          <span>Bunker®</span>
         </div>
+
+        <!-- Extra Info -->
         <div div="extra-information">
           <span>R ZAR</span>
           <span>|</span>

@@ -13,23 +13,25 @@ PRIMARY KEY (`user_id`)
 
 CREATE TABLE `bunker`.`products` (
 `product_id` INT NOT NULL AUTO_INCREMENT , 
-`type` VARCHAR(20) NOT NULL ,
-`name` VARCHAR(50) NOT NULL , 
-`brand` VARCHAR(50) NOT NULL , 
-`price` INT NOT NULL , 
+`type` VARCHAR(20) NOT NULL,
+`name` VARCHAR(50) NOT NULL, 
+`brand` VARCHAR(50) NOT NULL, 
+`price` INT NOT NULL, 
 `image` VARCHAR(250) NOT NULL , 
-`alt_view_image` VARCHAR(250) NOT NULL , 
-`released` INT NOT NULL , 
-`featured` INT NOT NULL , 
+`alt_view_image` VARCHAR(250) NOT NULL, 
+`released` INT NOT NULL, 
+`featured` INT NOT NULL, 
 PRIMARY KEY (`product_id`)
 ) ENGINE = InnoDB;
 
 CREATE TABLE `bunker`.`cart` (
 `user_id` INT NOT NULL, 
 `product_id` INT NOT NULL, 
-`product_name` VARCHAR(50) NOT NULL , 
-`product_price` INT NOT NULL , 
-`product_image` VARCHAR(250) NOT NULL
+`cart_id` INT NOT NULL AUTO_INCREMENT,
+`product_name` VARCHAR(50) NOT NULL, 
+`product_price` INT NOT NULL, 
+`product_image` VARCHAR(250) NOT NULL,
+PRIMARY KEY (`cart_id`)
 ) ENGINE = InnoDB;
 
 -- Links books and authors tables via foreign key

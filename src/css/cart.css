@@ -110,6 +110,10 @@ button:active {
   font-style: italic;
 }
 
+main {
+  min-height: calc(100vh - 100px - 35px);
+}
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -162,6 +166,38 @@ button:active {
 }
 .cart-img {
   width: 50px;
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+  /* border-bottom: 1px solid black; */
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.total-text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;
+  font-size: 20px;
+}
+.product-btn {
+  background-color: #f2cc0f;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-style: italic;
+  border: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  padding-left: 5px;
+}
+.product-btn:hover {
+  color: #f2cc0f;
+  background-color: black;
 }
 
 /* Navigation controller */

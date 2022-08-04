@@ -96,20 +96,20 @@ header .input-button:hover {
 }
 
 .section-heading {
-    margin: 0.7rem 0;
-    font-size: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-style: italic;
-  }
+  margin: 0.7rem 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+}
 
-  button {
-    transition: 0.1s all;
-  }
-  button:active {
-    transform: scale(0.95);
-  }
+button {
+  transition: 0.1s all;
+}
+button:active {
+  transform: scale(0.95);
+}
 
 .sidenav {
   height: 100%;
@@ -147,45 +147,28 @@ header .input-button:hover {
   cursor: pointer;
 }
 
+/* Main */
+main {
+  min-height: calc(100vh - 60px - 35px);
+  margin: 0 auto;
+}
 /* About Us Page */
 .about-us {
-  margin: 1rem 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
 }
+
 /* Staff Grid */
 .company-staff {
-  max-width: 600px;
+  max-width: 30%;
+  min-width: 320px;
   margin: 0 auto;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-.company-details {
-  max-width: 600px;
-  min-width: 300px;
-  margin: 0 auto;
-}
-/* Map */
-.map-responsive {
-  overflow: hidden;
-  padding-bottom: 500px;
-  position: relative;
-  height: 0;
-  margin: 0 auto;
-  margin-top: 1rem;
-}
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 600px;
-  min-width: 300px;
-  position: absolute;
-}
-/* Description */
-.company-description {
-  font-size: 16px;
-  margin-top: 1rem;
-}
+/* Staff details */
 .content {
   position: relative;
   max-width: 400px;
@@ -202,8 +185,6 @@ header .input-button:hover {
   bottom: 0;
   right: 0;
   opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
 }
 .content:hover .content-overlay {
@@ -230,18 +211,60 @@ header .input-button:hover {
   opacity: 1;
 }
 .content-details h3 {
-  color: #fff;
+  color: white;
   font-weight: 500;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
 }
 .content-details p {
-  color: #fff;
+  color: white;
   font-size: 0.8em;
 }
 .fadeIn-top {
   top: 20%;
+}
+
+/* Company Details */
+/* Background Image */
+.company-details {
+  width: 60%;
+  min-width: 320px;
+  margin: 0 auto;
+  background: url("../images/store/backdrop.jpg");
+  padding: 3rem;
+}
+/* Description */
+.company-description {
+  font-size: 19px;
+  margin-top: 1rem;
+  color: #fff;
+}
+/* Map */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 500px;
+  position: relative;
+  height: 0;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
+  position: absolute;
+}
+/* Contact */
+.company-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  padding-top: 0.5rem;
+  font-size: 15px;
 }
 
 /* Navigation controller */
@@ -311,108 +334,94 @@ footer {
   color: black;
   font-weight: bold;
   width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
+/* Media Queries */
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-  #upBtn {
-    position: fixed;
-    bottom: 250px;
-    right: 40px;
+  .about-us {
+    flex-direction: column;
   }
-  #downBtn {
-    position: fixed;
-    bottom: 190px;
-    right: 40px;
+  .company-details {
+    padding: 1rem;
   }
-  #openNav {
-    position: fixed;
-    bottom: 220px;
-    right: 10px;
+  .company-staff {
+    padding-bottom: 1rem;
   }
-  #closeNav {
-    position: fixed;
-    bottom: 220px;
-    right: 70px;
-  }
-  #previousPage {
-    position: fixed;
-    bottom: 220px;
-    right: 40px;
-    border-radius: 50%;
+  .company-contact {
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
-@media (min-width: 481px) and (max-width: 899px) {
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .company-staff {
+    /* max-width: 50%; */
+    min-width: 620px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+  .about-us {
+    flex-direction: column;
+  }
+  .company-details {
+    width: 620px;
+    padding: 1rem;
+  }
+  .company-staff {
+    padding-bottom: 1rem;
+  }
+  .company-contact {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 900px) and (max-width: 1024px) {
-  .top-container {
-    font-size: 18px;
+@media (min-width: 768px) and (max-width: 1024px) {
+  .company-staff {
+    min-width: 720px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+  .about-us {
+    flex-direction: column;
   }
-  header a {
-    cursor: pointer;
-    color: black;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    text-decoration: none;
-    font-size: 60px;
-    font-style: italic;
+  .company-details {
+    width: 720px;
+    padding: 2rem;
   }
-  header i {
-    font-size: 30px;
+  .company-staff {
+    padding-bottom: 1rem;
   }
-  footer {
-    font-size: 18px;
-  }
-  #upBtn {
-    position: fixed;
-    bottom: 276px;
-    right: 40px;
-  }
-  #downBtn {
-    position: fixed;
-    bottom: 216px;
-    right: 40px;
-  }
-  #openNav {
-    position: fixed;
-    bottom: 246px;
-    right: 10px;
-  }
-  #closeNav {
-    position: fixed;
-    bottom: 246px;
-    right: 70px;
-  }
-  #previousPage {
-    position: fixed;
-    bottom: 246px;
-    right: 40px;
-    border-radius: 50%;
+  .company-contact {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {
-  .top-container {
-    font-size: 18px;
-  }
-  header a {
-    cursor: pointer;
-    color: black;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    text-decoration: none;
-    font-size: 60px;
-    font-style: italic;
-  }
-  header i {
-    font-size: 30px;
-  }
-  footer {
-    font-size: 18px;
-  }
+  .company-staff {
+    width: 200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
-/* Media Query for Large screens */
-@media (min-width: 1900px) {
-  main {
-    padding: 1.25rem 2rem;
+  .company-details {
+    width: 500px;
+    padding: 2rem;
+  }
+  .company-staff {
+    padding-bottom: 1rem;
+  }
+  .company-contact {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
