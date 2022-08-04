@@ -10,7 +10,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
     $product_id = $_POST['product_id'];
     var_dump($_POST);
-    $user_id = '1';
+    $user_id = $_SESSION["user_id"];
     $product_name = $_POST['product_name'];
     $product_price = $_POST['product_price'];
     $product_image = $_POST['product_image'];

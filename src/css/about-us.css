@@ -414,13 +414,22 @@ footer {
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
+
+.company-staff {
+  width: 35%;
+  min-width: 320px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
   .company-details {
     width: 500px;
     padding: 2rem;
   }
-  .company-staff {
+  /* .company-staff {
     padding-bottom: 1rem;
-  }
+  } */
   .company-contact {
     flex-direction: row;
     justify-content: space-evenly;

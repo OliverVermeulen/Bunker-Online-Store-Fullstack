@@ -3,9 +3,13 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
+
+session_start();
+
 // GET Cart Data
 $app->get('/cart-data/user', function (Request $request, Response $response) {
-    $sql = "SELECT * FROM cart";
+    $userId =  $_SESSION["user_id"];
+    $sql = "SELECT * FROM cart WHERE user_id = $userId";
 
     try {
         $db = new DB();
