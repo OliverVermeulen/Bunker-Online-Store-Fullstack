@@ -161,12 +161,12 @@ main {
 
 /* Staff Grid */
 .company-staff {
-  max-width: 30%;
+  width: 35%;
   min-width: 320px;
   margin: 0 auto;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
 }
 /* Staff details */
 .content {
@@ -349,6 +349,7 @@ footer {
   }
   .company-staff {
     padding-bottom: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
   .company-contact {
     flex-direction: column;
