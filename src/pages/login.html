@@ -5,94 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUNKER® - SIGN IN</title>
+    <!-- Stylesheets and Favicon -->
     <link rel="shortcut icon" href="../images/store/bunker-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/account.css" />
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="../js/script.js" defer></script>
+    <script src="../js/vue.js" type="module" defer></script>
   </head>
-<body>
-  <div id="app">
-    <header id="myHeader">
-      <div class="header-buttons">
-        <button type="disabled" class="icon" title="Search Toggle"><i class="fa fa-search"></i></button>
-        <a href="/Bunker-Online-Store-Fullstack/" title="Home" class="home-link">BUNKER</a>
-        <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
+  <body>
+    <div id="app">
+      <header id="myHeader">
+        <!-- Buttons/Links -->
+        <div class="header-buttons">
+          <!-- Disabled -->
+          <button type="disabled" class="icon" title="Disabled"><i class="fa fa-search"></i></button>
+
+          <!-- Logo/Home -->
+          <a href="/" title="Home" class="home-link">BUNKER</a>
+
+          <!-- Cart page -->
+          <form action="../php/check-cart.php" method="post">
+            <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
+          </form>
+        </div>
+      </header>
+
+      <!-- Navbar -->
+      <nav id="mySidenav" class="sidenav">
+        <!-- Filter products by tops -->
+        <form action="../pages/filtered-products.html">
+          <input type="hidden" value="top" name="product_type" />
+          <button title="Tops" class="type-button"><a>Tops</a></button>
+        </form>
+
+        <!-- Filter products by bottoms -->
+        <form action="../pages/filtered-products.html">
+          <input type="hidden" value="bottom" name="product_type" />
+          <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
+        </form>
+
+        <!-- Filter products by accessories -->
+        <form action="../pages/filtered-products.html">
+          <input type="hidden" value="accessory" name="product_type" />
+          <button title="Accessories" class="type-button"><a>Accessories</a></button>
+        </form>
+
+        <!-- About Us page -->
+        <a href="../pages/about-us.html" title="About Us">About Us</a>
+
+        <!-- Account page -->
+        <a href="/" title="Account">Home</a>
+      </nav>
+
+      <main>
+        <p class="section-heading">Sign In</p>
+        <div class="account">
+          <!-- Login Form -->
+          <form action="../php/login.php" method="post" class="account-form">
+            <!-- Input username -->
+            <label class="form-label">Username</label>
+            <input type="text" name="username"class="form-input" minlength="1" maxlength="50" required />
+
+            <!-- Input password-->
+            <label class="form-label">Password</label>
+            <input type="password" name="password" class="form-input" minlength="1" maxlength="6" required />
+
+            <div class="account-form-buttons">
+              <!-- Submit form -->
+              <input type="submit" value="Submit" class="form-button" title="Submit" />
+
+              <!-- Clear form -->
+              <input type="reset" value="Reset" class="form-button" title="Reset" />
+            </div>
+          </form>
+
+          <p>Don't have an account?<a href="../pages/register.html" class="account-link" title="Sign Up"> sign up now</a></p>
+        </div>
+      </main>
+
+      <!-- Navigation Controller -->
+      <div class="navigation-controller">
+        <!-- Top of page -->
+        <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top"><i class="fa fa-arrow-up"></i></button>
+
+        <!-- Open Navbar -->
+        <button onclick="openNav()" id="openNav" class="navigation-btn" title="Open Navbar"><i class="fa fa-arrow-right" class="icon"></i></button>
+
+        <!-- Previous page -->
+        <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back"><i class="fa fa-close"></i></button>
+
+        <!-- Close Navbar -->
+        <button onclick="closeNav()" id="closeNav" class="navigation-btn" title="Close Navbar"><i class="fa fa-arrow-left"></i></button>
+
+        <!-- Bottom of page -->
+        <button onclick="bottomFunction()" id="downBtn" class="navigation-btn" title="To bottom">
+          <i class="fa fa-arrow-down"></i>
+        </button>
       </div>
-    </header>
 
-    <!-- Navbar -->
-    <nav id="mySidenav" class="sidenav">
-      <!-- Filter products by tops -->
-      <form action="../pages/filtered-products.html">
-        <input type="hidden" value="top" name="product_type" />
-        <button title="Tops" class="type-button"><a>Tops</a></button>
-      </form>
+      <!-- Footer -->
+      <footer class="footer">
+        <!-- Trademarks -->
+        <div class="trademarks">
+          <span>Bunker®</span>
+        </div>
 
-      <!-- Filter products by bottoms -->
-      <form action="../pages/filtered-products.html">
-        <input type="hidden" value="bottom" name="product_type" />
-        <button title="Bottoms" class="type-button"><a>Bottoms</a></button>
-      </form>
-
-      <!-- Filter products by accessories -->
-      <form action="../pages/filtered-products.html">
-        <input type="hidden" value="accessory" name="product_type" />
-        <button title="Accessories" class="type-button"><a>Accessories</a></button>
-      </form>
-
-      <!-- About Us page -->
-      <a href="../pages/about-us.html" title="About Us">About Us</a>
-
-      <!-- Account page -->
-      <a href="/" title="Home" >Home</a>
-    </nav>
-    
-    <main>
-    <div class="account">
-      <form action="../php/login.php" method="post" class="account-form">
-          <label class="form-label">Username</label>
-          <input type="text" name="username" class="form-input" required /> 
-
-          <label class="form-label">Password</label>
-          <input type="password" name="password" class="form-input" required />
-
-          <div class="account-form-buttons">
-          <input type="submit" value="Submit" class="form-button" />
-          <input type="reset" value="Reset" class="form-button" />
-          </div>
-      </form>
-      <p>Don't have an account? <a href="../pages/register.html">sign up now</a></p>
-  </div>
-</main>
-
-  <div class="navigation-controller">
-    <button onclick="topFunction()" id="upBtn" class="navigation-btn" title="To top">
-      <i class="fa fa-arrow-up"></i>
-    </button>
-    <button onclick="bottomFunction()" id="downBtn" class="navigation-btn" title="To bottom">
-      <i class="fa fa-arrow-down"></i>
-    </button>
-    <button onclick="openNav()" id="openNav" class="navigation-btn" title="Open Navbar">
-      <i class="fa fa-arrow-right" class="icon"></i>
-    </button>
-    <button onclick="closeNav()" id="closeNav" class="navigation-btn" title="Close Navbar">
-      <i class="fa fa-arrow-left"></i>
-    </button>
-    <button onclick="history.back()" id="previousPage" class="navigation-btn" title="Back">
-      <i class="fa fa-close"></i>
-    </button>
-  </div>
-
-  <footer class="footer">
-    <div class="trademarks">
-      <span>BUNKER®</span>
+        <!-- Extra Info -->
+        <div div="extra-information">
+          <span>R ZAR</span>
+          <span>|</span>
+          <span>Help <i class="fa fa-gear"></i></span>
+        </div>
+      </footer>
     </div>
-
-    <div div="extra-information">
-      <span>R ZAR</span>
-      <span>|</span>
-      <span>Help <i class="fa fa-gear"></i></span>
-    </div>
-  </footer>
-  </div>
-</body>
+  </body>
+</html>

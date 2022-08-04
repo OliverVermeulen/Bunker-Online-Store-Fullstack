@@ -24,6 +24,7 @@ body button:active {
   background-color: black;
   color: white;
   text-align: center;
+  text-transform: uppercase;
 }
 
 header {
@@ -46,6 +47,7 @@ header .home-link {
   text-decoration: none;
   font-size: 40px;
   font-style: italic;
+  text-transform: uppercase;
 }
 header i {
   font-size: 20px;
@@ -90,6 +92,7 @@ header .input-button {
   padding-left: 3px;
   cursor: pointer;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 header .input-button:hover {
   color: black;

@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUNKER®</title>
+    <title>BUNKER® - CART</title>
+    <!-- Stylesheets and Favicon -->
     <link rel="shortcut icon" href="../images/store/bunker-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/cart.css" />
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue@3"></script>
@@ -17,7 +19,7 @@
     <div id="app">
       <!-- Top Container -->
       <div class="top-container">
-        <span><i class="fa fa-globe"></i> FREE SHIPPING ON ORDERS OVER R 4000</span>
+        <span><i class="fa fa-globe"></i> Free shipping on orders over R 4000</span>
       </div>
 
       <!-- Header -->
@@ -25,21 +27,13 @@
         <!-- Buttons/Links -->
         <div class="header-buttons">
           <!-- Toggle searchbar -->
-          <button onclick="disabled" class="icon" title="Disabled"><i class="fa fa-search"></i></button>
+          <button type="disabled" class="icon" title="Disabled"><i class="fa fa-search"></i></button>
 
           <!-- Logo/Home -->
-          <a href="/" title="Home" class="home-link">BUNKER</a>
+          <a href="/" title="Home" class="home-link">Bunker</a>
 
-          <!-- Cart -->
-          <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
-        </div>
-
-        <!-- Searchbar -->
-        <div id="searchbar" style="display: none">
-          <div class="searchbar">
-            <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.." autocomplete="off" />
-            <button @click="resetInput" class="input-button" title="Clear Search">CLEAR</button>
-          </div>
+          <!-- Cart page -->
+            <button type="disabled" class="icon" title="Disabled"><i class="fa fa-shopping-cart"></i></button>
         </div>
       </header>
 

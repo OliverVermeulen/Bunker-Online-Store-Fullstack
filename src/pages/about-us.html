@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUNKER® - ABOUT US</title>
+    <!-- Stylesheets and Favicon -->
     <link rel="shortcut icon" href="../images/store/bunker-icon.png"type="image/x-icon"/>
     <link rel="stylesheet" href="../css/about-us.css" />
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="../js/script.js" defer></script>
+    <script src="../js/vue.js" type="module" defer></script>
   </head>
   <body>
     <div id="app">
@@ -16,19 +21,15 @@
       <header id="myHeader">
         <!-- Buttons/Links -->
         <div class="header-buttons">
-          <!-- Disabled -->
-          <button type="disabled" class="icon" title="Disabled">
-            <i class="fa fa-search"></i>
-          </button>
+          <!-- Toggle searchbar -->
+          <button type="disabled" class="icon" title="Disabled"><i class="fa fa-search"></i></button>
 
           <!-- Logo/Home -->
-          <a href="/" title="Home" class="home-link">BUNKER</a>
+          <a href="/" title="Home" class="home-link">Bunker</a>
 
           <!-- Cart page -->
           <form action="../php/check-cart.php" method="post">
-            <button class="icon" title="Cart">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
+            <button class="icon" title="Cart"><i class="fa fa-shopping-cart"></i></button>
           </form>
         </div>
       </header>

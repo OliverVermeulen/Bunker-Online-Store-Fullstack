@@ -13,11 +13,20 @@ body {
   transition: margin-left 0.5s;
 }
 
+
+.top-container {
+  padding: 0.3rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 header {
   background-color: #f2cc0f;
   color: black;
   padding: 0.4rem 2rem;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 header .header-buttons {
@@ -33,6 +42,7 @@ header .home-link {
   text-decoration: none;
   font-size: 40px;
   font-style: italic;
+  text-transform: uppercase;
 }
 header i {
   font-size: 20px;
@@ -77,10 +87,16 @@ header .input-button {
   padding-left: 3px;
   cursor: pointer;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 header .input-button:hover {
   color: black;
   background-color: #f2cc0f;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 .section-heading {

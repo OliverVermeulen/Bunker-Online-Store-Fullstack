@@ -9,15 +9,28 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+body button {
+  transition: 0.1s all;
+}
+body button:active {
+  transform: scale(0.95);
+}
 #app {
   transition: margin-left 0.5s;
 }
 
+.top-container {
+  padding: 0.3rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
 header {
   background-color: #f2cc0f;
   color: black;
   padding: 0.4rem 2rem;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 header .header-buttons {
@@ -33,6 +46,7 @@ header .home-link {
   text-decoration: none;
   font-size: 40px;
   font-style: italic;
+  text-transform: uppercase;
 }
 header i {
   font-size: 20px;
@@ -77,6 +91,7 @@ header .input-button {
   padding-left: 3px;
   cursor: pointer;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 header .input-button:hover {
   color: black;
@@ -86,22 +101,6 @@ header .input-button:hover {
   position: sticky;
   top: 0;
   width: 100%;
-}
-
-.section-heading {
-  margin: 0.7rem 0;
-  font-size: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-style: italic;
-}
-
-button {
-  transition: 0.1s all;
-}
-button:active {
-  transform: scale(0.95);
 }
 
 .sidenav {
@@ -143,11 +142,19 @@ button:active {
 /* Account Sign -In, -Register and Change Password pages */
 main {
   min-height: calc(100vh - 60.78px - 35px);
-  padding: 30px;
   width: 592px;
   min-width: 300px;
-  padding: 20px;
   margin: 0 auto;
+  padding-bottom: 0.7rem;
+}
+/* Heading */
+main .section-heading {
+  margin: 0.7rem 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
 }
 .account {
   background-color: #f2cc0f;
@@ -199,6 +206,10 @@ main {
 }
 .account p {
   text-align: center;
+  font-size: 15px;
+}
+.account .account-link {
+  color: black;
 }
 
 /* Navigation controller */
@@ -268,6 +279,8 @@ footer {
   color: black;
   font-weight: bold;
   width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Media Query for Mobile Devices */

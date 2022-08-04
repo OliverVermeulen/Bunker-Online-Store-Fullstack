@@ -12,12 +12,22 @@ body {
 #app {
   transition: margin-left 0.5s;
 }
+body button {
+  transition: 0.1s all;
+}
+body button:active {
+  transform: scale(0.95);
+}
+#app {
+  transition: margin-left 0.5s;
+}
 
 .top-container {
   padding: 0.3rem;
   background-color: black;
   color: white;
   text-align: center;
+  text-transform: uppercase;
 }
 
 header {
@@ -40,6 +50,7 @@ header .home-link {
   text-decoration: none;
   font-size: 40px;
   font-style: italic;
+  text-transform: uppercase;
 }
 header i {
   font-size: 20px;
@@ -84,30 +95,16 @@ header .input-button {
   padding-left: 3px;
   cursor: pointer;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 header .input-button:hover {
   color: black;
   background-color: #f2cc0f;
 }
-
-button {
-  transition: 0.1s all;
-}
-button:active {
-  transform: scale(0.95);
-}
 .sticky {
   position: sticky;
   top: 0;
   width: 100%;
-}
-.section-heading {
-  margin: 0.7rem 0;
-  font-size: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-style: italic;
 }
 
 .sidenav {
@@ -146,6 +143,14 @@ button:active {
   cursor: pointer;
 }
 
+.section-heading {
+  margin: 0.7rem 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+}
 .product {
   display: flex;
   flex-direction: row;
@@ -169,7 +174,7 @@ button:active {
   width: 200px;
 }
 .form-text-label {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 23px;
   padding-right: 7px;
 }
@@ -186,7 +191,7 @@ button:active {
   text-transform: uppercase;
   font-style: italic;
   border: 0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 20px;
   padding-left: 5px;
 }
