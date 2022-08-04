@@ -4,7 +4,7 @@ Use CMD localhost:8888 to host project
 
 ## Bunker
 
-Bunker is not a company but a collective of young visionaries that have come together in collaboration to bring luxury unisex fashion to the streets of South-Africa. Each luxury piece is hand selected by our staff and is of the highest quality.
+Bunker is not a company but a collective of young visionaries that have come together in collaboration to bring luxury unisex fashion to the streets of South-Africa
 
 ## About 
 
@@ -36,6 +36,10 @@ Bunker is a fullstack application built with HTML5, CSS3, JavaScript and PHP as 
 - Add Cart page (Complete)
 - Add Account pages (Complete)
 - Add filtering (Complete)
+
+## Disclaimer
+
+I do not own any of the images used in this project nor do I claim to, Bunker is a fictional store
 
 ### Repo link
 
