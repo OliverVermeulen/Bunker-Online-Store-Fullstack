@@ -34,6 +34,16 @@ CREATE TABLE `bunker`.`cart` (
 PRIMARY KEY (`cart_id`)
 ) ENGINE = InnoDB;
 
+CREATE TABLE `bunker`.`orders` ( 
+`order_id` INT NOT NULL AUTO_INCREMENT, 
+`user_id` INT NOT NULL , 
+`total_price` INT NOT NULL, 
+`order_made` DATETIME NULL DEFAULT CURRENT_TIMESTAMP, 
+PRIMARY KEY (`order_id`)
+) ENGINE = InnoDB;
+
+ALTER TABLE `orders` ADD FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
 -- Links books and authors tables via foreign key
 ALTER TABLE `cart` ADD FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 

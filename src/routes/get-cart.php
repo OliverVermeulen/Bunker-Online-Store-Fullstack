@@ -31,3 +31,32 @@ $app->get('/cart-data/user', function (Request $request, Response $response) {
             ->withStatus(500);
     }
 });
+
+// GET Orders Data
+$app->get('/order-data/user', function (Request $request, Response $response) {
+    $userId =  $_SESSION["user_id"];
+    // $yeet = "SELECT  * FROM orders WHERE   order_id = (SELECT max(order_id) From orders)";
+    $sql = "SELECT * FROM orders WHERE user_id = $userId AND order_id = (SELECT max(order_id) From orders)";
+
+    try {
+        $db = new DB();
+        $conn = $db->connect();
+        $stmt = $conn->query($sql);
+        $customers = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $db = null;
+
+        $response->getBody()->write(json_encode($customers));
+        return $response
+            ->withHeader('content-type', 'application/json')
+            ->withStatus(200);
+    } catch (PDOException $e) {
+        $error = array(
+            "message" => $e->getMessage()
+        );
+
+        $response->getBody()->write(json_encode($error));
+        return $response
+            ->withHeader('content-type', 'application/json')
+            ->withStatus(500);
+    }
+});

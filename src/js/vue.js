@@ -7,6 +7,7 @@ const Component = {
       available: null,
       featured: null,
       cart: null,
+      orders: null,
       users: null,
     };
   },
@@ -18,27 +19,25 @@ const Component = {
     console.log(this);
 
     // Available products
-    axios
-      .get("/public/product-data/available")
-      .then((response) => {
-        let result = response.data;
-        let queryParams = window.location.search.substr(1).split("=");
-        console.log(queryParams)
-        console.log(result)
-        if (queryParams[0] === "product_id") {
-          let productId = parseInt(queryParams[1], 10);
-          console.log("Filtering products for", productId)
-          result = result.filter((product) => {
-            return parseInt(product.product_id, 10) === productId;
-          });
-        }
-        if (queryParams[0] === "product_type") {
-          result = result.filter((product) => {
-            return product.type === queryParams[1];
-          });
-        }
-        this.available = result
-      });
+    axios.get("/public/product-data/available").then((response) => {
+      let result = response.data;
+      let queryParams = window.location.search.substr(1).split("=");
+      console.log(queryParams);
+      console.log(result);
+      if (queryParams[0] === "product_id") {
+        let productId = parseInt(queryParams[1], 10);
+        console.log("Filtering products for", productId);
+        result = result.filter((product) => {
+          return parseInt(product.product_id, 10) === productId;
+        });
+      }
+      if (queryParams[0] === "product_type") {
+        result = result.filter((product) => {
+          return product.type === queryParams[1];
+        });
+      }
+      this.available = result;
+    });
     console.log(this);
 
     // Featured products
@@ -46,16 +45,21 @@ const Component = {
       .get("/public/product-data/featured")
       .then((response) => (this.featured = response.data));
     console.log(this);
-    
+
     axios
-    .get("/public/cart-data/user")
-    .then((response) => (this.cart = response.data));
+      .get("/public/cart-data/user")
+      .then((response) => (this.cart = response.data));
+    console.log(this);
+
+    axios
+    .get("/public/order-data/user")
+    .then((response) => (this.orders = response.data));
   console.log(this);
 
-  axios
-  .get("/public/users-data/all")
-  .then((response) => (this.users = response.data));
-console.log(this);
+    axios
+      .get("/public/users-data/all")
+      .then((response) => (this.users = response.data));
+    console.log(this);
   },
 };
 

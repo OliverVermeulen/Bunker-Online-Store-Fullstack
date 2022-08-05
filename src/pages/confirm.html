@@ -65,23 +65,19 @@
       </nav>
 
         <main>
-          <p class="section-heading">Your Cart</p>
+          <p class="section-heading">Confirm Order</p>
           <div v-for="product in cart" :key="product.product_id">
             <div class="cart-item">
               <p class="cart-text">{{product.product_name}}</p>
               <p class="cart-text">R {{product.product_price}}.00</p>
               <img v-bind:src="'../images/products/' + product.product_image" :alt="product.product_name" class="cart-img" />
-              <form action="../php/remove-cart.php" method="post">
-                <input type="hidden" :value="product.cart_id" name="cart_id">
-                <button class="navigation-btn" title="Remove"><i class="fa fa-close"></i></button>
-              </form>
             </div>
           </div>
-            <div class="cart-checkout">
-              <!-- <p class="total-text">TOTAL</p>
-              <p class="total-text">R 1000000.00</p> -->
-              <form action="../php/confirm-cart.php">
-                <button type="submit" class="product-btn" title="Checkout">Checkout</button>
+            <div class="cart-confirm"  v-for="order in orders" :key="order.order_id">
+              <p class="total-text">TOTAL</p>
+              <p class="total-text">R {{order.total_price}}.00</p>
+              <form action="../php/clear-cart.php">
+                <button type="submit" class="product-btn" title="Checkout" title="Confirm">Confirm</button>
               </form>
             </div>
         </main>
