@@ -41,7 +41,7 @@
         <!-- Searchbar -->
         <div id="searchbar" style="display: none">
           <div class="searchbar">
-            <input type="text" id="searchInput" class="search-input" v-model="search" placeholder="Search.." autocomplete="off" />
+            <input type="text" id="searchInput" class="search-input" v-model="productSearch" placeholder="Search.." autocomplete="off" />
             <button @click="resetInput" class="input-button" title="Clear Search">Clear</button>
           </div>
         </div>
@@ -118,7 +118,7 @@
         <p class="section-heading" id="all-products">The Collection</p>
         <div class="cards">
           <!-- Vue data loop -->
-          <div class="card" v-for="product in available" :key="product.product_id">
+          <div class="card" v-for="product in filteredProductList" :key="product.product_id">
             <!-- Selected product form -->
             <form action="./src/pages/selected-products.html">
               <!-- Hidden form data -->

@@ -35,7 +35,6 @@ $app->get('/cart-data/user', function (Request $request, Response $response) {
 // GET Orders Data
 $app->get('/order-data/user', function (Request $request, Response $response) {
     $userId =  $_SESSION["user_id"];
-    // $yeet = "SELECT  * FROM orders WHERE   order_id = (SELECT max(order_id) From orders)";
     $sql = "SELECT * FROM orders WHERE user_id = $userId AND order_id = (SELECT max(order_id) From orders)";
 
     try {

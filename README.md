@@ -43,13 +43,15 @@ Bunker is a fullstack application built with HTML5, CSS3, JavaScript and PHP as 
 - Add in more robust filtering system
 
 ### Repo link
+
 https://github.com/OliverVermeulen/Bunker-Online-Store-Fullstack.git
 
 ### Special Thanks
+
 - Jesse Vermeulen
 - Shirley Vermeulen
 - William Steward
 - Micheal Moore
 
 ### Disclaimer
-I do not own any of the images or products used in this project nor do I claim to, Bunker is a fictional store
+I do not own any of the images or products used in this project nor do I claim to, Bunker is not a real store

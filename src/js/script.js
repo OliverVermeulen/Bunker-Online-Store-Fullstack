@@ -1,3 +1,4 @@
+// Sticky header function
 let header = document.getElementById("myHeader");
 let sticky = header.offsetTop;
 
@@ -9,6 +10,7 @@ function myFunction() {
   }
 }
 
+// Searchbar function
 function myFunction() {
   let searchbar = document.getElementById("searchbar");
   if (searchbar.style.display === "none") {

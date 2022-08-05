@@ -417,7 +417,6 @@ footer {
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
-
   .company-staff {
     width: 35%;
     min-width: 320px;
@@ -430,9 +429,6 @@ footer {
     width: 500px;
     padding: 2rem;
   }
-  /* .company-staff {
-    padding-bottom: 1rem;
-  } */
   .company-contact {
     flex-direction: row;
     justify-content: space-evenly;
