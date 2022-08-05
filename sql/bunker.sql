@@ -1,6 +1,6 @@
 -- Database: bunker
 
--- Adds in users table
+-- User table
 CREATE TABLE `bunker`.`users` ( 
 `user_id` INT NOT NULL AUTO_INCREMENT, 
 `name` VARCHAR(50) NOT NULL, 
@@ -11,6 +11,7 @@ CREATE TABLE `bunker`.`users` (
 PRIMARY KEY (`user_id`)
 ) ENGINE = InnoDB;
 
+-- Products table
 CREATE TABLE `bunker`.`products` (
 `product_id` INT NOT NULL AUTO_INCREMENT , 
 `type` VARCHAR(20) NOT NULL,
@@ -24,6 +25,7 @@ CREATE TABLE `bunker`.`products` (
 PRIMARY KEY (`product_id`)
 ) ENGINE = InnoDB;
 
+-- Cart table
 CREATE TABLE `bunker`.`cart` (
 `user_id` INT NOT NULL, 
 `product_id` INT NOT NULL, 
@@ -34,6 +36,7 @@ CREATE TABLE `bunker`.`cart` (
 PRIMARY KEY (`cart_id`)
 ) ENGINE = InnoDB;
 
+-- Orders table
 CREATE TABLE `bunker`.`orders` ( 
 `order_id` INT NOT NULL AUTO_INCREMENT, 
 `user_id` INT NOT NULL , 
@@ -42,12 +45,15 @@ CREATE TABLE `bunker`.`orders` (
 PRIMARY KEY (`order_id`)
 ) ENGINE = InnoDB;
 
-ALTER TABLE `orders` ADD FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
--- Links books and authors tables via foreign key
+
+-- Links cart table to users table
 ALTER TABLE `cart` ADD FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
--- Adds records into books table
+-- Links orders table to users table
+ALTER TABLE `orders` ADD FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+-- Adds records products table
 INSERT INTO `products` (`product_id`, `type`, `name`, `brand`, `price`, `image`, `alt_view_image`, `released`, `featured`) VALUES 
 (NULL, 'top', 'Float Tee', 'Supreme', 700, 't-shirt.png', 't-shirt-alt-view.png', 1, 1), 
 (NULL, 'top', 'Camo Field Jacket With Patches', 'Off-White', 22000, 'camo-jacket.png', 'camo-jacket-alt-view.png', 1, 0),

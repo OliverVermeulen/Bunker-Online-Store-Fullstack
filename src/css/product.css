@@ -167,11 +167,15 @@ header .input-button:hover {
   margin-bottom: 1rem;
 }
 
+main {
+  min-height: calc(100vh - 60.78px - 35px);
+}
 .main-img {
   width: 500px;
 }
 .order-form {
   width: 200px;
+  text-align: center;
 }
 .form-text-label {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -194,6 +198,7 @@ header .input-button:hover {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 20px;
   padding-left: 5px;
+  cursor: pointer;
 }
 .product-btn:hover {
   color: #f2cc0f;
@@ -273,35 +278,78 @@ footer {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-  body {
-    background-color: red;
+  main {
+    margin: 1rem 0;
   }
+  .product {
+    flex-direction: column;
+    align-items:unset;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .product-alt-views {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.alt-img {
+  width: 100px;
+}
+  .main-img {
+    width: 100%;
+}
+.order-form {
+  margin: 0 auto;
+}
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
-  body {
-    background-color: yellow;
+  main {
+    margin: 1rem 0;
   }
+  .product {
+    flex-direction: column;
+    align-items:unset;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .product-alt-views {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.alt-img {
+  width: 150px;
+}
+  .main-img {
+    width: 60%;
+}
+.order-form {
+  margin: 0 auto;
+}
 }
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background-color: blue;
+  main {
+    margin: 1rem 0;
   }
+  .product {
+    flex-direction: column;
+    align-items:unset;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .product-alt-views {
+    flex-direction: row;
+    justify-content: space-evenly;
 }
-
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {
-  body {
-    background-color: green;
-  }
+.alt-img {
+  width: 200px;
 }
-
-/* Media Query for Large screens */
-@media (min-width: 1281px) {
-  body {
-    background-color: white;
-  }
+  .main-img {
+    width: 90%;
+}
+.order-form {
+  margin: 0 auto;
+}
 }

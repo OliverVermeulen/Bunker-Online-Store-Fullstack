@@ -284,4 +284,8 @@ footer {
   main {
     padding: 1rem 1rem;
   }
+  .sidenav a {
+    padding-right: 5px;
+    font-size: 18px;
+  }
 }

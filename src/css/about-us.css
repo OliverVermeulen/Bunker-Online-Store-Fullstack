@@ -358,8 +358,11 @@ footer {
 }
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
+  .sidenav a {
+    padding-right: 5px;
+    font-size: 18px;
+  }
   .company-staff {
-    /* max-width: 50%; */
     min-width: 620px;
     margin: 0 auto;
     display: grid;
