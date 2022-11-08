@@ -1,6 +1,6 @@
 # Bunker-Online-Store-Fullstack
 
-Use CMD localhost:8888 to host project
+Use CMD (php -S localhost:8888) to host project
 
 ## Bunker
 
